@@ -1,0 +1,42 @@
+{{ $currNode := . }}
+{{if isset .Params "categories"}}
+  {{ $.Scratch.Add "cats" .Params.categories }}
+  {{if gt (len ($.Scratch.Get "cats")) 1}}
+    {{ $.Scratch.Set "cats" (first 1 ($.Scratch.Get "cats") )}}
+  {{end}}
+  {{ $list := (index .Site.Taxonomies.categories (index ($.Scratch.Get "cats") 0))}}
+  {{ with $list.Len }}
+    {{$currNode.Scratch.Add "navfirst" (index $list 0).Page.RelPermalink}}
+    {{$currNode.Scratch.Add "navlast" (index $list (sub . 1)).Page.RelPermalink }}
+  {{end}}
+{{end}}
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "nav.html" . }}
+    {{ partial "sidebar.html" . }}
+
+    <div id="container" class=""> <!-- container section start -->
+
+      <div id="main-content"> <!--main content start-->
+          <!-- <div class="panel-header"> </div> -->
+          {{if ne (.Scratch.Get "navfirst") $currNode.RelPermalink}}
+          <a href="{{.Prev.RelPermalink}}"><div class="panel-nav" style="margin-bottom: -10px;"><i class="fa fa-angle-double-up"></i></div></a>
+          {{end}}
+
+          <div class="panel-body">  
+            {{ .Content }}
+          </div>
+
+          {{if ne (.Scratch.Get "navlast") $currNode.RelPermalink}}
+          <a href="{{.Next.RelPermalink}}"><div class="panel-nav" style="margin-top: -10px;"><i class="fa fa-angle-double-down"></i></div></a>
+          {{end}}
+      </div> <!--main content end-->
+
+    </div> <!-- container section end -->
+    {{ partial "js.html" . }}
+  </body>
+</html>
+
+

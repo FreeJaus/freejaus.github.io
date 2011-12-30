@@ -1,0 +1,24 @@
+{{ "<!-- Navigation -->" | safeHTML }}
+<nav class="navbar navbar-default navbar-fixed-top">
+  <span>
+            <a class="navbar-brand page-scroll" href="#page-top">{{ with .Site.Params.navigation.brand }}{{ . }}{{ end }}BRAND</a>
+  </span>
+
+            <span style="float: right; text-align: right; font-size: 10px; padding-top: 5px; padding-right: 10px;">
+              <div title="published {{.PublishDate.UTC.Format "2006/01/02 15:04"}}">
+                <span>{{dateFormat "Monday, 2 Jan 2006" .PublishDate.UTC}}</span>
+                <i class="fa fa-calendar-check-o"></i>
+              </div>
+              <div title="last updated">
+                <span>{{.Date.UTC.Format "2006/01/02 15:04"}}</span>
+                <i class="fa fa-calendar-plus-o"></i>
+              </div>
+            </span>
+
+            <span style="width: 100%; text-align: center;">
+              <div style="font-size: 16px; font-weight: bold;">Notebook - {{.Title}}</div>
+              <div style="font-size: 10px; font-style: italic">{{range .Keywords}} {{.}}, {{end}}</div>
+            </span>
+
+  {{ "<!-- /.container-fluid -->" | safeHTML }}
+</nav>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body>
+ekin-nb index
+
+<section>
+  <ul>
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+      <li><a href="/{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a>
+        <ul>
+          {{ range $key, $value := $taxonomy }}
+          <li> {{ $key }} </li>
+                <ul>
+                {{ range $value.Pages }}
+                    <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+                {{ end }}
+                </ul>
+          {{ end }}
+        </ul>
+      </li>
+    {{ end }}
+      <li>Pages<ul>
+        {{range .Site.Pages}}
+          <li><a href="{{ .Permalink}}">{{.LinkTitle}} [{{.Section}}]</a></li>
+        {{end}}
+      </ul></li>
+  </ul>
+</section>
+
+
+  </body>
+</html>

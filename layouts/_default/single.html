@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "nav.html" . }}
+    {{ partial "sidebar.html" . }}
+    <div id="container" class=""> <!-- container section start -->
+
+      <div id="main-content"> <!--main content start-->
+          <!-- <div class="panel-header"> </div> -->
+
+          <div class="panel-body">
+		    DEFAULT
+            {{ .Content }}
+          </div>
+          <!-- <div class="panel-nav"><a href="{{.Next.Title}}"><i class="fa fa-angle-double-down"></i></a></div> -->
+      </div> <!--main content end-->
+
+    </div> <!-- container section end -->
+    {{ partial "js.html" . }}
+  </body>
+</html>

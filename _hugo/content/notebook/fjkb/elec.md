@@ -27,7 +27,7 @@ date: 2015-11-20
   
 - http://kalerator.clueboard.co/
 - https://geekhack.org/index.php?topic=74139.0
-- 
+- https://github.com/skullydazed/kalerator
   
 - Single-switch PCB
   - https://geekhack.org/index.php?topic=55744.msg1254946#msg1254946

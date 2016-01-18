@@ -15,8 +15,8 @@ title: Redecentralize
 
  - **Título de la actividad**: Soluciones libres para entornos de trabajo/colaboración distribuidos multiplataforma
  - **Tipo**: Seminario
- - **GEAs**: [WebMod](https://github.com/FreeJaus/gea-webmod) | [Elide](https://github.com/FreeJaus/elide)
- - **Ponente(s)**: unai.martinezcorral
+ - **GEAs**: [WebMod](https://github.com/FreeJaus/gea-webmod) | [PRISM](https://github.com/FreeJaus/gea-PRISM) | [Elide](https://github.com/FreeJaus/elide)
+ - **Dinamización**: u.mc
  
 ---
 

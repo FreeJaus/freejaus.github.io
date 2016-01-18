@@ -9,7 +9,7 @@ date: 2015-11-20
 ---
 
 Algunos fabricantes conocidos de componentes de PC con modelos mecánicos son Corsair, Razer, Nox, Ozone, G.Skill, Newskill, SteelSeries, Mad Catz, Thermaltake, Logitech... En [reddit.com/r/MechanicalKeyboards/wiki/buying_guide#wiki_cost](https://www.reddit.com/r/MechanicalKeyboards/wiki/buying_guide#wiki_cost) se puede consultar una lista más completa de modelos.
-También en [reddit.com/r/MechanicalKeyboards/wiki/recommendedsellers](https://www.reddit.com/r/MechanicalKeyboards/wiki/recommendedsellers#wiki_resellers_recommended_by_redditors_that_ship_international_.28alphabetical_order.29) se listan las tiendas de todo el mundo que importan y revenden teclados mecánicos. En la tabla siguiente, se resumen las características de algunos modelos comerciales. Se muestra prácticamente todo el catálogo de CoolerMaster, por su variedad.
+También en [reddit.com/r/MechanicalKeyboards/wiki/recommendedsellers](https://www.reddit.com/r/MechanicalKeyboards/wiki/recommendedsellers#wiki_resellers_recommended_by_redditors_that_ship_international_.28alphabetical_order.29) se listan las tiendas de todo el mundo que importan y revenden teclados mecánicos. En [Go Mechanical Keyboard](http://gomechanicalkeyboard.com/) se analizan y se recomiendan modelos en diferentes rangos de precios. En la tabla siguiente, se resumen las características de algunos modelos comerciales. Se muestra prácticamente todo el catálogo de CoolerMaster, por su variedad.
 
 ---
 

@@ -17,6 +17,17 @@ Tras analizar el [mercado](/notebook/fjkb/commercial), y observar la limitada of
  
 Naturalmente, no hemos sido los primeros en plantear esta posibilidad. [GeekHack](http://wiki.geekhack.org/index.php?title=GeekHackWiki) es un espacio dedicado a dispositivos de entrada (teclados, touchpads, trackballs...), con especial interés en la ergonomía y en disposiciones no usuales. Entre otras, hay secciones específicas sobre keycaps, y sobre cases para teclados CoolerMaster. En [DESKthority](http://deskthority.net/) también se reúnen muchos entusiatas de los teclados mecánicos, y disponen de una [wiki](http://deskthority.net/wiki/Main_Page). La comunidad con más crecimiento en los últimos años está en [reddit.com/r/MechanicalKeyboards](https://www.reddit.com/r/MechanicalKeyboards/), aunque es necesario acostumbrarse a la forma de estructurar el contenido en la plataforma.
 
+<!--
+- [Phantom](http://deskthority.net/wiki/Phantom)
+  - [Phantom instruction guide](http://deskthority.net/wiki/Phantom_instruction_guide)
+  - [Phantom group buy](http://deskthority.net/wiki/Phantom_Group_Buy)
+  - Firmware
+     - https://geekhack.org/index.php?topic=26742.0
+     - https://github.com/BathroomEpiphanies/AVR-Keyboard
+     - https://github.com/Tranquilite0/Teensy-Keyboard
+     - https://github.com/doxkb/tmk_keyboard
+-->
+
 En 2012, bajo el nombre [Phantom](http://deskthority.net/wiki/Phantom), diseñaron en DESKthority el PCB y soporte de un teclado basado en la tarjeta [Teensy](https://www.pjrc.com/teensy/) (compatible con Arduino). Pensado para encajar en un [Filco Majestouch](http://deskthority.net/wiki/Filco_Majestouch), están disponibles los esquemas y el firmware, además de los registros de múltiples pedidos conjuntos de piezas y keysets. Es especialmente reseñable que se diseñó un solo PCB para soportar diferentes layouts (ANSI, ANSI/WIN, ISO, ISO/WIN y 7BIT), incluso formato Compact (aunque el original fuera TKL). Es, por lo tanto, una base muy sólida sobre la que empezar. Dentro del abanico de layouts compatibles, la única modificación que requiere el PCB, a priori, es el soporte para los LEDs de retroiluminación. 
 
 Es digno de subrayar la cantidad de contenido que hay en la red, especialmente generado durante los últimos cinco años, con el éxito de Arduino, las impresoras 3D y el crowdfunding como impulsores. Sin embargo, la mayoría de la información está incompleta o muy dispersa. No se ha encontrado ningún proyecto documentado de principio a fin. En general, las referencias se centran en algún aspecto específico (la base, el layout, los switches, los keycaps, el firmware...). Las comunidades anteriores reúnen prácticamente toda la información necesaria, pero se encuentra mezclada con referencias a múltiples fabricantes y modelos.

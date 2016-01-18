@@ -9,6 +9,35 @@ menu:
 title: Taller de vehículos de radio control
 ---
 
+# [[FreeJaus](https://github.com/FreeJaus)] Formación
+
+---
+
+- **Título de la actividad**: Vehículos RC
+- **Tipo**: Taller
+- **GEAs**: [ArduPi](https://github.com/FreeJaus/ardupi)
+- **Dinamización**: u.mc, m.mc, z.gb 
+ 
+---
+
+- **Lugar**: Gazteleku Urduliz
+- **Formato**: Taller (120')
+- **Sesiones**:
+  1. 201Xxxx00: Montaje del chasis y la dirección con las piezas del kit. Desmontaje del vehículo averiado.
+  2. 2016Feb28: Montaje de los componentes eléctricos/electrónicos.
+   
+---
+
+- **Objetivos**:
+  - Generales:
+     - 
+  - Primera sesión:
+     - 
+  - Segunda sesión:
+     - 
+
+---	 
+
 Existen muchos tipos de vehículos de radio control: coches, camiones, helicópteros/cuadricópteros/octacópteros, botes/barcos, aviones, tanques, de construcción (excavadoras, grúas, carretillas, etc.), submarinos... tantos como la imaginación y el tiempo libre de los entusiastas pueden alcanzar. Aunque la mayoría son modelos o juguetes, existen también maquetas que reproducen fielmente cada detalle a escala. Asimismo, existen modelos tan pequeños como una caja de cerillas, y tan grandes como para transportar a una persona. Consecuentemente, las prestaciones, el coste y las utilidades que se les pueden dar son muy diferentes. Pero, independientemente del tipo y tamaño, el diseño de un vehículo de radio control se puede dividir en cuatro bloques:
 
 - Chasis/carrocería/fuselaje: estructura principal del vehículo que condiciona el tipo, el tamaño y la funcionalidad. En su diseño o elección se deben tener en cuenta los materiales y el entorno donde se va a utilizar. Debe tener espacio suficiente y adecuado para alojar el resto de componentes requeridos para el funcionamiento. Se debe estudiar el tipo de movimiento y la potencia necesaria en cada mecanismo accionado por un motor.

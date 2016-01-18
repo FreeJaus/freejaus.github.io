@@ -1,10 +1,10 @@
 ---
 menu:
   notebook:
-    name: 'Motor Drives'
+    name: 'Driving Motors'
     identifier: 'nb-mots'
     pre: "cogs"
     weight: -160
 
-title: Motor Drives
+title: Driving Motors
 ---

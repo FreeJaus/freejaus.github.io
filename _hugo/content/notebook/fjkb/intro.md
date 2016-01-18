@@ -17,32 +17,44 @@ publishdate: 2016-01-01
 date: 2016-01-01
 ---
 
+# [[FreeJaus](https://github.com/FreeJaus)] Investigación
+
+---
+
+- **Título de la actividad**: [FJKB] Libre DIY Mechanical Keyboard
+- **Tipo**: TAZ
+- **GEAs**: [ArduPi](https://github.com/FreeJaus/ardupi)
+- **Participante(s)**: u.mc, m.mc, z.gb 
+ 
+---
+
+- **Lugar**: Seminario 7i27 (Asociación juvenil FreeJaus Ikasle elkartea)
+- **Formato**: autónomo
+- **Sesiones**:
+  1. 
+   
+---
+
+- **Objetivos**:
+  - Generales:
+     - 
+
+---
+
 - ¿Qué es un teclado mecánico?
+  - ¿Por qué hoy en día la mayoría son de membrana?
+  - ¿Y los capacitivos/táctiles?
+- [Mechanical Keyboard Guide]( http://www.daskeyboard.com/blog/mechanical-keyboard-guide/)
+- [[guide] Common Misconceptions in the Mech Community - a Layman's Guide](https://www.reddit.com/r/MechanicalKeyboards/comments/3vgxfg/guide_common_misconceptions_in_the_mech_community/)
 - ¿Por qué invertir en uno? ¿Por qué no hacerlo?
-- ¿Por qué hoy en día la mayoría son de membrana?
-- ¿Y los capacitivos/táctiles?
 
-- http://www.daskeyboard.com/blog/mechanical-keyboard-guide/
-- http://gomechanicalkeyboard.com/
-
+---
+  
 - Switch tester keychain
-- http://www.openbuilds.com/builds/openbuilds-ox-cnc-machine.341/
-- buildersbot
-- voxel ox  http://www.openbuilds.com/builds/voxel-ox-extendable-3d-printer-and-cnc-platform.2418/
-- http://reprap.org/wiki/RepRap_Machines
-
 - http://foro.noticias3d.com/vbulletin/printthread.php?t=390311&pp=10&page=427
 
-mejorar interfaz keyboard-layout editor, CSS sólo?
-
-ejemplo de pedido de grupo (group buy, GB) organizado por Matias
-http://matias.ca/60/pc/
-
-https://www.reddit.com/r/MechanicalKeyboards/comments/3vgxfg/guide_common_misconceptions_in_the_mech_community/
-
-https://www.reddit.com/r/MechanicalKeyboards
-
-http://www.keybr.com/#!practice
+- Ejemplo de pedido de grupo (group buy, GB) organizado por Matias: http://matias.ca/60/pc/
+- https://store.getfreewrite.com/
 
 ---
 
@@ -81,3 +93,8 @@ Puestos a realizar un desembolso de 80-150€ en un teclado, las característica
 - Extras
   - [Opt] USB Hub
   - [Opt] Audio
+  
+# Viernes tarde
+
+- http://www.keybr.com/#!practice
+- Mejorar interfaz keyboard-layout editor, CSS sólo?

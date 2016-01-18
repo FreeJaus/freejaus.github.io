@@ -38,4 +38,5 @@ En lo que respecta al soporte del teclado en sí, y a la adición modular de ext
   - Wrist-pad (soft foam, hardwood)
   - Keycap Puller
 
+- https://bitbucket.org/afqueiruga/kbl2scad
 - Idea para las patas: https://www.indiegogo.com/projects/ergodox-ez-an-incredible-mechanical-keyboard#/

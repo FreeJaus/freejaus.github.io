@@ -1,5 +1,5 @@
 ---
-categories: [ nb-rpi ]
+categories: [ nb-elin ]
 
 title: Base configuration
 keywords:

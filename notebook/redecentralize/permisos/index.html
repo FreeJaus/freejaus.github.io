@@ -4,6 +4,9 @@
   
   
   
+    
+    
+  
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,9 +22,9 @@
   <meta name="author" content="This is the author">
   <meta name="generator" content="Hugo 0.16-DEV" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <title>ToDo - FreeJaus - Forge</title>
-  <meta content="ToDo - FreeJaus - Forge" property="og:title">
-  <meta content="todo" name="keywords">
+  <title>1. Permisos de usuario - FreeJaus - Forge</title>
+  <meta content="1. Permisos de usuario - FreeJaus - Forge" property="og:title">
+  <meta content="" name="keywords">
 
   <!-- Bootstrap and Font Awesome CSS -->
   
@@ -55,14 +58,14 @@
       <i class="fa fa-calendar-check-o"></i>
     </div>
     <div title="last updated">
-      <span>2015/11/20 00:00</span>
+      <span>2016/01/01 00:00</span>
       <i class="fa fa-calendar-plus-o"></i>
     </div>
   </span>
 
   <span style="width: 100%; text-align: center;">
-    <div style="font-size: 16px; font-weight: bold;"><a href="#page-top">Notebook - ToDo</a></div>
-    <div style="font-size: 10px; font-style: italic">todo</div>
+    <div style="font-size: 16px; font-weight: bold;"><a href="#page-top">Notebook - 1. Permisos de usuario</a></div>
+    <div style="font-size: 10px; font-style: italic"></div>
   </span>
 
   <!-- /.container-fluid -->
@@ -117,20 +120,20 @@
       
       
       
-        <li class="sub-menu">
+        <li class="sub-menu active">
           <a class="" href="/notebook/redecentralize/overview/">
-            <span class="menu-arrow fa fa-angle-right"></span>
+            <span class="menu-arrow fa fa-angle-down"></span>
             <i class="fa fa-exchange"></i>
             <span>Redecentralize</span>
           </a>
-          <ul class="sub">
+          <ul class="sub open">
             
             
               <li class="">
                 <a href="/notebook/redecentralize/contexto/"><i class="fa fa-caret-right"></i>0. Contexto</a>
               </li>
             
-              <li class="">
+              <li class="active">
                 <a href="/notebook/redecentralize/permisos/"><i class="fa fa-caret-right"></i>1. Permisos de usuario</a>
               </li>
             
@@ -280,7 +283,7 @@
       
       
       
-        <li class="active">
+        <li class="">
           <a class="" href="/notebook/todo/">
             <i class="fa fa-list-alt"></i>
             <span>ToDo</span>
@@ -320,28 +323,46 @@
       <div id="main-content"> 
           
           
-          <a href="/notebook/deskbot/soft/"><div class="panel-nav" style="margin-bottom: -10px;"><i class="fa fa-angle-double-up"></i></div></a>
+          <a href="/notebook/redecentralize/contexto/"><div class="panel-nav" style="margin-bottom: -10px;"><i class="fa fa-angle-double-up"></i></div></a>
           
 
           <div class="panel-body">  
-            <ul>
-<li><a href="https://justgetflux.com/">https://justgetflux.com/</a></li>
-<li><code>tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system /</code></li>
+            
 
-<li><p><a href="http://www.jide.com/en/remixos">http://www.jide.com/en/remixos</a></p></li>
-
-<li><p>PHP Dolibarr</p>
+<h1 id="windows:82c09ca7394a1afd0735c920df063748">Windows</h1>
 
 <ul>
-<li>Plantillas PDF (facturas, pedidos, etc.)</li>
-<li><a href="https://www.dolistore.com/en/modules/457-Mod--le-de-document-Alpiroc.html">https://www.dolistore.com/en/modules/457-Mod--le-de-document-Alpiroc.html</a></li>
-</ul></li>
+<li>[CONF] En el host: usuario.</li>
+<li>[INFO] IP o nombre del equipo. La IP puede consultarse mediante <code>ipconfig</code> en la consola (<em>Inicio -&gt; cmd.exe</em>) (<a href="https://technet.microsoft.com/en-us/library/bb490921.aspx">más info sobre <code>ipconfig</code></a>). El nombre del host puede consultarse en <em>Equipo -&gt; Propiedades -&gt; Nombre del equipo</em>.</li>
+<li>[INFO] Usuario y contraseña en el host.</li>
+<li>[CONF] En el host: recurso con permisos de, al menos, lectura.</li>
+<li>[CONF] Verificar que el puerto 139 o 445 no está bloqueado (<a href="https://en.wikipedia.org/wiki/Net_use">se utilizan</a>: <a href="https://es.wikipedia.org/wiki/Server_Message_Block">SMB</a> y <a href="https://es.wikipedia.org/wiki/NetBIOS">NetBios</a>).</li>
 </ul>
+
+<h1 id="linux:82c09ca7394a1afd0735c920df063748">Linux</h1>
+
+<p>los ficheros/directos que empiezan por <code>.</code> son ocultos (no se muestran con <code>ls</code>, es necesario <code>ls -a</code>)</p>
+
+<pre><code>/home/&lt;usuario&gt;/
+~/
+
+sudo mkdir /home/shared
+sudo groupadd gded
+sudo chown :gded /home/shared
+sudo chmod 770 /home/shared
+
+sudo usermod -a -G gded 1138-4EB
+
+cat /etc/group
+
+du -sh */
+tree -d
+</code></pre>
 
           </div>
 
           
-          <a href="/notebook/minideskbot/minideskbot/"><div class="panel-nav" style="margin-top: -10px;"><i class="fa fa-angle-double-down"></i></div></a>
+          <a href="/notebook/redecentralize/accesolocal/"><div class="panel-nav" style="margin-top: -10px;"><i class="fa fa-angle-double-down"></i></div></a>
           
       </div> 
 

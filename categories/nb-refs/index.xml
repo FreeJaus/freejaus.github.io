@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nb Refs on FreeJaus - Forge</title>
-    <link>http://forja.freejaus.com/categories/nb-refs/</link>
+    <link>http://freejaus.github.io/categories/nb-refs/</link>
     <description>Recent content in Nb Refs on FreeJaus - Forge</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://forja.freejaus.com/categories/nb-refs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://freejaus.github.io/categories/nb-refs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Go(lang)</title>
-      <link>http://forja.freejaus.com/notebook/refs/golang/</link>
+      <link>http://freejaus.github.io/notebook/refs/golang/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://forja.freejaus.com/notebook/refs/golang/</guid>
+      <guid>http://freejaus.github.io/notebook/refs/golang/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://go-tour-es.appspot.com&#34;&gt;https://go-tour-es.appspot.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://gobyexample.com/&#34;&gt;https://gobyexample.com/&lt;/a&gt;&lt;/li&gt;

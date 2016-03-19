@@ -1,0 +1,1375 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nb Fjkb on FreeJaus - Forge</title>
+    <link>http://freejaus.github.io/categories/nb-fjkb/</link>
+    <description>Recent content in Nb Fjkb on FreeJaus - Forge</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 20 Nov 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://freejaus.github.io/categories/nb-fjkb/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>0. Full custom</title>
+      <link>http://freejaus.github.io/notebook/fjkb/overview/</link>
+      <pubDate>Fri, 20 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://freejaus.github.io/notebook/fjkb/overview/</guid>
+      <description>&lt;p&gt;Tras analizar el &lt;a href=&#34;http://freejaus.github.io/notebook/fjkb/commercial&#34;&gt;mercado&lt;/a&gt;, y observar la limitada oferta disponible en europa para layouts ISO compactos en formato ES, se plantea la posibilidad de fabricar un teclado modular libre -no sólo open source- completamente a medida, lo que implica tanto el diseño mecánico como el electrónico e informático. Se analizarán los costes detalladamente. Por un lado, para disponer un presupuesto completo que permita valorar si merece la pena fabricar un número muy reducido de unidades (1-3), o si es más razonable adquirir un modelo comercial/custom y modificarlo. Por otro lado, para estudiar la viabilidad comercial de una startup que ofrezca un catálogo de piezas full custom para teclados mecánicos DIY. Tratándose de un proyecto libre, el margen de beneficio de la startup estará en:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;La disposición de la maquinaria necesaria para fabricar las piezas, o del stockage de grandes lotes.&lt;/li&gt;
+&lt;li&gt;El know-how:
+
+&lt;ul&gt;
+&lt;li&gt;Para entusiastas, que quieren diseñar y personalizar cada parte del teclado hasta disponer de parametrizaciones/descripciones completas, pero no quieren profundizar en los detalles de fabricación/programación.&lt;/li&gt;
+&lt;li&gt;Para usuarios sin conocimientos técnicos, que no saben utilizar las herramientas para generar parametrizaciones/descripciones completas, y requieren trabajos de asesoría y/o diseño.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Naturalmente, no hemos sido los primeros en plantear esta posibilidad. &lt;a href=&#34;http://wiki.geekhack.org/index.php?title=GeekHackWiki&#34;&gt;GeekHack&lt;/a&gt; es un espacio dedicado a dispositivos de entrada (teclados, touchpads, trackballs&amp;hellip;), con especial interés en la ergonomía y en disposiciones no usuales. Entre otras, hay secciones específicas sobre keycaps, y sobre cases para teclados CoolerMaster. En &lt;a href=&#34;http://deskthority.net/&#34;&gt;DESKthority&lt;/a&gt; también se reúnen muchos entusiatas de los teclados mecánicos, y disponen de una &lt;a href=&#34;http://deskthority.net/wiki/Main_Page&#34;&gt;wiki&lt;/a&gt;. La comunidad con más crecimiento en los últimos años está en &lt;a href=&#34;https://www.reddit.com/r/MechanicalKeyboards/&#34;&gt;reddit.com/r/MechanicalKeyboards&lt;/a&gt;, aunque es necesario acostumbrarse a la forma de estructurar el contenido en la plataforma.&lt;/p&gt;
+
+&lt;!--
+- [Phantom](http://deskthority.net/wiki/Phantom)
+  - [Phantom instruction guide](http://deskthority.net/wiki/Phantom_instruction_guide)
+  - [Phantom group buy](http://deskthority.net/wiki/Phantom_Group_Buy)
+  - Firmware
+     - https://geekhack.org/index.php?topic=26742.0
+     - https://github.com/BathroomEpiphanies/AVR-Keyboard
+     - https://github.com/Tranquilite0/Teensy-Keyboard
+     - https://github.com/doxkb/tmk_keyboard
+--&gt;
+
+&lt;p&gt;En 2012, bajo el nombre &lt;a href=&#34;http://deskthority.net/wiki/Phantom&#34;&gt;Phantom&lt;/a&gt;, diseñaron en DESKthority el PCB y soporte de un teclado basado en la tarjeta &lt;a href=&#34;https://www.pjrc.com/teensy/&#34;&gt;Teensy&lt;/a&gt; (compatible con Arduino). Pensado para encajar en un &lt;a href=&#34;http://deskthority.net/wiki/Filco_Majestouch&#34;&gt;Filco Majestouch&lt;/a&gt;, están disponibles los esquemas y el firmware, además de los registros de múltiples pedidos conjuntos de piezas y keysets. Es especialmente reseñable que se diseñó un solo PCB para soportar diferentes layouts (ANSI, ANSI/WIN, ISO, ISO/WIN y 7BIT), incluso formato Compact (aunque el original fuera TKL). Es, por lo tanto, una base muy sólida sobre la que empezar. Dentro del abanico de layouts compatibles, la única modificación que requiere el PCB, a priori, es el soporte para los LEDs de retroiluminación.&lt;/p&gt;
+
+&lt;p&gt;Es digno de subrayar la cantidad de contenido que hay en la red, especialmente generado durante los últimos cinco años, con el éxito de Arduino, las impresoras 3D y el crowdfunding como impulsores. Sin embargo, la mayoría de la información está incompleta o muy dispersa. No se ha encontrado ningún proyecto documentado de principio a fin. En general, las referencias se centran en algún aspecto específico (la base, el layout, los switches, los keycaps, el firmware&amp;hellip;). Las comunidades anteriores reúnen prácticamente toda la información necesaria, pero se encuentra mezclada con referencias a múltiples fabricantes y modelos.&lt;/p&gt;
+
+&lt;p&gt;Por lo anterior, el objetivo es elaborar una guía en cuatro bloques, sólo con la información imprescindible para tomar las decisiones críticas en el diseño y la fabricación de un teclado full-custom. Se añadirán referencias adicionales para que se pueda profundizar en cada aspecto. A la hora de montar el teclado, todos los componentes tienen que complementarse para ofrecer la funcionalidad de seada. Por ello, resulta difícil analizar cada parte por separado. Se recomienda realizar una primera lectura ligera, y navegar, tanto por las páginas de algunos de los fabricantes mencionados anteriormente como GeekHack y DESKthority, para tener una idea general de la variabilidad en el interesante mundo del diseño de teclados, y perfilar las preferencias a la hora de afrontar la toma de decisiones. Los contenidos de los bloques en que se divide la guía se han escogido de forma que cada uno de ellos se ve condicionado por las decisiones tomadas en los anteriores, pero no por los siguientes. A continuación se muestran las palabras clave de cada uno:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Layout&lt;/li&gt;
+&lt;li&gt;Keys: switches keycaps stabilizers&lt;/li&gt;
+&lt;li&gt;Electronics: PCB controller&lt;/li&gt;
+&lt;li&gt;Mechanics: base plate connectors&lt;/li&gt;
+&lt;li&gt;Tools&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;El quinto bloque, sobre herramientas, reune referencias para fabricar las máquinas que permitan no tener que externalizar ninguno de los pasos de fabricación y montaje. Esta sección está destinada, por tanto, a analizar la viabilidad de producir a pequeña-media escala los accesorios que no están disponibles en europa y cuyos costes de importanción encarecen notablemente el producto. También, la de ofrecer una personalización para pequeñas tiradas que no ofrecen otros fabricantes con mayor volumen de negocio.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>1. Layout</title>
+      <link>http://freejaus.github.io/notebook/fjkb/layout/</link>
+      <pubDate>Fri, 20 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://freejaus.github.io/notebook/fjkb/layout/</guid>
+      <description>
+
+&lt;p&gt;El &lt;a href=&#34;https://en.wikipedia.org/wiki/Keyboard_layout&#34;&gt;layout del teclado&lt;/a&gt; es el número de teclas, el tamaño de cada una de ellas, la disposición de las mismas, la leyenda y/o su funcionalidad. La usabilidad y la experiencia de usuario dependen de un equilibrio entre todas las anteriores, pero condicionan diferentes partes del diseño:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Layout mecánico: el número de teclas, el tamaño y su posición
+
+&lt;ul&gt;
+&lt;li&gt;Dimensiones mínimas &lt;code&gt;w,h&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PCB&lt;/li&gt;
+&lt;li&gt;Base&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Offset &lt;code&gt;x,y&lt;/code&gt; de cada tecla
+
+&lt;ul&gt;
+&lt;li&gt;Layout del PCB&lt;/li&gt;
+&lt;li&gt;[Opt] Cortes  en el plate&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Tamaño &lt;code&gt;w,h&lt;/code&gt; de cada tecla
+
+&lt;ul&gt;
+&lt;li&gt;Keycaps&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Layout visual: las leyendas
+
+&lt;ul&gt;
+&lt;li&gt;Posición &lt;code&gt;x,y&lt;/code&gt; -en rango (1:4,1:3)- y contenido &lt;code&gt;&#39;str&#39;&lt;/code&gt; de las leyendas de cada tecla
+
+&lt;ul&gt;
+&lt;li&gt;Keycaps&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Color de la tecla &lt;code&gt;#000000&lt;/code&gt; y de la leyenda &lt;code&gt;#000000&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Keycaps&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Layout funcional:
+
+&lt;ul&gt;
+&lt;li&gt;Funcionalidad normal, +shift, +fn, [opt] +macros de cada tecla
+
+&lt;ul&gt;
+&lt;li&gt;Controlador&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tanto los parámetros mecánicos como los visuales pueden representarse en un diseño en 2D y es habitual encontrar imágenes como la siguiente, ISO 105 QWERTY UK:&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:ISO_keyboard_%28105%29_QWERTY_UK.svg&#34;&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/ISO_keyboard_%28105%29_QWERTY_UK.svg/640px-ISO_keyboard_%28105%29_QWERTY_UK.svg.png&#34; alt=&#34;ISO 105 QWERTY UK&#34; /&gt;&lt;/a&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;El modelo anterior es el clásico en Europa, al que estamos acostumbrados (con diferentes leyendas y funcionalidad). Sin embargo, lo más común en las búsquedas es encontrar modelos ANSI 104, utilizados en Estados Unidos. La diferencia principal entre ambos es que ANSI tiene un shift izquierdo más ancho, mientras que en el ISO hay una tecla adicional a su lado. Al mismo tiempo, la tecla de Enter tiene doble altura en el ISO, aunque esto no supone una diferencia en el número total de teclas. En &lt;a href=&#34;https://deskthority.net/wiki/ANSI_vs_ISO&#34;&gt;ANSI vs ISO&lt;/a&gt; se muestran gráficamente la diferencias. Una variación de ANSI con nombre propio es la denominada &lt;em&gt;big-ass enter&lt;/em&gt; que tiene un backspace de una unidad de ancho, para dejar sitio para una tecla de enter de doble altura y 2.25 de anchura.&lt;/p&gt;
+
+&lt;h1 id=&#34;layout-mecánico:66b86657894595ae36af47f31c365fda&#34;&gt;Layout mecánico&lt;/h1&gt;
+
+&lt;p&gt;Es tradicional la inclusión o exclusión de teclas de &lt;em&gt;Windows&lt;/em&gt; en la línea inferior, sea en el modelo ANSI o ISO, lo que da como resultado cuatro layouts básicos (sin contar las variantes &lt;em&gt;big-ass enter&lt;/em&gt;). La amplia mayoría de los teclados comerciales disponibles para escritorio en formato full mantienen alguno de ellos como referencia. Con el abaratamiento de la fabricación de teclados de membrana, y la proliferación de dispositivos multimedia y smartphones, podemos encontrar muchas variaciones especialmente enfocadas a compactar el conjunto. No obstante, cabe subrayar que en el campo de los modelos mecánicos es común mantener tamaños estandar en las teclas, para así aprovechar la disponibilidad de keycaps y estabilizadores. Por ello, los sucesivos pasos que se han dado para compactar cada diseño son más fácilmente trazables.&lt;/p&gt;
+
+&lt;p&gt;A la hora de modificar las dimensiones de alguna tecla se debe tener en cuenta que se establece como referencia de las dimensiones una de las teclas de letras, que son normalmente cuadradas, y se dice que su tamaño es 1x1. Las variaciones se definen en multiplos de 0.5 o 0.25 unidades. En lo que respecta al eje vertical, la gran mayoría de teclas en prácticamente todos los layouts tienen una unidad. Las excepciones más habituales son la tecla de &lt;em&gt;Enter&lt;/em&gt; en los modelos ISO o &lt;em&gt;big-ass enter&lt;/em&gt;, y las teclas de &lt;em&gt;Enter&lt;/em&gt; y &lt;em&gt;+&lt;/em&gt; en el &lt;code&gt;numpad&lt;/code&gt;, que tienen doble altura. En la anchura hay más variedad, siendo comunes las medidas 1, 1.25, 1.5, 1.75, 2, 2.25 y hasta 2.75. Cuestión aparte son las barras de espacio, que suelen ser de 6.25 unidades, aunque las hay desde 3 hasta 10. En &lt;a href=&#34;https://deskthority.net/wiki/Space_bar_dimensions&#34;&gt;Space bar dimensions&lt;/a&gt; se puede ver un listado de los diferentes modelos para switches Cherry MX, y en &lt;a href=&#34;https://deskthority.net/wiki/Space_by_keyboard&#34;&gt;Space by keyboard&lt;/a&gt; las medidas concretas de alrededor de media centena de modelos de varias marcas. Asimismo, en &lt;a href=&#34;https://deskthority.net/wiki/Keycap_size_by_keyboard&#34;&gt;Keycap size by keyboard&lt;/a&gt; aparecen especificados los tamaños de layouts completos de varios modelos. A la hora de traducir las &lt;a href=&#34;https://deskthority.net/wiki/Unit&#34;&gt;unidades&lt;/a&gt; a dimensiones físicas, en el caso de Cherry se establece en 0.75 pulgadas (aproximadamente 19mm).&lt;/p&gt;
+
+&lt;p&gt;A continuación se enumeran los layouts más comunes, especificando las diferencias con respecto a un diseño full:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;NOTA: a la hora de hacer referencia a las filas, se utiliza la misma numeración que Signature Plastics, de acuerdo con &lt;a href=&#34;https://deskthority.net/wiki/Keyboard_profile#Numbering&#34;&gt;esta&lt;/a&gt; tabla.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Compact (&lt;sup&gt;92&lt;/sup&gt;&amp;frasl;&lt;sub&gt;93&lt;/sub&gt;):
+
+&lt;ul&gt;
+&lt;li&gt;Se elimina el conjunto de 13 teclas del bloque de navegación.&lt;/li&gt;
+&lt;li&gt;Las teclas eliminadas se superponen funcionalmente en el conjunto de 17 teclas de la derecha (al que se denomina genéricamente &lt;code&gt;numpad&lt;/code&gt; o &lt;code&gt;tenkey&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;La implementación habitual es que el conjunto resultante actúa como &lt;code&gt;numpad&lt;/code&gt; cuando &lt;code&gt;num lock&lt;/code&gt; está activado, y como navegación cuando no.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;a href=&#34;http://www.keyboard-layout-editor.com/##@@=Esc&amp;amp;_x:1%3B&amp;amp;=F1&amp;amp;=F2&amp;amp;=F3&amp;amp;=F4&amp;amp;_x:0.5%3B&amp;amp;=F5&amp;amp;=F6&amp;amp;=F7&amp;amp;=F8&amp;amp;_x:0.5%3B&amp;amp;=F9&amp;amp;=F10&amp;amp;=F11&amp;amp;=F12%3B&amp;amp;@_y:0.5%3B&amp;amp;=%C2%AC%0A%60&amp;amp;=!%0A1&amp;amp;=%22%0A2&amp;amp;=%C2%A3%0A3&amp;amp;=$%0A4&amp;amp;=%25%0A5&amp;amp;=^%0A6&amp;amp;=%2F&amp;amp;%0A7&amp;amp;=*%0A8&amp;amp;=%28%0A9&amp;amp;=%29%0A0&amp;amp;=%2F_%0A-&amp;amp;=+%0A%2F=&amp;amp;_w:2%3B&amp;amp;=Backspace&amp;amp;_x:0.5%3B&amp;amp;=Num%20Lock&amp;amp;=%2F%2F%0APrtSc&amp;amp;=*%0AScrLk&amp;amp;=-%0APause%3B&amp;amp;@_w:1.5%3B&amp;amp;=Tab&amp;amp;=Q&amp;amp;=W&amp;amp;=E&amp;amp;=R&amp;amp;=T&amp;amp;=Y&amp;amp;=U&amp;amp;=I&amp;amp;=O&amp;amp;=P&amp;amp;={%0A[&amp;amp;=}%0A]&amp;amp;_x:0.25&amp;amp;w:1.25&amp;amp;h:2&amp;amp;w2:1.5&amp;amp;h2:1&amp;amp;x2:-0.25%3B&amp;amp;=Enter&amp;amp;_x:0.5%3B&amp;amp;=7%0AIns&amp;amp;=8%0AHome&amp;amp;=9%0APgUp&amp;amp;_h:2%3B&amp;amp;=+%3B&amp;amp;@_w:1.75%3B&amp;amp;=Caps%20Lock&amp;amp;=A&amp;amp;=S&amp;amp;=D&amp;amp;=F&amp;amp;=G&amp;amp;=H&amp;amp;=J&amp;amp;=K&amp;amp;=L&amp;amp;=%2F:%0A%2F%3B&amp;amp;=%2F@%0A%27&amp;amp;=~%0A%23&amp;amp;_x:1.75%3B&amp;amp;=4%0ADel&amp;amp;=5%0AEnd&amp;amp;=6%0APgDn%3B&amp;amp;@_w:1.25%3B&amp;amp;=Shift&amp;amp;=|%0A&amp;amp;=Z&amp;amp;=X&amp;amp;=C&amp;amp;=V&amp;amp;=B&amp;amp;=N&amp;amp;=M&amp;amp;=%3C%0A,&amp;amp;=%3E%0A.&amp;amp;=%3F%0A%2F%2F&amp;amp;_w:2.75%3B&amp;amp;=Shift&amp;amp;_x:0.5%3B&amp;amp;=1&amp;amp;=2%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%E2%86%91&amp;amp;=3&amp;amp;_h:2%3B&amp;amp;=Enter%3B&amp;amp;@_w:1.25%3B&amp;amp;=Ctrl&amp;amp;_w:1.25%3B&amp;amp;=Win&amp;amp;_w:1.25%3B&amp;amp;=Alt&amp;amp;_a:7&amp;amp;w:6.25%3B&amp;amp;=&amp;amp;_a:4&amp;amp;w:1.25%3B&amp;amp;=AltGr&amp;amp;_w:1.25%3B&amp;amp;=Win&amp;amp;_w:1.25%3B&amp;amp;=Menu&amp;amp;_w:1.25%3B&amp;amp;=Ctrl&amp;amp;_x:0.5%3B&amp;amp;=0%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%E2%86%90&amp;amp;=00%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%E2%86%93&amp;amp;=.%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%E2%86%92&#34;&gt;&lt;img src=&#34;http://freejaus.github.io/img/fjkb/layouts/compact.png&#34; alt=&#34;Compact 91/92&#34; /&gt;&lt;/a&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://deskthority.net/wiki/Tenkeyless_keyboard&#34;&gt;Tenkeyless - TKL&lt;/a&gt; (&lt;sup&gt;87&lt;/sup&gt;&amp;frasl;&lt;sub&gt;88&lt;/sub&gt;):
+
+&lt;ul&gt;
+&lt;li&gt;Se elimina el conjunto de 17 teclas de la derecha (&lt;code&gt;numpad&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;No se compensa funcionalmente.&lt;/li&gt;
+&lt;li&gt;Es uno de los diseños con más auge en modelos comerciales para gaming. También es la referencia del &lt;a href=&#34;https://deskthority.net/wiki/Phantom&#34;&gt;Phantom&lt;/a&gt;, que se diseñó como un teclado TKL con cinco posibles layouts (ANSI, ANSIWIN, ISO, ISOWIN, y 7bit), aunque se indica que el diseño del PCB soporta más posibilidades.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;a href=&#34;http://www.keyboard-layout-editor.com/##@@=Esc&amp;amp;_x:1%3B&amp;amp;=F1&amp;amp;=F2&amp;amp;=F3&amp;amp;=F4&amp;amp;_x:0.5%3B&amp;amp;=F5&amp;amp;=F6&amp;amp;=F7&amp;amp;=F8&amp;amp;_x:0.5%3B&amp;amp;=F9&amp;amp;=F10&amp;amp;=F11&amp;amp;=F12&amp;amp;_x:0.25%3B&amp;amp;=PrtSc&amp;amp;=Scroll%20Lock&amp;amp;=Pause%0ABreak%3B&amp;amp;@_y:0.5%3B&amp;amp;=%C2%AC%0A%60&amp;amp;=!%0A1&amp;amp;=%22%0A2&amp;amp;=%C2%A3%0A3&amp;amp;=$%0A4&amp;amp;=%25%0A5&amp;amp;=^%0A6&amp;amp;=%2F&amp;amp;%0A7&amp;amp;=*%0A8&amp;amp;=%28%0A9&amp;amp;=%29%0A0&amp;amp;=%2F_%0A-&amp;amp;=+%0A%2F=&amp;amp;_w:2%3B&amp;amp;=Backspace&amp;amp;_x:0.25%3B&amp;amp;=Insert&amp;amp;=Home&amp;amp;=PgUp%3B&amp;amp;@_w:1.5%3B&amp;amp;=Tab&amp;amp;=Q&amp;amp;=W&amp;amp;=E&amp;amp;=R&amp;amp;=T&amp;amp;=Y&amp;amp;=U&amp;amp;=I&amp;amp;=O&amp;amp;=P&amp;amp;={%0A[&amp;amp;=}%0A]&amp;amp;_x:0.25&amp;amp;w:1.25&amp;amp;h:2&amp;amp;w2:1.5&amp;amp;h2:1&amp;amp;x2:-0.25%3B&amp;amp;=Enter&amp;amp;_x:0.25%3B&amp;amp;=Delete&amp;amp;=End&amp;amp;=PgDn%3B&amp;amp;@_w:1.75%3B&amp;amp;=Caps%20Lock&amp;amp;=A&amp;amp;=S&amp;amp;=D&amp;amp;=F&amp;amp;=G&amp;amp;=H&amp;amp;=J&amp;amp;=K&amp;amp;=L&amp;amp;=%2F:%0A%2F%3B&amp;amp;=%2F@%0A%27&amp;amp;=~%0A%23%3B&amp;amp;@_w:1.25%3B&amp;amp;=Shift&amp;amp;=|%0A&amp;amp;=Z&amp;amp;=X&amp;amp;=C&amp;amp;=V&amp;amp;=B&amp;amp;=N&amp;amp;=M&amp;amp;=%3C%0A,&amp;amp;=%3E%0A.&amp;amp;=%3F%0A%2F%2F&amp;amp;_w:2.75%3B&amp;amp;=Shift&amp;amp;_x:1.25%3B&amp;amp;=%E2%86%91%3B&amp;amp;@_w:1.25%3B&amp;amp;=Ctrl&amp;amp;_w:1.25%3B&amp;amp;=Win&amp;amp;_w:1.25%3B&amp;amp;=Alt&amp;amp;_a:7&amp;amp;w:6.25%3B&amp;amp;=&amp;amp;_a:4&amp;amp;w:1.25%3B&amp;amp;=AltGr&amp;amp;_w:1.25%3B&amp;amp;=Win&amp;amp;_w:1.25%3B&amp;amp;=Menu&amp;amp;_w:1.25%3B&amp;amp;=Ctrl&amp;amp;_x:0.25%3B&amp;amp;=%E2%86%90&amp;amp;=%E2%86%93&amp;amp;=%E2%86%92&#34;&gt;&lt;img src=&#34;http://freejaus.github.io/img/fjkb/layouts/TKL.png&#34; alt=&#34;TKL 87/88&#34; /&gt;&lt;/a&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://deskthority.net/wiki/75%25&#34;&gt;75%&lt;/a&gt; (&lt;sup&gt;84&lt;/sup&gt;&amp;frasl;&lt;sub&gt;85&lt;/sub&gt;):
+
+&lt;ul&gt;
+&lt;li&gt;Se elimina la separación entra la línea de función y el conjunto principal, y también entre los bloques de función.&lt;/li&gt;
+&lt;li&gt;Se elimina el conjunto de 17 teclas de la derecha (&lt;code&gt;numpad&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;El conjunto de 13 teclas de navegación se reduce a 11, y se incluye como una sola columna adicional sin separación con respecto al conjunto principal.&lt;/li&gt;
+&lt;li&gt;Para acomodar las flechas de dirección:
+
+&lt;ul&gt;
+&lt;li&gt;Se elimina la tecla de &lt;em&gt;Menu&lt;/em&gt; situada junto al &lt;em&gt;Ctrl&lt;/em&gt; derecho.&lt;/li&gt;
+&lt;li&gt;Se modifica el ancho de la tecla &lt;em&gt;Win&lt;/em&gt; izquierda de 1.25 a 1.&lt;/li&gt;
+&lt;li&gt;Se desplazan &lt;em&gt;Alt&lt;/em&gt; izq. y la barra espaciadora 0.25 a la izquierda.&lt;/li&gt;
+&lt;li&gt;Se modifica el ancho de &lt;em&gt;Alt Gr&lt;/em&gt; y &lt;em&gt;Win&lt;/em&gt; dch. de 1.25 a 1.&lt;/li&gt;
+&lt;li&gt;Se alinea la última fila a la izq.&lt;/li&gt;
+&lt;li&gt;Se añaden tres teclas de 1 en el hueco creado.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;[Var.] Alternativamente, se puede reducir la barra de espacio de 6.25 a 5.5, de forma que no es necesario estrechar &lt;em&gt;Menu&lt;/em&gt;, &lt;em&gt;Alt&lt;/em&gt; izq,, ni &lt;em&gt;Win&lt;/em&gt; dch.&lt;/li&gt;
+&lt;li&gt;Funcionalmente, &lt;em&gt;PrtScr&lt;/em&gt;, &lt;em&gt;NumLk&lt;/em&gt;, &lt;em&gt;Pause&lt;/em&gt;, &lt;em&gt;ScrLk&lt;/em&gt;, &lt;em&gt;Del&lt;/em&gt; e &lt;em&gt;Ins&lt;/em&gt;, se mapean en tres teclas.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;a href=&#34;http://www.keyboard-layout-editor.com/##@@_a:6%3B&amp;amp;=Esc&amp;amp;=F1&amp;amp;=F2&amp;amp;=F3&amp;amp;=F4&amp;amp;=F5&amp;amp;=F6&amp;amp;=F7&amp;amp;=F8&amp;amp;=F9&amp;amp;=F10&amp;amp;=F11&amp;amp;=F12&amp;amp;_a:4%3B&amp;amp;=PrtSc%0ANmLk&amp;amp;=Pause%0AScrLk&amp;amp;=Del%0AIns%3B&amp;amp;@=%C2%AC%0A%60&amp;amp;=!%0A1&amp;amp;=%22%0A2&amp;amp;=%C2%A3%0A3&amp;amp;=$%0A4&amp;amp;=%25%0A5&amp;amp;=^%0A6&amp;amp;=%2F&amp;amp;%0A7&amp;amp;=*%0A8&amp;amp;=%28%0A9&amp;amp;=%29%0A0&amp;amp;=%2F_%0A-&amp;amp;=+%0A%2F=&amp;amp;_w:2%3B&amp;amp;=Backspace&amp;amp;_a:6%3B&amp;amp;=Home%3B&amp;amp;@_a:4&amp;amp;w:1.5%3B&amp;amp;=Tab&amp;amp;=Q&amp;amp;=W&amp;amp;=E&amp;amp;=R&amp;amp;=T&amp;amp;=Y&amp;amp;=U&amp;amp;=I&amp;amp;=O&amp;amp;=P&amp;amp;={%0A[&amp;amp;=}%0A]&amp;amp;_x:0.25&amp;amp;w:1.25&amp;amp;h:2&amp;amp;w2:1.5&amp;amp;h2:1&amp;amp;x2:-0.25%3B&amp;amp;=Enter&amp;amp;_a:6%3B&amp;amp;=PgUp%3B&amp;amp;@_a:4&amp;amp;w:1.75%3B&amp;amp;=Caps%20Lock&amp;amp;=A&amp;amp;=S&amp;amp;=D&amp;amp;=F&amp;amp;=G&amp;amp;=H&amp;amp;=J&amp;amp;=K&amp;amp;=L&amp;amp;=%2F:%0A%2F%3B&amp;amp;=%2F@%0A%27&amp;amp;=~%0A%23&amp;amp;_x:1.25&amp;amp;a:6%3B&amp;amp;=PgDn%3B&amp;amp;@_w:1.25%3B&amp;amp;=Shift&amp;amp;_a:4%3B&amp;amp;=|%0A&amp;amp;=Z&amp;amp;=X&amp;amp;=C&amp;amp;=V&amp;amp;=B&amp;amp;=N&amp;amp;=M&amp;amp;=%3C%0A,&amp;amp;=%3E%0A.&amp;amp;=%3F%0A%2F%2F&amp;amp;_a:6&amp;amp;w:1.75%3B&amp;amp;=Shift&amp;amp;_a:7%3B&amp;amp;=%E2%86%91&amp;amp;_a:6%3B&amp;amp;=End%3B&amp;amp;@_w:1.5%3B&amp;amp;=Ctrl&amp;amp;=Win&amp;amp;_w:1.5%3B&amp;amp;=Alt&amp;amp;_a:7&amp;amp;w:5.5%3B&amp;amp;=&amp;amp;_a:6&amp;amp;w:1.25%3B&amp;amp;=AltGr&amp;amp;=Fn&amp;amp;_w:1.25%3B&amp;amp;=Ctrl&amp;amp;_a:7%3B&amp;amp;=%E2%86%90&amp;amp;=%E2%86%93&amp;amp;=%E2%86%92&#34;&gt;&lt;img src=&#34;http://freejaus.github.io/img/fjkb/layouts/75percent.png&#34; alt=&#34;75% 84/85&#34; /&gt;&lt;/a&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;65%, a medio camino entre 75% y 60%, distribución de cinco filas y una columna adicional a la derecha. Visto en &lt;a href=&#34;https://geekhack.org/index.php?topic=75079.0&#34;&gt;A 65% Custom&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://deskthority.net/wiki/60%25&#34;&gt;60%&lt;/a&gt; (&lt;sup&gt;61&lt;/sup&gt;&amp;frasl;&lt;sub&gt;62&lt;/sub&gt;) [hasta &lt;sup&gt;67&lt;/sup&gt;&amp;frasl;&lt;sub&gt;68&lt;/sub&gt; con variaciones]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Se eliminan el conjunto de 13 teclas de navegación.&lt;/li&gt;
+&lt;li&gt;Se elimina el conjunto de 17 teclas de la derecha (&lt;code&gt;numpad&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Se elimina la línea de función (13 teclas).&lt;/li&gt;
+&lt;li&gt;Funcionalmente,
+
+&lt;ul&gt;
+&lt;li&gt;La tecla &lt;em&gt;Esc&lt;/em&gt; se situa en la línea 1.&lt;/li&gt;
+&lt;li&gt;Las teclas de función se mapean sobre la línea 1.&lt;/li&gt;
+&lt;li&gt;Las teclas de navegación se mapean mediante una o más teclas &lt;em&gt;Fn&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;[Var. Esc] +1: se modifica la primera línea para añadir una tecla de &lt;em&gt;Esc&lt;/em&gt; específica:
+
+&lt;ul&gt;
+&lt;li&gt;Se reduce la anchura del &lt;em&gt;Backspace&lt;/em&gt; de 2 a 1, y se alinea a la derecha.&lt;/li&gt;
+&lt;li&gt;Se desplaza la primera tecla de la fila al hueco que se ha creado.&lt;/li&gt;
+&lt;li&gt;Se añade una tecla en la primera posición de la primera fila.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;[Var. RShift] +1: se modifica la anchura del Shift derecho de 2.75 a 1.75, y se añade una tecla de 1 en el hueco creado. Visto en &lt;a href=&#34;https://deskthority.net/wiki/KBT_Pure&#34;&gt;KBT Pure&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;[Var. Dir] +3: se modifican las dos últimas líneas para acomodar flechas de dirección y una tecla &lt;em&gt;Del&lt;/em&gt;:
+
+&lt;ul&gt;
+&lt;li&gt;Penúltima fila
+
+&lt;ul&gt;
+&lt;li&gt;La anchura del &lt;em&gt;Shift&lt;/em&gt; izquierdo se reduce de 1.25 a 1, y se desplazan todas las teclas restantes de la fila .25 a la izquierda.&lt;/li&gt;
+&lt;li&gt;Se reduce la anchura del &lt;em&gt;Shift&lt;/em&gt; derecho de 2.75 a 1.&lt;/li&gt;
+&lt;li&gt;Se añaden dos teclas de 1 en el hueco de 2 que se ha creado.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Última fila
+
+&lt;ul&gt;
+&lt;li&gt;Se modifica la anchura de las cuatro teclas a la derecha de la barra espaciadora de 1.25 a 1. Si se va a reducir la barra espaciadora también (variación siguiente), sólo hay que modificar 3 de las 4.&lt;/li&gt;
+&lt;li&gt;Se añade una tecla en el hueco creado.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;[Var. Dir + Fn] [+3]+2: además de la variación anterior, se añaden dos teclas &lt;em&gt;Fn&lt;/em&gt; adicionales en la última fila:
+
+&lt;ul&gt;
+&lt;li&gt;Se modifica la anchura del &lt;em&gt;Ctrl&lt;/em&gt; izquierdo de 1.25 a 1.75.&lt;/li&gt;
+&lt;li&gt;Se desplazan las teclas &lt;em&gt;Win&lt;/em&gt; y &lt;em&gt;Alt&lt;/em&gt; izquierdas 0.5 a la derecha.&lt;/li&gt;
+&lt;li&gt;Se modifica el ancho de la barra espaciadora de 6.25 a 3, y se desplaza 1.75 a la derecha.&lt;/li&gt;
+&lt;li&gt;Se añaden dos teclas de 1.25 en los huecos creado a cada lado de la barra espaciadora. Visto en &lt;a href=&#34;https://deskthority.net/wiki/Filco_Minila&#34;&gt;Filco Minila&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;El diseño &lt;a href=&#34;https://deskthority.net/group-buys-f50/hypermicro-and-hypermini-keyboard-t4185.html&#34;&gt;HyperMini&lt;/a&gt; ilustra múltiples layouts 60% que se soportan por un mismo diseño PCB.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://www.keyboard-layout-editor.com/##@@=%C2%AC%0A%60&amp;amp;=!%0A1&amp;amp;=%22%0A2&amp;amp;=%C2%A3%0A3&amp;amp;=$%0A4&amp;amp;=%25%0A5&amp;amp;=^%0A6&amp;amp;=%2F&amp;amp;%0A7&amp;amp;=*%0A8&amp;amp;=%28%0A9&amp;amp;=%29%0A0&amp;amp;=%2F_%0A-&amp;amp;=+%0A%2F=&amp;amp;_w:2%3B&amp;amp;=Backspace%3B&amp;amp;@_w:1.5%3B&amp;amp;=Tab&amp;amp;=Q&amp;amp;=W&amp;amp;=E&amp;amp;=R&amp;amp;=T&amp;amp;=Y&amp;amp;=U&amp;amp;=I&amp;amp;=O&amp;amp;=P&amp;amp;={%0A[&amp;amp;=}%0A]&amp;amp;_x:0.25&amp;amp;w:1.25&amp;amp;h:2&amp;amp;w2:1.5&amp;amp;h2:1&amp;amp;x2:-0.25%3B&amp;amp;=Enter%3B&amp;amp;@_w:1.75%3B&amp;amp;=Caps%20Lock&amp;amp;=A&amp;amp;=S&amp;amp;=D&amp;amp;=F&amp;amp;=G&amp;amp;=H&amp;amp;=J&amp;amp;=K&amp;amp;=L&amp;amp;=%2F:%0A%2F%3B&amp;amp;=%2F@%0A%27&amp;amp;=~%0A%23%3B&amp;amp;@_w:1.25%3B&amp;amp;=Shift&amp;amp;=|%0A&amp;amp;=Z&amp;amp;=X&amp;amp;=C&amp;amp;=V&amp;amp;=B&amp;amp;=N&amp;amp;=M&amp;amp;=%3C%0A,&amp;amp;=%3E%0A.&amp;amp;=%3F%0A%2F%2F&amp;amp;_w:2.75%3B&amp;amp;=Shift%3B&amp;amp;@_w:1.25%3B&amp;amp;=Ctrl&amp;amp;_w:1.25%3B&amp;amp;=Win&amp;amp;_w:1.25%3B&amp;amp;=Alt&amp;amp;_a:7&amp;amp;w:6.25%3B&amp;amp;=&amp;amp;_a:4&amp;amp;w:1.25%3B&amp;amp;=AltGr&amp;amp;_w:1.25%3B&amp;amp;=Win&amp;amp;_w:1.25%3B&amp;amp;=Menu&amp;amp;_w:1.25%3B&amp;amp;=Ctrl&#34;&gt;&lt;img src=&#34;http://freejaus.github.io/img/fjkb/layouts/60percent.png&#34; alt=&#34;60% 61/62&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.keyboard-layout-editor.com/##@@=Esc&amp;amp;=!%0A1&amp;amp;=%22%0A2&amp;amp;=%C2%A3%0A3&amp;amp;=$%0A4&amp;amp;=%25%0A5&amp;amp;=^%0A6&amp;amp;=%2F&amp;amp;%0A7&amp;amp;=*%0A8&amp;amp;=%28%0A9&amp;amp;=%29%0A0&amp;amp;=%2F_%0A-&amp;amp;=+%0A%2F=&amp;amp;=%C2%AC%0A%60&amp;amp;_a:7%3B&amp;amp;=%E2%86%90%3B&amp;amp;@_a:4&amp;amp;w:1.5%3B&amp;amp;=Tab&amp;amp;=Q&amp;amp;=W&amp;amp;=E&amp;amp;=R&amp;amp;=T&amp;amp;=Y&amp;amp;=U&amp;amp;=I&amp;amp;=O&amp;amp;=P&amp;amp;={%0A[&amp;amp;=}%0A]&amp;amp;_x:0.25&amp;amp;w:1.25&amp;amp;h:2&amp;amp;w2:1.5&amp;amp;h2:1&amp;amp;x2:-0.25%3B&amp;amp;=Enter%3B&amp;amp;@_w:1.75%3B&amp;amp;=Caps%20Lock&amp;amp;=A&amp;amp;=S&amp;amp;=D&amp;amp;=F&amp;amp;=G&amp;amp;=H&amp;amp;=J&amp;amp;=K&amp;amp;=L&amp;amp;=%2F:%0A%2F%3B&amp;amp;=%2F@%0A%27&amp;amp;=~%0A%23%3B&amp;amp;@=Shift&amp;amp;=|%0A&amp;amp;=Z&amp;amp;=X&amp;amp;=C&amp;amp;=V&amp;amp;=B&amp;amp;=N&amp;amp;=M&amp;amp;=%3C%0A,&amp;amp;=%3E%0A.&amp;amp;=%3F%0A%2F%2F&amp;amp;=Shift&amp;amp;_a:7%3B&amp;amp;=%E2%86%91&amp;amp;_a:4%3B&amp;amp;=Del%3B&amp;amp;@_w:1.75%3B&amp;amp;=Ctrl&amp;amp;_w:1.25%3B&amp;amp;=Win&amp;amp;_w:1.25%3B&amp;amp;=Alt&amp;amp;_w:1.25%3B&amp;amp;=Fn&amp;amp;_a:7&amp;amp;w:3%3B&amp;amp;=&amp;amp;_a:4&amp;amp;w:1.25%3B&amp;amp;=Fn&amp;amp;_w:1.25%3B&amp;amp;=AltGr&amp;amp;=Win&amp;amp;_a:7%3B&amp;amp;=%E2%86%90&amp;amp;=%E2%86%93&amp;amp;=%E2%86%92&#34;&gt;&lt;img src=&#34;http://freejaus.github.io/img/fjkb/layouts/60percentvar.png&#34; alt=&#34;60% 67/68&#34; /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;NOTA: Las imágenes mostradas en todos los diseños anteriores representan las variantes ISO UK. La conversión a ANSI en la mayoría de ellos se limita a las diferencias ya indicadas. En los modelos más compactos indicados a continuación, menos habituales y mucho más específicos, no hay diferencias mecánicas, sólo visuales y funcionales.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://deskthority.net/wiki/40%25&#34;&gt;40%&lt;/a&gt; se utiliza para hacer referencia a layouts que carecen incluso de la línea 1. La mayoría de variaciones siguen la línea que se ve en los diseño 75% y 60%, y afectan principalmente a la última fila y a las teclas de edición/sistema. Una variación notablemente diferente es el diseño &lt;em&gt;Planck&lt;/em&gt; (47) que se caracteriza por ser ortolinear.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://www.keyboard-layout-editor.com/##@@=Esc&amp;amp;=Q&amp;amp;=W&amp;amp;=E&amp;amp;=R&amp;amp;=T&amp;amp;=Y&amp;amp;=U&amp;amp;=I&amp;amp;=O&amp;amp;=P&amp;amp;=Back%3Cbr%3ESpace%3B&amp;amp;@_w:1.25%3B&amp;amp;=Tab&amp;amp;=A&amp;amp;=S&amp;amp;=D&amp;amp;=F&amp;amp;=G&amp;amp;=H&amp;amp;=J&amp;amp;=K&amp;amp;=L&amp;amp;_w:1.75%3B&amp;amp;=Enter%3B&amp;amp;@_w:1.75%3B&amp;amp;=Shift&amp;amp;=Z&amp;amp;=X&amp;amp;=C&amp;amp;=V&amp;amp;=B&amp;amp;=N&amp;amp;=M&amp;amp;=%3C%0A.&amp;amp;_w:1.25%3B&amp;amp;=Shift&amp;amp;=Fn%3B&amp;amp;@_w:1.25%3B&amp;amp;=Hyper&amp;amp;=Super&amp;amp;=Meta&amp;amp;_a:7&amp;amp;w:6.25%3B&amp;amp;=&amp;amp;_a:4&amp;amp;w:1.25%3B&amp;amp;=Meta&amp;amp;_w:1.25%3B&amp;amp;=Super&#34;&gt;&lt;img src=&#34;http://freejaus.github.io/img/fjkb/layouts/40percent.png&#34; alt=&#34;40%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.keyboard-layout-editor.com/##@@_a:7%3B&amp;amp;=Tab&amp;amp;=Q&amp;amp;=W&amp;amp;=E&amp;amp;=R&amp;amp;=T&amp;amp;=Y&amp;amp;=U&amp;amp;=I&amp;amp;=O&amp;amp;=P&amp;amp;=Back%20Space%3B&amp;amp;@=Esc&amp;amp;=A&amp;amp;=S&amp;amp;=D&amp;amp;=F&amp;amp;=G&amp;amp;=H&amp;amp;=J&amp;amp;=K&amp;amp;=L&amp;amp;=%2F%3B&amp;amp;=%27%3B&amp;amp;@=Shift&amp;amp;=Z&amp;amp;=X&amp;amp;=C&amp;amp;=V&amp;amp;=B&amp;amp;=N&amp;amp;=M&amp;amp;=,&amp;amp;=.&amp;amp;=%2F%2F&amp;amp;=Return%3B&amp;amp;@=&amp;amp;=Ctrl&amp;amp;=Alt&amp;amp;=Super&amp;amp;=%2F&amp;amp;dArr%2F%3B&amp;amp;_w:2%3B&amp;amp;=&amp;amp;=%2F&amp;amp;uArr%2F%3B&amp;amp;=%2F&amp;amp;larr%2F%3B&amp;amp;=%2F&amp;amp;darr%2F%3B&amp;amp;=%2F&amp;amp;uarr%2F%3B&amp;amp;=%2F&amp;amp;rarr%2F&#34;&gt;&lt;img src=&#34;http://freejaus.github.io/img/fjkb/layouts/40planck.png&#34; alt=&#34;40%&#34; /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Diseños ergonómicos. La característica principal de estos es que están pensados para reducir el esfuerzo en las muñecas y los dedos, por lo que visualmente es evidente la posición de las manos. A veces están compuestos por dos mitades simétricas, mientras que otros diseños guardan más parecido con los modelos estandar. Algunos ejemplos representativos de esta familia son &lt;a href=&#34;http://www.keyboard-layout-editor.com/##@@_x:3.5%3B&amp;amp;=%23%0A3&amp;amp;_x:10.5%3B&amp;amp;=*%0A8%3B&amp;amp;@_y:-0.875&amp;amp;x:2.5%3B&amp;amp;=%2F@%0A2&amp;amp;_x:1%3B&amp;amp;=$%0A4&amp;amp;_x:8.5%3B&amp;amp;=%2F&amp;amp;%0A7&amp;amp;_x:1%3B&amp;amp;=%28%0A9%3B&amp;amp;@_y:-0.875&amp;amp;x:5.5%3B&amp;amp;=%25%0A5&amp;amp;_a:7%3B&amp;amp;=&amp;amp;_x:4.5%3B&amp;amp;=&amp;amp;_a:4%3B&amp;amp;=^%0A6%3B&amp;amp;@_y:-0.875&amp;amp;a:7&amp;amp;w:1.5%3B&amp;amp;=&amp;amp;_a:4%3B&amp;amp;=!%0A1&amp;amp;_x:14.5%3B&amp;amp;=%29%0A0&amp;amp;_a:7&amp;amp;w:1.5%3B&amp;amp;=%3B&amp;amp;@_y:-0.375&amp;amp;x:3.5&amp;amp;a:4%3B&amp;amp;=E&amp;amp;_x:10.5%3B&amp;amp;=I%3B&amp;amp;@_y:-0.875&amp;amp;x:2.5%3B&amp;amp;=W&amp;amp;_x:1%3B&amp;amp;=R&amp;amp;_x:8.5%3B&amp;amp;=U&amp;amp;_x:1%3B&amp;amp;=O%3B&amp;amp;@_y:-0.875&amp;amp;x:5.5%3B&amp;amp;=T&amp;amp;_a:7&amp;amp;h:1.5%3B&amp;amp;=&amp;amp;_x:4.5&amp;amp;h:1.5%3B&amp;amp;=&amp;amp;_a:4%3B&amp;amp;=Y%3B&amp;amp;@_y:-0.875&amp;amp;a:7&amp;amp;w:1.5%3B&amp;amp;=&amp;amp;_a:4%3B&amp;amp;=Q&amp;amp;_x:14.5%3B&amp;amp;=P&amp;amp;_a:7&amp;amp;w:1.5%3B&amp;amp;=%3B&amp;amp;@_y:-0.375&amp;amp;x:3.5&amp;amp;a:4%3B&amp;amp;=D&amp;amp;_x:10.5%3B&amp;amp;=K%3B&amp;amp;@_y:-0.875&amp;amp;x:2.5%3B&amp;amp;=S&amp;amp;_x:1%3B&amp;amp;=F&amp;amp;_x:8.5%3B&amp;amp;=J&amp;amp;_x:1%3B&amp;amp;=L%3B&amp;amp;@_y:-0.875&amp;amp;x:5.5%3B&amp;amp;=G&amp;amp;_x:6.5%3B&amp;amp;=H%3B&amp;amp;@_y:-0.875&amp;amp;a:7&amp;amp;w:1.5%3B&amp;amp;=&amp;amp;_a:4%3B&amp;amp;=A&amp;amp;_x:14.5%3B&amp;amp;=%2F:%0A%2F%3B&amp;amp;_a:7&amp;amp;w:1.5%3B&amp;amp;=%3B&amp;amp;@_y:-0.625&amp;amp;x:6.5&amp;amp;h:1.5%3B&amp;amp;=&amp;amp;_x:4.5&amp;amp;h:1.5%3B&amp;amp;=%3B&amp;amp;@_y:-0.75&amp;amp;x:3.5&amp;amp;a:4%3B&amp;amp;=C&amp;amp;_x:10.5%3B&amp;amp;=%3C%0A,%3B&amp;amp;@_y:-0.875&amp;amp;x:2.5%3B&amp;amp;=X&amp;amp;_x:1%3B&amp;amp;=V&amp;amp;_x:8.5%3B&amp;amp;=M&amp;amp;_x:1%3B&amp;amp;=%3E%0A.%3B&amp;amp;@_y:-0.875&amp;amp;x:5.5%3B&amp;amp;=B&amp;amp;_x:6.5%3B&amp;amp;=N%3B&amp;amp;@_y:-0.875&amp;amp;a:7&amp;amp;w:1.5%3B&amp;amp;=&amp;amp;_a:4%3B&amp;amp;=Z&amp;amp;_x:14.5%3B&amp;amp;=%3F%0A%2F%2F&amp;amp;_a:7&amp;amp;w:1.5%3B&amp;amp;=%3B&amp;amp;@_y:-0.375&amp;amp;x:3.5%3B&amp;amp;=&amp;amp;_x:10.5%3B&amp;amp;=%3B&amp;amp;@_y:-0.875&amp;amp;x:2.5%3B&amp;amp;=&amp;amp;_x:1%3B&amp;amp;=&amp;amp;_x:8.5%3B&amp;amp;=&amp;amp;_x:1%3B&amp;amp;=%3B&amp;amp;@_y:-0.75&amp;amp;x:0.5%3B&amp;amp;=&amp;amp;=&amp;amp;_x:14.5%3B&amp;amp;=&amp;amp;=%3B&amp;amp;@_r:30&amp;amp;rx:6.5&amp;amp;ry:4.25&amp;amp;y:-1&amp;amp;x:1%3B&amp;amp;=&amp;amp;=%3B&amp;amp;@_h:2%3B&amp;amp;=&amp;amp;_h:2%3B&amp;amp;=&amp;amp;=%3B&amp;amp;@_x:2%3B&amp;amp;=%3B&amp;amp;@_r:-30&amp;amp;rx:13&amp;amp;y:-1&amp;amp;x:-3%3B&amp;amp;=&amp;amp;=%3B&amp;amp;@_x:-3%3B&amp;amp;=&amp;amp;_h:2%3B&amp;amp;=&amp;amp;_h:2%3B&amp;amp;=%3B&amp;amp;@_x:-3%3B&amp;amp;=&#34;&gt;ErgoDox&lt;/a&gt;, &lt;a href=&#34;http://www.keyboard-layout-editor.com/##@@_r:10&amp;amp;rx:1&amp;amp;y:-0.09999999999999998&amp;amp;x:2%3B&amp;amp;=E%3B&amp;amp;@_y:-0.65&amp;amp;x:1%3B&amp;amp;=W&amp;amp;_x:1%3B&amp;amp;=R%3B&amp;amp;@_y:-0.75%3B&amp;amp;=Q%3B&amp;amp;@_y:-0.9&amp;amp;x:4%3B&amp;amp;=T%3B&amp;amp;@_y:-0.7000000000000001&amp;amp;x:2%3B&amp;amp;=D%3B&amp;amp;@_y:-0.6499999999999999&amp;amp;x:1%3B&amp;amp;=S&amp;amp;_x:1%3B&amp;amp;=F%3B&amp;amp;@_y:-0.75%3B&amp;amp;=A%3B&amp;amp;@_y:-0.8999999999999999&amp;amp;x:4%3B&amp;amp;=G%3B&amp;amp;@_y:-0.7000000000000002&amp;amp;x:2%3B&amp;amp;=C%3B&amp;amp;@_y:-0.6499999999999999&amp;amp;x:1%3B&amp;amp;=X&amp;amp;_x:1%3B&amp;amp;=V%3B&amp;amp;@_y:-0.75%3B&amp;amp;=Z%3B&amp;amp;@_y:-0.8999999999999999&amp;amp;x:4%3B&amp;amp;=B%3B&amp;amp;@_y:-0.75&amp;amp;x:5&amp;amp;h:1.5%3B&amp;amp;=Ctrl%3B&amp;amp;@_y:-0.9500000000000002&amp;amp;x:2%3B&amp;amp;=super%3B&amp;amp;@_y:-0.6499999999999999&amp;amp;x:1%3B&amp;amp;=Tab&amp;amp;_x:1%3B&amp;amp;=Shift%3B&amp;amp;@_y:-0.75%3B&amp;amp;=Esc%3B&amp;amp;@_y:-0.8999999999999999&amp;amp;x:4%3B&amp;amp;=Bksp%3B&amp;amp;@_r:-10&amp;amp;rx:7&amp;amp;ry:0.965&amp;amp;y:-0.20000000000000018&amp;amp;x:2%3B&amp;amp;=I%3B&amp;amp;@_y:-0.6499999999999999&amp;amp;x:1%3B&amp;amp;=U&amp;amp;_x:1%3B&amp;amp;=O%3B&amp;amp;@_y:-0.75&amp;amp;x:4%3B&amp;amp;=P%3B&amp;amp;@_y:-0.8999999999999999%3B&amp;amp;=Y%3B&amp;amp;@_y:-0.7000000000000002&amp;amp;x:2%3B&amp;amp;=K%3B&amp;amp;@_y:-0.6499999999999999&amp;amp;x:1%3B&amp;amp;=J&amp;amp;_x:1%3B&amp;amp;=L%3B&amp;amp;@_y:-0.75&amp;amp;x:4%3B&amp;amp;=%2F:%0A%2F%3B%3B&amp;amp;@_y:-0.8999999999999999%3B&amp;amp;=H%3B&amp;amp;@_y:-0.7000000000000002&amp;amp;x:2%3B&amp;amp;=%3C%0A,%3B&amp;amp;@_y:-0.6499999999999999&amp;amp;x:1%3B&amp;amp;=M&amp;amp;_x:1%3B&amp;amp;=%3E%0A.%3B&amp;amp;@_y:-0.7500000000000004&amp;amp;x:4%3B&amp;amp;=%3F%0A%2F%2F%3B&amp;amp;@_y:-0.9000000000000004%3B&amp;amp;=N%3B&amp;amp;@_y:-0.7499999999999996&amp;amp;x:-1&amp;amp;h:1.5%3B&amp;amp;=Alt%3B&amp;amp;@_y:-0.9499999999999997&amp;amp;x:2%3B&amp;amp;=%2F_%0A-%3B&amp;amp;@_y:-0.6500000000000004&amp;amp;x:1%3B&amp;amp;=fn&amp;amp;_x:1%3B&amp;amp;=%22%0A%27%3B&amp;amp;@_y:-0.75&amp;amp;x:4%3B&amp;amp;=Enter%3B&amp;amp;@_y:-0.9000000000000004%3B&amp;amp;=Space&#34;&gt;Atreus&lt;/a&gt;, &lt;a href=&#34;http://www.keyboard-layout-editor.com/##@@_f:1&amp;amp;f2:2&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=%0AEsc&amp;amp;_x:0.07499999999999996&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=%0AF1&amp;amp;_x:0.07499999999999996&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=%0AF2&amp;amp;_x:0.07500000000000018&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=%0AF3&amp;amp;_x:0.07500000000000018&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=%0AF4&amp;amp;_x:0.07500000000000018&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=%0AF5&amp;amp;_x:0.07500000000000018&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=%0AF6&amp;amp;_x:0.07500000000000018&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=%0AF7&amp;amp;_x:0.07500000000000018&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=%0AF8&amp;amp;_x:4.825&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=Repeat%20Rate%0AF9&amp;amp;_x:0.07499999999999929&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=Disable%20Macro%0AF10&amp;amp;_x:0.07499999999999929&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=Macro%0AF11&amp;amp;_x:0.07499999999999929&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=Remap%0AF12&amp;amp;_x:0.07499999999999929&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=PrintScr%20SysReq&amp;amp;_x:0.07499999999999929&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=Scroll%3Cbr%3Elock&amp;amp;_x:0.07499999999999929&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=Pause%20Break&amp;amp;_x:0.07499999999999929&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=Keypad&amp;amp;_x:0.07499999999999929&amp;amp;w:0.675&amp;amp;h:0.85%3B&amp;amp;=Progrm%3B&amp;amp;@_x:2.25&amp;amp;f:3%3B&amp;amp;=%2F@%0A2&amp;amp;=%23%0A3&amp;amp;=$%0A4&amp;amp;=%25%0A5&amp;amp;_x:5.5%3B&amp;amp;=^%0A6&amp;amp;=%2F&amp;amp;%0A7%0A%0A%0ANm%20Lk&amp;amp;=*%0A8%0A%0A%0A%2F=&amp;amp;=%28%0A9%0A%0A%0A%2F=%3B&amp;amp;@_y:-0.75&amp;amp;w:1.25%3B&amp;amp;=+%0A%2F=&amp;amp;=!%0A1&amp;amp;_x:13.5%3B&amp;amp;=%29%0A0%0A%0A%0A*&amp;amp;_w:1.25%3B&amp;amp;=%2F_%0A-%3B&amp;amp;@_y:-0.25&amp;amp;x:2.25&amp;amp;f:6%3B&amp;amp;=W&amp;amp;=E&amp;amp;=R&amp;amp;=T&amp;amp;_x:5.5%3B&amp;amp;=Y&amp;amp;=U%0A%0A%0A%0A7&amp;amp;=I%0A%0A%0A%0A8&amp;amp;=O%0A%0A%0A%0A9%3B&amp;amp;@_y:-0.75&amp;amp;a:6&amp;amp;f:3&amp;amp;w:1.25%3B&amp;amp;=Tab&amp;amp;_a:4&amp;amp;f:6%3B&amp;amp;=Q&amp;amp;_x:13.5%3B&amp;amp;=P%0A%0A%0A%0A-&amp;amp;_f:3&amp;amp;w:1.25%3B&amp;amp;=|%0A%3B&amp;amp;@_y:-0.25&amp;amp;x:2.25&amp;amp;f:6%3B&amp;amp;=S&amp;amp;=D&amp;amp;=F&amp;amp;=G&amp;amp;_x:5.5%3B&amp;amp;=H&amp;amp;=J%0A%0A%0A%0A4&amp;amp;=K%0A%0A%0A%0A5&amp;amp;=L%0A%0A%0A%0A6%3B&amp;amp;@_y:-0.75&amp;amp;a:6&amp;amp;f:3&amp;amp;w:1.25%3B&amp;amp;=Caps%3Cbr%3ELock&amp;amp;_a:4&amp;amp;f:6%3B&amp;amp;=A&amp;amp;_x:13.5&amp;amp;f:3%3B&amp;amp;=%2F:%0A%2F%3B%0A%0A%0A+&amp;amp;_w:1.25%3B&amp;amp;=%22%0A%27%3B&amp;amp;@_y:-0.25&amp;amp;x:2.25&amp;amp;f:6%3B&amp;amp;=X&amp;amp;=C&amp;amp;=V&amp;amp;=B&amp;amp;_x:5.5%3B&amp;amp;=N&amp;amp;=M%0A%0A%0A%0A1&amp;amp;_f:3%3B&amp;amp;=%3C%0A,%0A%0A%0A2&amp;amp;=%3E%0A.%0A%0A%0A3%3B&amp;amp;@_y:-0.75&amp;amp;a:6&amp;amp;w:1.25%3B&amp;amp;=Shift&amp;amp;_a:4&amp;amp;f:6%3B&amp;amp;=Z&amp;amp;_x:13.5&amp;amp;f:3%3B&amp;amp;=%3F%0A%2F%2F%0A%0A%0AEnter&amp;amp;_a:6&amp;amp;w:1.25%3B&amp;amp;=Shift%3B&amp;amp;@_y:-0.25&amp;amp;x:2.25&amp;amp;a:4%3B&amp;amp;=|%0A%0A%0A%0AInsert&amp;amp;_a:5&amp;amp;f:5%3B&amp;amp;=%E2%87%A6%0A%0A%0A%0A%E2%87%A6&amp;amp;=%E2%87%A8%0A%0A%0A%0A%E2%87%A8&amp;amp;_x:7.5%3B&amp;amp;=%E2%87%A7%0A%0A%0A%0A%E2%87%A7&amp;amp;=%E2%87%A9%0A%0A%0A%0A%E2%87%A9&amp;amp;_a:4&amp;amp;f:3%3B&amp;amp;={%0A[%0A%0A%0A.%3B&amp;amp;@_y:-0.75&amp;amp;x:1.25%3B&amp;amp;=~%0A%60&amp;amp;_x:13.5%3B&amp;amp;=}%0A]%0A%0A%0AEnter%3B&amp;amp;@_r:15&amp;amp;rx:5.25&amp;amp;ry:4&amp;amp;x:1.5%3B&amp;amp;=Ctrl&amp;amp;=Alt%3B&amp;amp;@_x:0.5&amp;amp;a:7&amp;amp;h:2%3B&amp;amp;=Back%3Cbr%3ESpace&amp;amp;_h:2%3B&amp;amp;=Delete&amp;amp;=Home%3B&amp;amp;@_x:2.5%3B&amp;amp;=End%3B&amp;amp;@_r:-15&amp;amp;rx:12.75&amp;amp;x:-3.5&amp;amp;a:4%3B&amp;amp;=Cmd%0A%0A%0A%0A%0A%0AWin&amp;amp;_a:7%3B&amp;amp;=Ctrl%3B&amp;amp;@_x:-3.5&amp;amp;a:6%3B&amp;amp;=Page%3Cbr%3EUp&amp;amp;_a:7&amp;amp;h:2%3B&amp;amp;=Enter&amp;amp;_h:2%3B&amp;amp;=Space%3B&amp;amp;@_x:-3.5&amp;amp;a:6%3B&amp;amp;=Page%3Cbr%3EDown&#34;&gt;Kinesis Advantage&lt;/a&gt;, &lt;a href=&#34;http://www.keyboard-layout-editor.com/#/samples/pkb.json&#34;&gt;Programmer&amp;rsquo;s Keyboard&lt;/a&gt;, o &lt;a href=&#34;http://matias.ca/ergopro/pc/&#34;&gt;ergo pro&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;20%: existe una relativamente amplia variedad de periféricos (generalmente para gaming) denominados &lt;code&gt;keypad&lt;/code&gt;, p.e. &lt;a href=&#34;https://geekhack.org/index.php?topic=61306.0&#34;&gt;Introducing the GH36 Programmable Matrix Keypad&lt;/a&gt;, que podrían incluirse en esta categoría. Sin embargo, dichos periféricos normalmente no son suficiente para utilizar el equipo, y se requiere un teclado adicional. El concepto 20%, &lt;a href=&#34;https://deskthority.net/workshop-f7/onehand-20-keyboard-t6617.html&#34;&gt;OneHand&lt;/a&gt; o &lt;a href=&#34;http://www.matias.ca/halfkeyboard/&#34;&gt;Half Keyboard&lt;/a&gt; va más allá, rizando el rizo para proveer funcionalidad completa mediante macros. El diseño es parecido a una mitad de un teclado ergonómico. De hecho, pueden unirse dos 20% para teclear con ambas manos. A la inversa, algunos fabricantes ofrecen soporte funcional para utilizar un teclado con layout clásico sólo con una mano, como por ejemplo &lt;a href=&#34;http://half-qwerty.com/&#34;&gt;half-qwerty keyboard&lt;/a&gt;. Más info en &lt;a href=&#34;http://www.onehandedkeyboard.com/&#34;&gt;onehandedkeyboard.com&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Tal como se comenta en la siguiente sección, el desplazamiento horizontal relativo entre filas es una herencia de las máquinas de escribir. Existen variantes con disposición ortolinear, más allá del Planck, como puede verse por ejemplo en &lt;a href=&#34;http://ortholinearkeyboards.com/&#34;&gt;ortholinearkeyboards.com&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para ver ejemplos comerciales de los layouts anteriores, en &lt;a href=&#34;https://www.reddit.com/r/MechanicalKeyboards/wiki/tenkeyless_keyboards&#34;&gt;reddit.com/r/MechanicalKeyboards/wiki/tenkeyless_keyboards&lt;/a&gt; se puede consultar un listado bastante extenso. Se utiliza una nomenclatura ligeramente diferente: &amp;ldquo;&lt;em&gt;for the purposes of this Guide 65% is 60%+Arrow keys. 70% is 60%+Fcn keys. 80% is Tenkeyless. 90% (TK) is 60%+Fcn/Numpad&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Tratándose de diseños personalizados, naturalmente pueden añadirse teclas adicionales, ya sea para funciones multimedia o para macros (como se ve en modelos comerciales de alta gama de marcas conocidas). También pueden añadirse ruedas, trackballs, touchpads&amp;hellip; La mayoría de estas adiciones son redundantes, y se incluyen para facilitar explícitamente la introducción de algunas órdenes. Por ello, en esta guía no se consideran parte del layout mecánico, sino módulos opcionales que se analizarán en la sección dedicada al diseño de la base.&lt;/p&gt;
+
+&lt;h1 id=&#34;layout-visual:66b86657894595ae36af47f31c365fda&#34;&gt;Layout visual&lt;/h1&gt;
+
+&lt;p&gt;Si bien el layout mecánico está ligado con el idioma en el que trabaje el usuario (motivación principal de la existencia de &lt;em&gt;Alt Gr&lt;/em&gt; en los diseños ISO), las diferencias más notables se aprecian en el layout visual. En &lt;a href=&#34;https://deskthority.net/wiki/Region-specific_layouts&#34;&gt;este&lt;/a&gt; artículo se enuncian las particularidades de diferentes regiones. El &lt;a href=&#34;https://es.wikipedia.org/wiki/Teclado_QWERTY#/media/File:Latin_keyboard_layouts_by_country_in_Europe_map.PNG&#34;&gt;layout habitual en europa&lt;/a&gt; es el QWERTY, siendo la diferencia principal la colocación de los símbolos en la fila 1 y en el resto de teclas adyacentes a las letras. Sin embargo, en algunos países como en Alemania, las letras Y y Z están intercambiadas, un layout denominado QWERTZ. En Francia, se utiliza AZERTY. Pese a las diferencias, todos los anteriores son esencialmente la misma distribución, por lo que se suele emplear el QWERTY de forma genérica.&lt;/p&gt;
+
+&lt;p&gt;Curiosamente el layout QWERTY se creo cuando las máquinas de escribir entraron en el mercado de masas, antes del siglo XX. La motivación principal para su diseño fue evitar la pulsación rápida de teclas adyacentes, ya que debido al funcionamiento de las máquinas, éstas eran propensas a atascarse. De hecho, el hecho de que las filas no estén alineadas es también una herencia de las máquinas de escribir. El &lt;code&gt;numpad&lt;/code&gt;, más moderno, es ortolinear. En cualquier caso, las máquinas mejoraron, y los elementos mecánicos se redujeron a switches, pero el layout se ha mantenido.&lt;/p&gt;
+
+&lt;p&gt;Por lo anterior, se han propuesto multitud de layouts visuales diferentes, entre los que los más conocidos son los de tipo Dvorak o Colemak. A la hora de diseñarlos se tienen en cuenta factores como la alternancia entre manos, el uso de la fila principal, el recorrido de cada dedo, si los movimientos son hacia dentro o hacia fuera, las características del lenguaje en que se va a escribir&amp;hellip; Algunos layouts propuestos priorizan, por ejemplo, las combinaciones de teclas antes que los recorridos largos con un dedo. Estas consideraciones pueden requerir la disposición particulr de teclas adicionales. Por ello, la exploración de nuevos layouts visuales está estrechamente relacionada con la ergonomía y es común encontrarlos en modelos como el ErgoDox. No obstante, algunos de los modelos Custom referenciados en la sección de modelos comerciales incluyen switches para cambiar a alguno de los layouts alternativos más extendidos. Adicionalmente, mediante software y/o con firmware personalizado se puede probar cualquiera en un teclado con un layout mecánico común. Tanto en la wiki de &lt;a href=&#34;https://deskthority.net/wiki/Keyboard_layouts&#34;&gt;DESKthority&lt;/a&gt; como en la &lt;a href=&#34;https://en.wikipedia.org/wiki/Keyboard_layout&#34;&gt;Wikipedia&lt;/a&gt; se puede obtener más información sobre layouts por regiones y alternativos. Existen incluso &lt;a href=&#34;https://deskthority.net/wiki/Keyboard_layouts#Custom_layout-generators&#34;&gt;generadores&lt;/a&gt; para crear layouts visuales optimizados a partir de los parámetros y preferencias que establezca el usuario.&lt;/p&gt;
+
+&lt;h1 id=&#34;layout-funcional:66b86657894595ae36af47f31c365fda&#34;&gt;Layout funcional&lt;/h1&gt;
+
+&lt;p&gt;La función principal del layout funcional es traducir las pulsaciones de una o varias teclas en las órdenes enviadas al equipo. En caso de disponer de layout visual, el aspecto funcional principal que la orden enviada al equipo se corresponda con la leyenda. También deberán interpretarse los locks y teclas de systema y función en los modelos más reducidos, donde no existe tecla específica. Adicionalmente, deben procesarse las órdenes que no se han representado en el layout visual por limitaciones de espacio o de fabricación del keycap, pero que son necesarias para el uso habitual. Por último, puede añadirse órdenes multimedia o la ejecución de macros mediante teclas usadas como modificadores.&lt;/p&gt;
+
+&lt;p&gt;Cuando la leyenda no representa todas las funcionalidades de una tecla, o cuando se usan modificadores que alteran la función de todas las teclas (este es el caso de los layouts con menor número de teclas -20%, 40%, 60%&amp;hellip;-), es habitual representar visualmente el layout funcional en grupos de imagenes denominadas capas (en inglés, &lt;em&gt;layer&lt;/em&gt;). &lt;a href=&#34;http://www.creativephotoeffects.com/pje/KeyCodes.png&#34;&gt;Aqui&lt;/a&gt; puede verse un ejemplo para un diseño 20%.&lt;/p&gt;
+
+&lt;h1 id=&#34;guis-para-el-diseño-mecánico-y-visual:66b86657894595ae36af47f31c365fda&#34;&gt;GUIs para el diseño mecánico y visual&lt;/h1&gt;
+
+&lt;p&gt;Puesto que un teclado estandar tiene más de cien teclas, resulta muy tedioso definir manualmente las características de cada una de ellas para definir el layout del teclado deseado. Por suerte, en &lt;a href=&#34;http://www.keyboard-layout-editor.com/#/&#34;&gt;keyboard-layout-editor.com&lt;/a&gt; se provee una interfaz gráfica (sobre tecnologías web) para facilitar la tarea. De hecho, haciendo click sobre cualquiera de las imágenes mostradas en la lista del apartado sobre el layout mecánico, se puede acceder a la misma para analizar el layout en detalle (y modificarlo si se quiere). Además del tamaño y posición/rotación del número de teclas que se quiera, permite personalizar el color y las leyendas. Permite exportar el diseño en varios formatos de imagen, y facilita también un listado del número de teclas ordenadas por tamaño y color. Adicionalmente, permite guardar la configuración en un fichero de texto (denominado formato RAW), y también en formato JSON, para procesarla posteriormente. Aunque la licencia no es libre aún, es un proyecto gratuito y open source.&lt;/p&gt;
+
+&lt;p&gt;Por lo tanto, revisando la lista de requisitos indicada al principio de este bloque, un fichero RAW o JSON generado con el keyboard-layout-editor es suficiente para continuar con la fabricación, ya que reúne toda la información necesaria. El tiempo requerido para escoger un layout de entre las muchas opciones disponibles es harina de otro costal :D.&lt;/p&gt;
+
+&lt;p&gt;Algunos fabricantes como &lt;a href=&#34;http://www.wasdkeyboards.com/index.php/wasd-v2-87-key-custom-mechanical-keyboard.html&#34;&gt;WASD keyboards&lt;/a&gt; ofrecen editores para kits de keycaps personalizados, pero ninguno tan completo como el anterior.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Valoraciones personales:
+
+&lt;ul&gt;
+&lt;li&gt;Hago un uso intensivo del &lt;code&gt;numpad&lt;/code&gt;, por lo que el teclado de trabajo principal debe incluir una cuadricula cartesiana de al menos 9x9. El diseño compact es una buena base.&lt;/li&gt;
+&lt;li&gt;La separación de las teclas de función no es necesaria, por lo que es interesante &amp;lsquo;pegar&amp;rsquo; la fila de función a la fila 1, como en 75%.&lt;/li&gt;
+&lt;li&gt;Disponer de teclas de función permite mapear en las mismas hasta 12*(4+n) funciones, pero también son 12 switches requeridos. ¿Merece la pena mantenerlas? A priori resulta difícil encajar &lt;em&gt;Esc&lt;/em&gt;, &lt;em&gt;PrtSc&lt;/em&gt; y &lt;em&gt;Pause&lt;/em&gt;, pero puede ser interesante tratar de ajustar un 60% con un &lt;code&gt;numpad&lt;/code&gt; (y llamarlo 70%¿?).&lt;/li&gt;
+&lt;li&gt;Entre el TKL y el 75%, el primero lo único que aporta es más separación. Estaría bien probar si cuesta situar las teclas de enter y edición. Si pueden encontrarse fácilmente a ciegas -posiblemente con &lt;em&gt;homing&lt;/em&gt;-, puede ser una buena base tanto para gaming como para un uso portable/multimedia.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2. Keys</title>
+      <link>http://freejaus.github.io/notebook/fjkb/keys/</link>
+      <pubDate>Fri, 20 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://freejaus.github.io/notebook/fjkb/keys/</guid>
+      <description>
+
+&lt;p&gt;De la definición del layout se extrae un listado con el número de teclas de cada tipo (dimensiones y color), y la leyenda correspondiente a cada una de ellas. En la imagen siguiente se muestran los componentes principales que intervienen en el montaje de una tecla. Aunque no se refleja en la figura, cabe puntualizar que, en el caso de la barra de espacio y otras teclas con dimensiones igual o mayores que 2 unidades, es posible que se requiera la instalación de &lt;a href=&#34;https://deskthority.net/wiki/Stabiliser&#34;&gt;estabilizadores&lt;/a&gt;. Por otro lado, las partes indicadas como &lt;em&gt;PCB&lt;/em&gt;, &lt;em&gt;mounting plate&lt;/em&gt;, &lt;em&gt;upper shell&lt;/em&gt; y &lt;em&gt;lower shell&lt;/em&gt; forman parte de la base y del diseño electrónico, por lo que se analizarán en el bloque correspondiente. En este bloque se analizan las partes restantes (switches, keycaps y tipo de montaje), para extraer los requisitos que condicionan las anteriores. Concretamente, se requiere:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Si el montaje es tipo plate, layout de cada switch para el plate, y, si es necesario, del soporte (estabilizador).&lt;/li&gt;
+&lt;li&gt;Layout de cada switch para el PCB.&lt;/li&gt;
+&lt;li&gt;Perfil de cada tecla.&lt;/li&gt;
+&lt;li&gt;Estabilizadores necesarios.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;https://deskthority.net/wiki/Key&#34;&gt;&lt;img src=&#34;https://deskthority.net/w/images/thumb/9/96/Keyswitch_illustration.svg/823px-Keyswitch_illustration.svg.png&#34; height=&#34;350&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;switches:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Switches&lt;/h1&gt;
+
+&lt;p&gt;La parte más importante de una tecla, especialmente en el caso de los teclados mecánicos, es el accionamiento de tipo pulsador denominado &lt;em&gt;switch&lt;/em&gt;. Del diseño de éste depende la respuesta del teclado en lo que respecta al recorrido de la pulsación, presión necesaria para la activación, punto de activación en el recorrido, percepción de la activación&amp;hellip; Tradicionalmente se han utilizado múltiples características físicas para el &lt;a href=&#34;https://deskthority.net/wiki/Contact_mechanism&#34;&gt;mecanismo de accionamiento&lt;/a&gt;: acústica, capacidad, efecto Hall, inducción, contacto&amp;hellip; Los más extendidos en el diseño de teclados de uso general y en portátiles son los de &lt;a href=&#34;https://deskthority.net/wiki/Rubber_dome_over_membrane&#34;&gt;membrana con conos de goma&lt;/a&gt;. La característica principal de los teclados mecánicos es que se sustituyen las membranas por un PCB (típicamente de fibra de vidrio), a los que se sueldan (micro)switches individuales. De la &lt;a href=&#34;https://www.reddit.com/r/MechanicalKeyboards/wiki/switch_guides#wiki_general_switch_guides&#34;&gt;extensa lista&lt;/a&gt; de switches que se han fabricado y se fabrican actualmente, a continuación se presentan las tres familias con más presencia:&lt;/p&gt;
+
+&lt;h2 id=&#34;common-types:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Common types&lt;/h2&gt;
+
+&lt;h3 id=&#34;cherry-mx:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Cherry MX&lt;/h3&gt;
+
+&lt;p&gt;Los más utilizados son los &lt;a href=&#34;https://deskthority.net/wiki/Cherry_MX&#34;&gt;Cherry MX&lt;/a&gt;, diseñados por la empresa alemana &lt;a href=&#34;https://deskthority.net/wiki/Cherry&#34;&gt;Cherry Corporation&lt;/a&gt; desde 1983, y basados en el contacto entre dos láminas metálicas, tal como se muestra en la siguiente animación:&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;a href=&#34;http://www.pictureshack.us/images/44932_Cherry_MX_Blue.gif&#34;&gt;&lt;img alt=&#34;Cherry MX Blue w/ LED&#34; src=&#34;http://www.pictureshack.us/images/44932_Cherry_MX_Blue.gif&#34; height=&#34;275&#34;/&gt;&lt;/a&gt; &lt;img src=&#34;https://deskthority.net/w/images/3/38/CherryMXForceTravel.png&#34; height=&#34;275&#34;&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;En el catálogo de Cherry existen varios modelos MX diferenciados por colores, en función de la fuerza necesaria para su desplazamiento a lo largo de todo el recorrido, hasta tocar el fondo (denominado &lt;em&gt;bottoming out&lt;/em&gt;). La gráfica de la derecha muestra las curvas de los modelos más utilizados (black, red, blue, brown y white), y en &lt;a href=&#34;http://www.keyboardco.com/blog/index.php/2012/12/an-introduction-to-cherry-mx-mechanical-switches/&#34;&gt;este&lt;/a&gt; artículo se describen las diferencias. Adicionalmente, con el propósito de &lt;a href=&#34;https://deskthority.net/wiki/Damping&#34;&gt;silenciar parcialmente&lt;/a&gt; el teclado, se comercializan gomas denominadas &lt;em&gt;O-ring&lt;/em&gt; y pequeños pads de gomaespuma&lt;/p&gt;
+
+&lt;p&gt;Debido a que Cherry no previó la apuesta de las marcas de gaming por modelos mecánicos, y puesto que la patente expiró hace una década, a los largo de los últimos años ha habido problemas para satisfacer la demanda. Eso y el precio de los mismos (que se analizará más adelante) ha propiciado la comercialización de diseños que son prácticamente copias de los Cherry MX. Este es el caso de &lt;a href=&#34;http://www.kailh.com/&#34;&gt;Kailh&lt;/a&gt;, fabricante chino de switches de todo tipo que provee a marcas como Razer o Steelseries. En &lt;a href=&#34;http://imgur.com/a/7ujle&#34;&gt;Kailh switch guide - from clones to custom designs&lt;/a&gt; hay detalles sobre la evolución de este fabricante en el mercado. &lt;a href=&#34;https://deskthority.net/wiki/Category:Gateron_switches&#34;&gt;Gateron&lt;/a&gt; es otro fabricante de clones de Cherry MX, con &lt;a href=&#34;https://www.reddit.com/r/MechanicalKeyboards/comments/37lpci/gateron_switches/&#34;&gt;mejores críticas&lt;/a&gt; que Kailh en cuanto a durabilidad. Mientras las especificaciones y colores de los modelos de Kailh coinciden con las de los Cherry MX, los modelos de Gateran tienen diferentes características (más suaves).&lt;/p&gt;
+
+&lt;h3 id=&#34;alps-skbl-skbm:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Alps SKBL/SKBM&lt;/h3&gt;
+
+&lt;p&gt;Aunque el formato de Cherry es el líder indiscutible del mercado, los switches fabricados por la compañia japonesa &lt;a href=&#34;https://deskthority.net/wiki/Alps_Electric&#34;&gt;Alps Electric&lt;/a&gt;, fundada en 1948, son mención obligada. Alps ya no los fabrica, pero de la &lt;a href=&#34;https://deskthority.net/wiki/Category:Alps_switches&#34;&gt;amplia variedad&lt;/a&gt; de switches que han fabricado, los &lt;a href=&#34;https://deskthority.net/wiki/Alps_SKCL/SKCM_series&#34;&gt;SCKL/SKCM&lt;/a&gt;, introducidos en 1983, fueron los más comunes en teclados de ordenador, y son muy preciados entre los entusiastas. Sin embargo, el número de piezas que componían cada uno era elevado (10-11), en comparación, p.e., con las 5-6 de que se &lt;a href=&#34;http://www.cherry.de/cid/MX_Technology.htm?#/modul-specification/mx-blue-level&#34;&gt;componen&lt;/a&gt; los Cherry MX. A partir de 1996, de la mano de la taiwanesa &lt;a href=&#34;https://deskthority.net/wiki/Forward_Electronics&#34;&gt;Forward Electronics&lt;/a&gt;, se empezó a comercializar el modelo &lt;a href=&#34;https://deskthority.net/wiki/Alps_SKBL/SKBM_series&#34;&gt;SKBL/SKBM&lt;/a&gt;, denominado &lt;em&gt;simplified Alps&lt;/em&gt;. Hoy en día se siguen comercializando &lt;a href=&#34;https://deskthority.net/wiki/Alps_clone&#34;&gt;clones&lt;/a&gt; de este último diseño (modelos compatibles) no fabricados por Alps, tal como se indica en este &lt;a href=&#34;https://deskthority.net/wiki/Category:Clones_of_Alps_SKCL/SKCM_switches&#34;&gt;listado&lt;/a&gt;. De entre ellos, los fabricados por &lt;a href=&#34;https://deskthority.net/wiki/Matias_Corporation&#34;&gt;Matias Corporation&lt;/a&gt;, empresa sita en Canada, están teniendo un auge muy notable. Matias afrontó el diseño de &lt;a href=&#34;https://deskthority.net/wiki/Matias_switch&#34;&gt;los mismos&lt;/a&gt;, que duró dos años, al saber que Forward Electronics dejaría de producirlos. Al igual que en los Cherry MX, se ofrecen varios modelos, pero la oferta es más reducida: &lt;a href=&#34;http://matias.ca/switches/click/&#34;&gt;click&lt;/a&gt; (clon de SKBM White), &lt;a href=&#34;http://matias.ca/switches/quiet/&#34;&gt;quiet click&lt;/a&gt; (clon de SKBM Black), y &lt;a href=&#34;http://matias.ca/switches/linear/&#34;&gt;linear&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;http://matias.ca/switches/quiet/viewer/2.jpg&#34; width=&#34;225&#34;&gt;
+&lt;img src=&#34;http://matias.ca/switches/quiet/viewer/3.jpg&#34; width=&#34;225&#34;&gt;
+&lt;img src=&#34;http://matias.ca/switches/quiet/viewer/4.jpg&#34; width=&#34;225&#34;&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Una de las novedades entre 2014 y 2015 fue la proliferación de modelos con LEDs RGB para crear efectos visuales en el teclado. Al margen de preferencias estéticas, lo cierto es que la retroiluminación del teclado es una característica muy demandada desde hace años, tanto para lanparties como por quienes trabajan por la noche. Los switches Matias están fabricados en plástico traslúcido para aprovechar al máximo los LEDs (RGB o de un solo color). Es cierto que después Cherry empezó a comercializar también modelos traslúcidos (RGB),  como subrayan en la página de Matias. Otra diferencia reseñable es que lo switches matias quiet incluyen &lt;a href=&#34;https://deskthority.net/wiki/Damping&#34;&gt;silenciadores&lt;/a&gt; en el diseño, por lo que no es necesario adquirilos por separado.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;http://matias.ca/switches/quiet/viewer/1.jpg&#34; width=&#34;225&#34;&gt;
+&lt;img src=&#34;http://matias.ca/switches/quiet/viewer/5.jpg&#34; width=&#34;225&#34;&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;topre:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Topre&lt;/h3&gt;
+
+&lt;p&gt;Por otro lado, la japonesa &lt;a href=&#34;https://deskthority.net/wiki/Topre_Corporation&#34;&gt;Topre Corporation&lt;/a&gt;, fabricante de teclados desde 1983, comercializa &lt;a href=&#34;https://deskthority.net/wiki/Topre_switch&#34;&gt;switches capacitivos&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://elitekeyboards.com/proddata/images/topre3d_405.png&#34; height=&#34;250&#34;&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;backlight:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Backlight&lt;/h2&gt;
+
+&lt;p&gt;Si bien un teclado puede disponer de retroiluminación independientemente del switch utilizado, algunos modelos son más adecuados para ello. Particularmente, los modelos MX incluyen, en el diseño de la carcasa de cada switch, un hueco para colocarlos, tal como se ve en la animación mostrada anteriormente. En el caso de los &lt;a href=&#34;https://deskthority.net/wiki/Matias_switch&#34;&gt;switches Matias&lt;/a&gt;, sin embargo, la carcasa no incluye ningún soporte. Puesto que es transparente/traslúcido, están pensados para que el LED pueda colocarse en cualquier posición debajo del propio switch. En el layout combinado mostrado más adelante, puede apreciarse que el LED está situado en la parte inferior, para ambos diseños.&lt;/p&gt;
+
+&lt;p&gt;No obstante, tal como se analiza en la sección correspondiente a las keycaps, el efecto de la retroiluminación es simbólico si no se dispone de leyendas traslúcidas. En caso de querer una iluminación de fondo por motivos puramente estéticos, puede reducirse significativamente el número de LEDs utilizado (reduciendo así el consumo también). Asimismo, si se utilizan leyendas frontprint y switches no traslúcidos, debe tenerse en cuenta la posición en la que montar el switch. Los switches pueden colocarse en varias posiciones, sin que afecte a su uso, pero el layout del PCB tiene que ser coherente.&lt;/p&gt;
+
+&lt;h2 id=&#34;elección-de-la-familia-de-switches:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Elección de la familia de switches&lt;/h2&gt;
+
+&lt;p&gt;Existen &lt;a href=&#34;http://www.keyboardco.com/blog/index.php/2013/01/which-switch/&#34;&gt;diagramas&lt;/a&gt; y &lt;a href=&#34;http://i.imgur.com/cZkte.png&#34;&gt;guias&lt;/a&gt;, para orientar a quienes nunca han dispuesto de un modelo mecánico, en función del uso que se le va a dar, teniendo en cuenta aspecto básicos y generales. Sin embargo, tratándose de algo tan particular, es muy posible que las orientaciones generales no coincidan con el tacto que uno espera de un teclado mecánico. En el caso de Cherry MX, algunas tiendan comercializan kits de prueba con modelos de varios colores, e incluso de varios fabricantes. MAXkeyboard, por ejemplo tiene tres kits de tamaños diferentes. El más grande, que incluye modelos de Cherry y de Gateron, se muestra en la figura siguiente (imagen de la izquierda). En el caso de Matias o Topre, todavía no se comercializan kits similares.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;a href=&#34;http://www.maxkeyboard.com/max-keycap-cherry-mx-switch-gateron-switch-o-ring-ultimate-sampler-tester-kit.html&#34;&gt;&lt;img src=&#34;http://d2fu7qgd3tdbcc.cloudfront.net/images/detailed/2/Max_Ultimate_Sampler_kit_4.jpg?t=1452475788&#34; height=&#34;300&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://geekhack.org/index.php?action=dlattach;topic=60268.0;attach=69978;image&#34; height=&#34;250&#34;&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;La elección del &lt;em&gt;el mejor switch&lt;/em&gt;, y la modificación de los mismos para personalizar el tacto, es un tema de discusión constante en foros y grupos de opinión. Es, con diferencia, el aspecto sobre el que más información se encuentra. Sin embargo, la preferencia por una de las familias anteriores, y por un modelo en concreto, es personal es intransferible. Asumiendo una calidad de fabricación equivalente, ninguna de las familias es mejor per se. Y sólo la prueba durante varios días de un teclado completo permite percibir realmente el tacto del switch.&lt;/p&gt;
+
+&lt;p&gt;En lo que respecta a la compatibilidad, los modelos de cada familia pueden ser intercambiados sin modificaciones en el diseño mecánico del teclado. Por ejemplo, se pueden sustituir los MX Green de un teclado por unos Gateron KS Blue. Sin embargo, no es así entre familias. En principio, los layout del PCB son diferentes y las keycaps para MX no son compatibles con los swtiches Alps o Topre. Sin embargo, tratándose de un mercado en plena efervescencia, debido a que prácticamente la totalidad de keycaps custom que se ofertan son compatibles con MX, se están dando pasos importantes en este sentido:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;El &lt;a href=&#34;http://us.coolermaster.com/product/Detail/gaming/novatouch/novatouch.html&#34;&gt;CM Novatouch TKL&lt;/a&gt; es un teclado con switches Topre compatibles con keycaps MX. Inicialmente un trabajor de CoolerMaster planteó la idea en &lt;a href=&#34;https://deskthority.net/keyboards-f2/topre-switch-cherry-mx-compatible-t7076.html&#34;&gt;DESKthority&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Tanto en &lt;a href=&#34;https://deskthority.net/workshop-f7/cherry-to-alps-adapters-t4934.html&#34;&gt;DESKthority&lt;/a&gt; como en &lt;a href=&#34;https://geekhack.org/index.php?topic=69031.0&#34;&gt;GeekHack&lt;/a&gt; se han propuesto diseños de adaptadores para utilizar keycaps MX sobre switches Alps. La pega principal es que las keycaps de MX están pensadas para introducirse parcialmente en el cuerpo del switch cuando son pulsadas, y los switches Alps no. Por ello, es inevitable que la altura de las teclas se incremente parcialmente al usar los adaptadores. Como resultado, en principio hay que adaptar todas las teclas al mismo tiempo, o utilizar adaptadores sólo en teclas de función o edición. Asimismo, la adaptación de estabilizadores no está resuelta por completo, y por el momento no hay soluciones documentadas para los de tipo Costar (wire).&lt;/li&gt;
+&lt;li&gt;Edgar Matias, uno de los fundadores de Matias Corporation, es investigador en el área de las interfaces de entrada, con una presencia notable en las comunidades de entusiastas. Un ejemplo de ello es el &lt;a href=&#34;http://matias.ca/60/pc/&#34;&gt;pedido de grupo de un 60%&lt;/a&gt; que está organizando. El diseño es compatible tanto con switches MX como Matias Alps (a excepción de la última fila). Esta compatibilidad se refleja en el diseño del PCB (en la figura superior, imagen de la derecha). Y también en el diseño del plate, especialmente en lo que respecta a los estabilizadores, tal como muestran las imágenes en &lt;a href=&#34;https://geekhack.org/index.php?topic=60268.0&#34;&gt;este&lt;/a&gt; hilo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;mount-type:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Mount type&lt;/h2&gt;
+
+&lt;p&gt;La a hora de &lt;a href=&#34;https://deskthority.net/wiki/Switch_mount&#34;&gt;montar&lt;/a&gt; los switches en el teclado hay dos soluciones comunes. Cuando se sueldan al PCB únicamente, se dice que son &lt;em&gt;PCB-mounted&lt;/em&gt;. En los teclados actuales es más común que los switches sean fijados a una placa (metálica o de plástico), que es parte de la base y está situada a una distancia concreta del PCB. Así, se dice que son &lt;em&gt;plate-mounted&lt;/em&gt;. Como es evidente, la solución &lt;em&gt;plate-mounted&lt;/em&gt; ofrece mayor rigidez y protege el PCB, pero también añade peso al diseño. Al mismo tiempo, puesto que el PCB es más flexible que el plate, amortigua parcialmente el ruido cuando se hace &lt;em&gt;bottom out&lt;/em&gt;, y tiene un tacto más suave.&lt;/p&gt;
+
+&lt;p&gt;Por último el montaje en plate puede limitar el acceso a los switches MX. El plate del &lt;a href=&#34;https://deskthority.net/wiki/Phantom&#34;&gt;Phantom&lt;/a&gt;, por ejemplo, está especialmente diseñado para permitir desmontar la parte superior de los switches sin necesidad de desoldarlo, pero no todos los diseños lo están. Esto no es un problema en los Alps, porque pueden ser abiertos en cualquier caso.&lt;/p&gt;
+
+&lt;h1 id=&#34;keycaps:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Keycaps&lt;/h1&gt;
+
+&lt;h2 id=&#34;profiles:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Profiles&lt;/h2&gt;
+
+&lt;p&gt;Las dimensiones de las bases de las tapas vienen determinadas por la separación entre teclas, siendo muy ligeramente más pequeñas, para que haya pequeños huecos entre las mismas. Sin embargo, existe cierta variedad en lo que respecta a la altura de las mismas y a la forma de la cara superior. El conjunto de características que determina la posición final de la caras superiores de las teclas se denomina &lt;a href=&#34;https://deskthority.net/wiki/Keyboard_profile&#34;&gt;profile&lt;/a&gt;. Está estrechamente relacionado con la forma de las propias teclas, y también con la forma y posición de la base. En la imagen siguiente se muestran las formas que puede tomar la base. Entre ellas, las denominadas &lt;em&gt;Flat&lt;/em&gt; y &lt;em&gt;Chiclet&lt;/em&gt; son las más comunes en teclados de portátil. En teclados mecánicos la base suele ser plana, pero suele estar inclinada, por lo que se utilizan perfiles contorneados o de tipo escalera. En el perfil en escalera todas las teclas tienen el mismo perfil angulado, de forma que las superficies quedan todas en paralelo con la mesa. Más habituales son los perfiles contorneados, que implican diferentes diseños para las teclas, en función de su ubicación en el teclado (la fila en la que estén).&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://www.keycapsdirect.com/key-caps.php&#34;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;th rowspan=&#34;5&#34;&gt;&lt;a href=&#34;https://deskthority.net/wiki/Keyboard_profile&#34;&gt;&lt;img src=&#34;https://deskthority.net/w/images/thumb/5/5b/KeyProfile.gif/344px-KeyProfile.gif&#34;&gt;&lt;/a&gt;
+&lt;/th&gt;
+&lt;th rowspan=&#34;5&#34; width=&#34;10&#34;&gt;&lt;/th&gt;
+&lt;th&gt;LP&lt;/th&gt;&lt;th&gt;&lt;img src=&#34;http://www.keycapsdirect.com/images/key-caps/angle1.jpg&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;DCS&lt;/th&gt;&lt;th&gt;&lt;img src=&#34;http://www.keycapsdirect.com/images/key-caps/angle3.jpg&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;DSA&lt;/th&gt;&lt;th&gt;&lt;img src=&#34;http://www.keycapsdirect.com/images/key-caps/angle2.jpg&#34;&gt;&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;SA&lt;/th&gt;&lt;th&gt;&lt;img src=&#34;http://www.keycapsdirect.com/images/key-caps/angle5.jpg&#34;&gt;&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;KT&lt;/th&gt;&lt;th&gt;&lt;img src=&#34;http://www.keycapsdirect.com/images/key-caps/angle7.jpg&#34;&gt;&lt;/th&gt;&lt;/tr&gt;
+&lt;/table&gt;&lt;/a&gt;
+&lt;/span&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;No todos los fabricantes utilizan la misma terminología, por lo que es recomendable revisar la documentación para identificar cada tecla. En lo que respecta a la identificación de las filas, en &lt;a href=&#34;https://deskthority.net/wiki/Keyboard_profile#Numbering&#34;&gt;esta&lt;/a&gt; tabla se resumen las numeraciones utilizadas por varios fabricantes. En la parte derecha de la figura anterior se muestran las cinco &lt;em&gt;familias&lt;/em&gt; definidas por &lt;a href=&#34;http://www.keycapsdirect.com/&#34;&gt;Signature Plastics&lt;/a&gt;: DCS, DSA, SA, LP, y KT, donde se muestra una silueta por cada una de las 4-6 filas. El término &lt;em&gt;profile&lt;/em&gt; se utiliza para definir la altura media de todas las teclas. &lt;em&gt;Sculptured&lt;/em&gt;, por otro lado, hace referencia a si todas tienen el mismo diseño. De las cinco familias, DSA, LP y KT son &lt;em&gt;non-sculptured&lt;/em&gt;. DSA (altura media) y LP (altura baja) son adecuadas para bases &lt;em&gt;Flat&lt;/em&gt;, mientras que KT tiene una inclinación constante, tipo &lt;em&gt;Staircase&lt;/em&gt; (altura alta). Por su parte, DCS (altura media) y SA (altura alta) se corresponden con perfiles contorneados. Un último aspecto que afecta a la forma de las keycaps es el forma de la parte superior. La mayoría de teclados hoy en día tienen forma &lt;a href=&#34;http://i.imgur.com/XdKTDPz.jpg&#34;&gt;cilíndrica&lt;/a&gt;, pero tradicionalmente también se han utilizado con forma &lt;a href=&#34;http://i.imgur.com/tpBdn2E.jpg&#34;&gt;esférica&lt;/a&gt; e incluso &lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/8/8e/Norskdata-terminal.JPG&#34;&gt;circular&lt;/a&gt;. En el caso de las familias mencionadas, DSA y SA tienen forma esférica, mientras que DCS, LP y KT son cilíndricas. El perfil DCS de Signature Plastics es muy parecido a lo que se denomina &lt;em&gt;Standard profile&lt;/em&gt; u &lt;em&gt;OEM profile&lt;/em&gt;, que se utiliza para keysets con diferentes tipos de montaje, incluyendo los MX y Alps SKCL/SKCM.&lt;/p&gt;
+
+&lt;p&gt;Como se ha comentado anteriormente, no todas las keycaps son compatibles entre sí. Por norma general, las keycaps de Alps sólo se pueden montar en switches Alps, mientras que las keycaps tipo MX pueden montarse en las tres familias de switches (con o sin adaptadores). Puesto que hay familias con diferentes alturas, en caso de necesitar adaptadores puede ser interesante adquirir algún set de perfil bajo, para evitar que se &lt;em&gt;inclinen&lt;/em&gt; las piezas. En cualquier caso, los fabricantes especializados en keycaps suelen disponer de varios tipos de montaje, como puede verse &lt;a href=&#34;http://pimpmykeyboard.com/template/images/MountStyles.pdf&#34;&gt;aquí&lt;/a&gt; para las familias mencionadas.&lt;/p&gt;
+
+&lt;h2 id=&#34;materials-and-construction:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Materials and construction&lt;/h2&gt;
+
+&lt;p&gt;Además del diseño y la rareza de las piezas, el precio está principalmente condicionado por el proceso de &lt;a href=&#34;https://deskthority.net/wiki/Keycap_construction&#34;&gt;fabricación&lt;/a&gt; y los materiales utilizados. El material más extendido es el ABS, aunque los estusiastas prefieren el PBT porque es más duro y tarda más en amarillear y en mostrar brillos por el desgaste en la superficie. Otro materiales utilizados, aunque más raros, son el aluminio y las resinas (especialmente en fabricaciones caseras). En cuanto al proceso en sí, las de mayor calidad se fabrican mediante moldeo por &lt;a href=&#34;https://deskthority.net/wiki/Double-shot_molding&#34;&gt;inyección en dos pasos&lt;/a&gt;. En primer lugar se moldea la leyenda, y en segundo lugar se moldea el resto del keycap alrededor de la primera pieza. De esta forma, la leyenda nunca se borrará, ya que no está gravada o pegada, sino que es parte de la pieza. Este tipo de fabricación permite fabricar &lt;a href=&#34;http://i.imgur.com/DTGxp.jpg&#34;&gt;keycaps con ventana&lt;/a&gt;, tal como se ve en &lt;a href=&#34;https://deskthority.net/w/images/2/27/Cherry_G80-3700HAU_--_double-shot_windowed_keycap.jpg&#34;&gt;esta&lt;/a&gt; imagen. Asimismo, es la técnica más adecuada para permitir la retroiluminación de las leyendas. Sin embargo, la fabricación en dos pasos requiere disponer de moldes para todas las piezas de la familia y también para todas las leyendas. Los moldes suelen realizarse sobre metal mediante fresado y/o torneado (CNC si se automatiza), lo que encarece significativamente el coste inicial. Por este motivo, existen tipografías diseñadas teniendo en cuenta las limitaciones de la maquinaria con la que se crean los moldes, algunas de ellas recogidas &lt;a href=&#34;https://deskthority.net/wiki/Keyboard_fonts&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ademñas de requerir moldes, el coste del PBT es entre dos y tres veces mayor que el del ABS. Por ello, es habitual que se fabriquen sets de teclas en blanco (sin leyenda), y después se &lt;a href=&#34;https://deskthority.net/wiki/Keycap_printing&#34;&gt;añada&lt;/a&gt; mediante impresión, sublimación, láser, gravado&amp;hellip; Aunque con menor durabilidad, estas técnicas permiten crear leyendas más complejas. Como desventaja, las teclas son opacas en su totalidad, por lo que las leyendas no se retroiluminan. Algunos keycaps se fabrican completamente en plásticos traslúcidos para realzar los LEDs, pero no permiten ver la leyenda en la oscuridad. Una solución de bajo coste es la fabricación de sets completamente transparentes, que son pintados y después gravados para dejar visible el plástico sólo en la leyenda. Sin embargo, la durabilidad deja mucho que desear en comparación con cualquiera de las soluciones anteriores, en las que el color está en el propio material.&lt;/p&gt;
+
+&lt;p&gt;Como es de esperar, también hay quienes han impreso &lt;a href=&#34;https://github.com/jaseg/Model-M&#34;&gt;sets completos&lt;/a&gt; con &lt;a href=&#34;https://www.reddit.com/r/MechanicalKeyboards/wiki/3dprinting&#34;&gt;impresoras 3D&lt;/a&gt;, con las pegas esperables de productos con un &lt;a href=&#34;https://deskthority.net/workshop-f7/3d-printed-cherry-mx-keycap-t4620.html&#34;&gt;acabado&lt;/a&gt; de prototipo. Por un lado, no se suele utilizar PBT, sino ABS o PLA. Por otro, el acabado de la superficie depende de la calidad de la impresora, por lo que el nivel de detalle que se puede obtener suele estar limitado en las impresoras de bajo coste. Sin embargo, ninguno de estos fatores ha supuesto un freno, como puede verse por los resultados del tag &lt;a href=&#34;https://www.thingiverse.com/tag:keyboard/&#34;&gt;&lt;em&gt;keyboard&lt;/em&gt; en thingiverse.com&lt;/a&gt;. Algunos ejemplos curiosos son &lt;a href=&#34;https://www.thingiverse.com/thing:811030&#34;&gt;tapas en Braille&lt;/a&gt;, o pequeñas &lt;a href=&#34;https://www.thingiverse.com/thing:584912&#34;&gt;piezas&lt;/a&gt; de color para alterar la iluminación en switches MX sin soldar. Aunque más difíciles de ver, aprovechando los cabezales con doble extrusor pueden imprimirse leyendas con resultados parecidos al moldeado en dos pasos. Si bien, el propósito inicial de los mismos era la fabricación a cera perdida. Cabe indicar que la mayoría de pruebas documentadas son de hace al menos dos años, por lo que es razonable esperar que los acabados mejoren conforme mejore la precisión de las impresoras. Aunque menos extendidas, las impresoras stereolitográficas ofrecen ya &lt;a href=&#34;https://learn.adafruit.com/3dprinted-custom-keycaps&#34;&gt;acabados&lt;/a&gt; notablemente mejores, y se utilizan los mismos &lt;a href=&#34;https://www.thingiverse.com/thing:749563&#34;&gt;modelos&lt;/a&gt; (en formato STL). Aún así, estás máquinas de prototipado no son una solución adecuada más que para tiradas cortas, debido al tiempo que requieren para fabricar cada pieza.&lt;/p&gt;
+
+&lt;p&gt;Por último, las solución más DIY, y clásica entre aficionados y artesanos, es el &lt;a href=&#34;https://www.reddit.com/r/ResinCasting/comments/1o2k2c/what_the_heck_is_resin_casting_anyway_what_can_it/&#34;&gt;moldeo por resina&lt;/a&gt;. Se trata esencialmente del mismo proceso que se sigue para el moldeo por inyección, pero se utilizan materiales con los que se puede trabajar a temperatura ambiente y sin necesidad de componentes hidraúlicos. Hay varias &lt;a href=&#34;https://geekhack.org/index.php?topic=23722.0&#34;&gt;guías&lt;/a&gt;, algunas más &lt;a href=&#34;https://geekhack.org/index.php?topic=62696.0&#34;&gt;recientes&lt;/a&gt; que &lt;a href=&#34;https://geekhack.org/index.php?topic=41371.0&#34;&gt;otras&lt;/a&gt;, con resultados visualmente muy &lt;a href=&#34;https://geekhack.org/index.php?topic=67744.0&#34;&gt;atractivos&lt;/a&gt;. Algunos modelos tienen incluso &lt;a href=&#34;http://wiki.geekhack.org/index.php?title=Click_Clack&#34;&gt;nombre propio&lt;/a&gt;, y existe todo un mercado alrededor de los mismos. En la &lt;a href=&#34;https://www.google.es/search?q=artisan+keycaps&amp;amp;source=lnms&amp;amp;tbm=isch&amp;amp;sa=X&amp;amp;ved=0ahUKEwjXl4uVlM3KAhWM7RQKHaOTBv4Q_AUIBygB&amp;amp;biw=1366&amp;amp;bih=698&#34;&gt;variedad&lt;/a&gt; está el gusto.&lt;/p&gt;
+
+&lt;p&gt;Más información sobre &lt;a href=&#34;https://www.reddit.com/r/MechanicalKeyboards/wiki/modifications#wiki_key_modifications&#34;&gt;modificación&lt;/a&gt; de &lt;a href=&#34;https://www.reddit.com/r/MechanicalKeyboards/wiki/3dprinting#wiki_keys&#34;&gt;teclas&lt;/a&gt;, y &lt;a href=&#34;http://gomechanicalkeyboard.com/3d-printed-keycaps-vs-artisan-keycaps/&#34;&gt;comparación&lt;/a&gt; del acabado entre impresoras 3D y las artesanales.&lt;/p&gt;
+
+&lt;h2 id=&#34;where-to-buy:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Where to buy&lt;/h2&gt;
+
+&lt;p&gt;La sustitución y personalización de keycaps es la modificación más fácil para usuarios sin conocimientos de hardware, y también la más visual. Por ello, el mercado de keycaps de todo tipo y color es con diferencia el más extenso del ámbito de los teclados mecánicos. Son habituales los pedidos conjuntos de keyset con combinaciones de colores concretas. Se venden también teclas individuales y grupos de teclas en función de su propósito (teclas de sistema, de navegación, numpad, función&amp;hellip;). Es habitual encontrar diseños artesanales que se venden como piezas de arte, e incluso piezas descatalogadas por hasta $250 la tecla. &lt;a href=&#34;https://deskthority.net/wiki/Keycap_mount&#34;&gt;Aqui&lt;/a&gt;, pueden consultarse listas de fabricantes en función del tipo de montaje de las keycaps.&lt;/p&gt;
+
+&lt;h1 id=&#34;stabilizers:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Stabilizers&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://deskthority.net/wiki/Stabiliser&#34;&gt;https://deskthority.net/wiki/Stabiliser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/MechanicalKeyboards/wiki/keycap_guides&#34;&gt;https://www.reddit.com/r/MechanicalKeyboards/wiki/keycap_guides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://deskthority.net/wiki/Category:Keyboard_terms&#34;&gt;https://deskthority.net/wiki/Category:Keyboard_terms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://deskthority.net/wiki/Category:Keyboard_keys&#34;&gt;https://deskthority.net/wiki/Category:Keyboard_keys&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;automatización:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Automatización&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bigbluesaw.com/big-blue-saw/big-blue-saw-special-info/waterjet-and-laser-cut-keyboard-plates.html&#34;&gt;https://www.bigbluesaw.com/big-blue-saw/big-blue-saw-special-info/waterjet-and-laser-cut-keyboard-plates.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://swillkb.com/&#34;&gt;http://swillkb.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://builder.swillkb.com/&#34;&gt;http://builder.swillkb.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geekhack.org/index.php?topic=65189.0&#34;&gt;https://geekhack.org/index.php?topic=65189.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://deskthority.net/workshop-f7/swill-s-plate-building-tool-t10228.html&#34;&gt;https://deskthority.net/workshop-f7/swill-s-plate-building-tool-t10228.html&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://geekhack.org/index.php?topic=65189.0&#34;&gt;https://geekhack.org/index.php?topic=65189.0&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Crear un set de moldes que incluya todos los modelos de un perfil:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fila de función
+
+&lt;ul&gt;
+&lt;li&gt;1x1&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Fila 1
+
+&lt;ul&gt;
+&lt;li&gt;1x1&lt;/li&gt;
+&lt;li&gt;Backspace&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Fila 2
+
+&lt;ul&gt;
+&lt;li&gt;1x1&lt;/li&gt;
+&lt;li&gt;Tab&lt;/li&gt;
+&lt;li&gt;Enter ISO&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Fila 3
+
+&lt;ul&gt;
+&lt;li&gt;1x1&lt;/li&gt;
+&lt;li&gt;Caps Lock&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Fila 4
+
+&lt;ul&gt;
+&lt;li&gt;1x1&lt;/li&gt;
+&lt;li&gt;Left Shift&lt;/li&gt;
+&lt;li&gt;Right Shift&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Fila 5
+
+&lt;ul&gt;
+&lt;li&gt;Left Ctrl&lt;/li&gt;
+&lt;li&gt;Left Fn&lt;/li&gt;
+&lt;li&gt;Left Win&lt;/li&gt;
+&lt;li&gt;Left Alt&lt;/li&gt;
+&lt;li&gt;Space bar&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Crear las leyendas con una impresora 3D o impresora SLA&lt;/p&gt;
+
+&lt;h1 id=&#34;coste:c3448c09895bb16fe48522a0f0f7886b&#34;&gt;Coste&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/MechanicalKeyboards/wiki/switch_suppliers&#34;&gt;https://www.reddit.com/r/MechanicalKeyboards/wiki/switch_suppliers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ortholinearkeyboards.com/education&#34;&gt;http://ortholinearkeyboards.com/education&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.keyboardco.com/keyboard_details.asp?PRODUCT=1127&#34;&gt;http://www.keyboardco.com/keyboard_details.asp?PRODUCT=1127&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.keyboardco.com/product.asp?PRODUCT=1127&#34;&gt;http://www.keyboardco.com/product.asp?PRODUCT=1127&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://matias.ca/order/#keycaps&#34;&gt;http://matias.ca/order/#keycaps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://deskthority.net/keyboards-f2/donjuan-goatse-and-matias-t7568.html&#34;&gt;https://deskthority.net/keyboards-f2/donjuan-goatse-and-matias-t7568.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://pimpmykeyboard.com/&#34;&gt;http://pimpmykeyboard.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://geekhack.org/index.php?topic=23722.0&#34;&gt;https://geekhack.org/index.php?topic=23722.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://geekhack.org/index.php?topic=45672.0&#34;&gt;https://geekhack.org/index.php?topic=45672.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Keycaps&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Legend position
+
+&lt;ul&gt;
+&lt;li&gt;Top&lt;/li&gt;
+&lt;li&gt;Front&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Color&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://support.wasdkeyboards.com/customer/en/portal/articles/1366948-keycap-compatibility&#34;&gt;http://support.wasdkeyboards.com/customer/en/portal/articles/1366948-keycap-compatibility&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.keycapsdirect.com/key-caps.php&#34;&gt;http://www.keycapsdirect.com/key-caps.php&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.keychatter.com/keycaps/&#34;&gt;https://www.keychatter.com/keycaps/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://imgur.com/a/OhRd4&#34;&gt;http://imgur.com/a/OhRd4&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://keypuller.com/&#34;&gt;http://keypuller.com/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://geekhack.org/index.php?topic=45672.0&#34;&gt;https://geekhack.org/index.php?topic=45672.0&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.reddit.com/r/MechanicalKeyboards/wiki/keycap_guides#wiki_plastics&#34;&gt;https://www.reddit.com/r/MechanicalKeyboards/wiki/keycap_guides#wiki_plastics&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.keychatter.com/keycaps/&#34;&gt;https://www.keychatter.com/keycaps/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.reddit.com/r/MechanicalKeyboards/wiki/switch_suppliers&#34;&gt;https://www.reddit.com/r/MechanicalKeyboards/wiki/switch_suppliers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Puesto que el desembolso en switches es una parte importante del coste total,&lt;/p&gt;
+
+&lt;p&gt;En &lt;a href=&#34;http://www.mouser.es/Search/Refine.aspx?Keyword=cherry+mx&#34;&gt;Mouser&lt;/a&gt; los Cherry MX están disponibles entre 0,706-1,11€ la unidad (dependiendo del modelo), y entre 0,57-0,896 para paquetes de 200-250. En &lt;a href=&#34;http://www.digikey.es/product-search/en/switches/pushbutton-switches/1114209?k=cherry%20mx&#34;&gt;Digi-Key&lt;/a&gt; están a 0,82€ la unidad y a 0,6585€ en paquetes de 250.&lt;/p&gt;
+
+&lt;p&gt;En el mejor de los casos, el desembolso requerido para un layout ISO 105 es de 60€, siendo 70€ una cifra más razonable, e incluso 80€ incluyendo gastos de envío.&lt;/p&gt;
+
+&lt;p&gt;se pueden compartir diseños de PCB (debidamente adaptados)
+se pueden compartir diseños de plates (debidamente adaptados)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>3. Electronics</title>
+      <link>http://freejaus.github.io/notebook/fjkb/elec/</link>
+      <pubDate>Fri, 20 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://freejaus.github.io/notebook/fjkb/elec/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;PCB
+
+&lt;ul&gt;
+&lt;li&gt;Layers&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Backlight
+
+&lt;ul&gt;
+&lt;li&gt;Addressable LEDs&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Connector
+
+&lt;ul&gt;
+&lt;li&gt;USB&lt;/li&gt;
+&lt;li&gt;PS/2&lt;/li&gt;
+&lt;li&gt;Inalámbrico&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Module connection&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Controller&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Backlight&lt;/li&gt;
+&lt;li&gt;Brightness&lt;/li&gt;
+&lt;li&gt;Effects&lt;/li&gt;
+&lt;li&gt;Media/Fn keys/functions&lt;/li&gt;
+&lt;li&gt;Win key block with fn combination, not switch&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://kalerator.clueboard.co/&#34;&gt;http://kalerator.clueboard.co/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://geekhack.org/index.php?topic=74139.0&#34;&gt;https://geekhack.org/index.php?topic=74139.0&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/skullydazed/kalerator&#34;&gt;https://github.com/skullydazed/kalerator&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Single-switch PCB&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://geekhack.org/index.php?topic=55744.msg1254946#msg1254946&#34;&gt;https://geekhack.org/index.php?topic=55744.msg1254946#msg1254946&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://deskthority.net/workshop-f7/another-single-switch-circuit-board-t11420.html&#34;&gt;https://deskthority.net/workshop-f7/another-single-switch-circuit-board-t11420.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://geekhack.org/index.php?topic=41989.0&#34;&gt;https://geekhack.org/index.php?topic=41989.0&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>4. Mechanics</title>
+      <link>http://freejaus.github.io/notebook/fjkb/mech/</link>
+      <pubDate>Fri, 20 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://freejaus.github.io/notebook/fjkb/mech/</guid>
+      <description>&lt;p&gt;En lo que respecta al soporte del teclado en sí, y a la adición modular de extras, el &lt;code&gt;Azio MGK1&lt;/code&gt; por lo visible de su diseño y por la relación calidad/precio se considera una buena referencia.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Material
+
+&lt;ul&gt;
+&lt;li&gt;Plastic&lt;/li&gt;
+&lt;li&gt;Steel&lt;/li&gt;
+&lt;li&gt;Aluminium&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Top
+
+&lt;ul&gt;
+&lt;li&gt;Classic&lt;/li&gt;
+&lt;li&gt;Bare-plate&lt;/li&gt;
+&lt;li&gt;Thin acrilic over bare-plate&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Bottom
+
+&lt;ul&gt;
+&lt;li&gt;Grip pads and stand-offs with rubber feet&lt;/li&gt;
+&lt;li&gt;Huecos para redirigir los cables&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Painting
+
+&lt;ul&gt;
+&lt;li&gt;Hydro-dip&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Modulos
+
+&lt;ul&gt;
+&lt;li&gt;Connector&lt;/li&gt;
+&lt;li&gt;Hub&lt;/li&gt;
+&lt;li&gt;Audio&lt;/li&gt;
+&lt;li&gt;SD reader&lt;/li&gt;
+&lt;li&gt;SATA&lt;/li&gt;
+&lt;li&gt;Tactile screen&lt;/li&gt;
+&lt;li&gt;Rueda/bola/ratón&lt;/li&gt;
+&lt;li&gt;Macros (8?)&lt;/li&gt;
+&lt;li&gt;Bluetooth&lt;/li&gt;
+&lt;li&gt;Wifi/Antena&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Accesorios&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Wrist-pad (soft foam, hardwood)&lt;/li&gt;
+&lt;li&gt;Keycap Puller&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://bitbucket.org/afqueiruga/kbl2scad&#34;&gt;https://bitbucket.org/afqueiruga/kbl2scad&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Idea para las patas: &lt;a href=&#34;https://www.indiegogo.com/projects/ergodox-ez-an-incredible-mechanical-keyboard#/&#34;&gt;https://www.indiegogo.com/projects/ergodox-ez-an-incredible-mechanical-keyboard#/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>5. Tools</title>
+      <link>http://freejaus.github.io/notebook/fjkb/tools/</link>
+      <pubDate>Fri, 20 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://freejaus.github.io/notebook/fjkb/tools/</guid>
+      <description>
+
+&lt;p&gt;Como resultado de las decisiones de diseño tomadas en los bloques anteriores, se dispondrá de una ficha por producto, donde se reúna toda la información relevante para la fabricación del mismo. Ésta puede representarse como una estructura de tipo árbol:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dimensiones:
+
+&lt;ul&gt;
+&lt;li&gt;Mínimas &lt;code&gt;w,h&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Márgenes: &lt;code&gt;l,t,r,b&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Montaje:
+
+&lt;ul&gt;
+&lt;li&gt;Plate o PCB.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Vector de teclas:
+
+&lt;ul&gt;
+&lt;li&gt;offset: &lt;code&gt;x,y&lt;/code&gt; [&lt;em&gt;Offset de cada tecla&lt;/em&gt;]&lt;/li&gt;
+&lt;li&gt;size: &lt;code&gt;w,h&lt;/code&gt; [&lt;em&gt;Tamaño de cada tecla, &lt;code&gt;0,0&lt;/code&gt; para Enter ISO&lt;/em&gt;]&lt;/li&gt;
+&lt;li&gt;legend: &lt;code&gt;&#39;\n\n\n\n\n\n\n\n\n\n\n&#39;&lt;/code&gt; [&lt;em&gt;Posición &lt;code&gt;x,y&lt;/code&gt; -en rango (1:4,1:3)- y contenido &lt;code&gt;&#39;str&#39;&lt;/code&gt; de las leyendas de cada tecla&lt;/em&gt;]&lt;/li&gt;
+&lt;li&gt;color: &lt;code&gt;#000000,#000000&lt;/code&gt; [&lt;em&gt;Color de la tecla y de la leyenda&lt;/em&gt;]&lt;/li&gt;
+&lt;li&gt;window: &lt;code&gt;none&lt;/code&gt; [&lt;em&gt;Si la tiene, posición y forma de la ventana&lt;/em&gt;]&lt;/li&gt;
+&lt;li&gt;use: &lt;code&gt;comb.,cmd&lt;/code&gt; [&lt;em&gt;Funcionalidad normal, +shift, +fn, [opt] +macros de cada tecla&lt;/em&gt;]&lt;/li&gt;
+&lt;li&gt;switch: &lt;code&gt;mx|alps|topre,ref&lt;/code&gt; [&lt;em&gt;Tipo de switch de cada tecla&lt;/em&gt;]&lt;/li&gt;
+&lt;li&gt;stab: &lt;code&gt;none&lt;/code&gt; [&lt;em&gt;Si lo requiere, tipo de estabilizador de cada tecla&lt;/em&gt;]&lt;/li&gt;
+&lt;li&gt;rot: &lt;code&gt;0&lt;/code&gt; o &lt;code&gt;90&lt;/code&gt; o &lt;code&gt;180&lt;/code&gt; o &lt;code&gt;270&lt;/code&gt;[&lt;em&gt;Si lo requiere, rotación de cada tecla para el layout para el plate y el PCB&lt;/em&gt;]&lt;/li&gt;
+&lt;li&gt;led: &lt;code&gt;white&lt;/code&gt; [&lt;em&gt;Si se utiliza, color del LED de cada tecla&lt;/em&gt;]&lt;/li&gt;
+&lt;li&gt;prof: &lt;code&gt;dsa,1&lt;/code&gt; [&lt;em&gt;Perfil de cada tecla y la línea&lt;/em&gt;]&lt;/li&gt;
+&lt;li&gt;addpcb: &lt;code&gt;none,0&lt;/code&gt; [&lt;em&gt;Tipo de swicth y rotación para incluir un layout adicional en el plate y el PCB&lt;/em&gt;]&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;software:392b1cfe5865fa09a3eb545085be9682&#34;&gt;Software&lt;/h1&gt;
+
+&lt;p&gt;Para interpretar cada ficha, se requieren librerías comunes que contengan los modelos a utilizar en los diferentes procesos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Layouts:
+
+&lt;ul&gt;
+&lt;li&gt;Plate:
+
+&lt;ul&gt;
+&lt;li&gt;mx&lt;/li&gt;
+&lt;li&gt;alps&lt;/li&gt;
+&lt;li&gt;topre&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;PCB:
+
+&lt;ul&gt;
+&lt;li&gt;mx&lt;/li&gt;
+&lt;li&gt;alps&lt;/li&gt;
+&lt;li&gt;topre&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Keys:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;NOTA: ¿cómo llegamos desde el diseño del layout online hasta el layout del plate y del PCB? Se han referenciado en los bloques anteriores varios diseños OpenSource, y también se ha referenciado al menos una herramienta para cada paso. ¿Qué falta para cubrir las necesidades indicadas en la ficha? ¿Se pueden adaptar las herramientas ya existentes? ¿Se pueden utilizar sólo con algo de pre y post procesado?&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.keyboard-layout-editor.com/&#34;&gt;keyboard-layout-editor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bitbucket.org/afqueiruga/kbl2scad&#34;&gt;kbl2scad&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;python kbl2scad.py my_layout_file -o keys.scad&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;procesos-de-fabricación:392b1cfe5865fa09a3eb545085be9682&#34;&gt;Procesos de fabricación&lt;/h1&gt;
+
+&lt;p&gt;El producto del procesamiento de cada ficha es una serie de modelos en 3D, y los procesos de fabricación asociados, de acuerdo con el siguiente &lt;a href=&#34;http://knsv.github.io/mermaid/live_editor/#/view/Z3JhcGggVEQKICAgIDAoQ2FyZCktLT5NW1BsYXRlc107CiAgICAwKENhcmQpLS0-RVtQQ0JzXTsKICAgIDAoQ2FyZCktLT5LW0tleXNdOwoKICAgIE0tLT5NZChEcmlsbCk7CiAgICAgIE1kLS0-TXMoU2F3KTsKICAgICAgTWQtLT5NbShNaWxsKTsKICAgIE0tLT5NbChMYXNlcik7CgogICAgTXMtLT5NbyhTbW9vdGgpOwogICAgTW0tLT5NbzsKICAgIE1sLS0-TW87CgogICAgTW8tLT5NYihCZW5kKTsKCiAgICBFLS0-RWQoRHJpbGwpOwogICAgRWQtLT5FbShNaWxsKTsKICAgIEUtLT5FbChMYXNlcik7CiAgICBFLS0-RWxwKExhc2VyIHByaW50ZXIpOwogICAgRWxwLS0-RWFwKEFjZXRhdGUpOwogICAgRWFwLS0-RWFjKENvbnRhY3QgY29waWVyKTsKICAgIEVscC0tPkVwcChQYXBlcik7CiAgICBFcHAtLT5FcGkoSXJvbik7CiAgICBFYWMtLT5FZVtFdGNoaW5nXTsKICAgIEVwaS0tPkVlOwogICAgRWUtLT5FZWQoRHJpbGwpOwoKICAgIEVtLS0-RWgoQ2xlYW4pOwogICAgRWgtLT5FczsKICAgIEVsLS0-RWg7CiAgICBFZWQtLT5FaDsKCiAgICBFaC0tPkVhbXAoUHJpbnQgTWFzayk7CiAgICBFYW1wLS0-RWFtYyhDdXQgTWFzayk7CiAgICBFaC0tPkVhbWwoTWFzayBQbG90dGVyKTsKICAgIEVhbWMtLT5FYW1hKEFwcGx5IFBhc3RlKTsKICAgIEVhbWwtLT5FYW1hOwogICAgRWgtLT5FYWQoUGFzdGUgZGlzcGVuc2VyKTsKICAgIEVhZC0tPkVwKFBpY2sgYW5kIFBsYWNlKTsKICAgIEVhbWEtLT5FcDsKICAgIEVwLS0-RXIoUmVmbG93KTsKICAgIEVyLS0-RXMoU29sZGVyKTsKICAgIEVzLS0-RWMoQ29hdCk7CgogICAgSy0tPktwKDNEIHByaW50KTsKICAgIEtwLS0-S2VzOwogICAgS3AtLT5LZTIoVHdvLXNob3QpOwogICAgS2UyLS0-S2U7CiAgICBLcC0tPktwc3MoU21vb3RoKTsKICAgIEtwc3MtLT5LcHMoU2lsaWNvbmUpOwogICAgS3BzLS0-S29bTW91bGRdOwogICAgSy0tPkttKE1pbGwpOwogICAgS20tLT5LZChEcmlsbC9UaHJlYWQpOwogICAgS2QtLT5LcyhTbW9vdGgpOwogICAgS3MtLT5LbzsKICAgIEtvLS0-S2UoRXh0cnVkZSk7CiAgICBLZS0tPktlcyhTbW9vdGgpOwoKICAgIE1iLS0-VGVzdDsKICAgIEVjLS0-VGVzdDsKICAgIEtlcy0tPlRlc3Q7&#34;&gt;diagrama&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;graph TD;
+    0(Card)--&amp;gt;M[Plates];
+    0(Card)--&amp;gt;E[PCBs];
+    0(Card)--&amp;gt;K[Keys];
+
+    M--&amp;gt;Md(Drill);
+      Md--&amp;gt;Ms(Saw);
+      Md--&amp;gt;Mm(Mill);
+    M--&amp;gt;Ml(Laser);
+
+    Ms--&amp;gt;Mo(Smooth);
+    Mm--&amp;gt;Mo;
+    Ml--&amp;gt;Mo;
+
+    Mo--&amp;gt;Mb(Bend);
+
+    E--&amp;gt;Ed(Drill);
+    Ed--&amp;gt;Em(Mill);
+    E--&amp;gt;El(Laser);
+    E--&amp;gt;Elp(Laser printer);
+    Elp--&amp;gt;Eap(Acetate);
+    Eap--&amp;gt;Eac(Contact copier);
+    Elp--&amp;gt;Epp(Paper);
+    Epp--&amp;gt;Epi(Iron);
+    Eac--&amp;gt;Ee[Etching];
+    Epi--&amp;gt;Ee;
+    Ee--&amp;gt;Eed(Drill);
+
+    Em--&amp;gt;Eh(Clean);
+    Eh--&amp;gt;Es;
+    El--&amp;gt;Eh;
+    Eed--&amp;gt;Eh;
+
+    Eh--&amp;gt;Eamp(Print Mask);
+    Eamp--&amp;gt;Eamc(Cut Mask);
+    Eh--&amp;gt;Eaml(Mask Plotter);
+    Eamc--&amp;gt;Eama(Apply Paste);
+    Eaml--&amp;gt;Eama;
+    Eh--&amp;gt;Ead(Paste dispenser);
+    Ead--&amp;gt;Ep(Pick and Place);
+    Eama--&amp;gt;Ep;
+    Ep--&amp;gt;Er(Reflow);
+    Er--&amp;gt;Es(Solder);
+    Es--&amp;gt;Ec(Coat);
+
+    K--&amp;gt;Kp(3D print);
+    Kp--&amp;gt;Kes;
+    Kp--&amp;gt;Ke2(Two-shot);
+    Ke2--&amp;gt;Ke;
+    Kp--&amp;gt;Kpss(Smooth);
+    Kpss--&amp;gt;Kps(Silicone);
+    Kps--&amp;gt;Ko[Mould];
+    K--&amp;gt;Km(Mill);
+    Km--&amp;gt;Kd(Drill/Thread);
+    Kd--&amp;gt;Ks(Smooth);
+    Ks--&amp;gt;Ko;
+    Ko--&amp;gt;Ke(Extrude);
+    Ke--&amp;gt;Kes(Smooth);
+
+    Mb--&amp;gt;Test;
+    Ec--&amp;gt;Test;
+    Kes--&amp;gt;Test;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.instructables.com/id/Circuit-Board-Lab-POV-Business-Card/?ALLSTEPS&#34;&gt;Circuit Board Lab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;www.instructables.com/id/Cheap-and-Easy-Toner-Transfer-for-PCB-Making&#34;&gt;Cheap and easy toner transfer for PCB making&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dr-lex.be/hardware/tonertransfer.html&#34;&gt;Toner transfer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.instructables.com/id/Modification-of-the-Lexmark-E260-for-Direct-Laser--1/?ALLSTEPS&#34;&gt;Modification of the Lexmark E260 for Direct Laser Printing of PCBs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=i0ZT4y3DYrY&#34;&gt;Desktop Production of Open Theremin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;herramientas-maquinaria:392b1cfe5865fa09a3eb545085be9682&#34;&gt;Herramientas/Maquinaria&lt;/h1&gt;
+
+&lt;p&gt;Así, las herramientas a utilizar son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Necesarias:
+
+&lt;ul&gt;
+&lt;li&gt;Impresora láser o plotter CNC&lt;/li&gt;
+&lt;li&gt;Taladro o taladro CNC&lt;/li&gt;
+&lt;li&gt;Sierra para metal o fresadora CNC&lt;/li&gt;
+&lt;li&gt;Lijas y pulidores para metal&lt;/li&gt;
+&lt;li&gt;Soldador&lt;/li&gt;
+&lt;li&gt;Impresora 3D por adición o SLA (stereolitography)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Opcionales
+
+&lt;ul&gt;
+&lt;li&gt;Doblador aluminio&lt;/li&gt;
+&lt;li&gt;Láser CNC&lt;/li&gt;
+&lt;li&gt;Acetato e insoladora, o plancha; y utensilios para el atacado (por ejemplo, caja estanca con salida de aire mediante tubo, para evitar la inhalación).&lt;/li&gt;
+&lt;li&gt;PickAndPlace CNC&lt;/li&gt;
+&lt;li&gt;Grill/Sandwichera con regulador y control para reflow&lt;/li&gt;
+&lt;li&gt;Soplete&lt;/li&gt;
+&lt;li&gt;Extrusor para molde&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Aunque no es estrictamente necesario para la fabricación de prototipos, el uso de herramientas de control númerico (CNC) permite acelerar los aspectos más repetitivos. Este hecho es especialmente relevante, puesto que el número de piezas que compone cada teclado es elevado. Sin embargo, no es razonable adquirir una máquina para fabricar sólo un teclado, ya que su coste será típicamente mayor que el de uno de alta gama.&lt;/p&gt;
+
+&lt;p&gt;No obstante, si se puede construir una máquina con un coste inferior a 250€, y con ella el coste de un teclado completamente personalizado se reduce a 75€, con cuatro unidades se habrá amortizado la inversión. El uso de una sola máquina tiene el inconveniente de no permitir la paralelización de procesos. Mas, enfocado en tiradas pequeñas sin tiempos de entrega que cumplir, es una limitación asumible. Por otro lado, desde un punto de vista didáctico, la adquisición de una máquina CNC multiusos con precisión suficiente en todos los procesos es un reto en sí. Concretamente, pueden ser útiles los siguientes cabezales:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rotulador/pluma [Impresora/Plotter]&lt;/li&gt;
+&lt;li&gt;Cortante/Cuchilla [Plotter]&lt;/li&gt;
+&lt;li&gt;Broca [Taladro]&lt;/li&gt;
+&lt;li&gt;Fresa [Fresadora]&lt;/li&gt;
+&lt;li&gt;Extrusor plástico [Impresora 3D]&lt;/li&gt;
+&lt;li&gt;Extrusor pasta [Dispensador de pasta]&lt;/li&gt;
+&lt;li&gt;Lija/Trapo [Pulidor]&lt;/li&gt;
+&lt;li&gt;Láser&lt;/li&gt;
+&lt;li&gt;Aspirador [Pick and Place]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;El proyecto &lt;a href=&#34;http://freejaus.github.io/notebook/deskbot&#34;&gt;DeskBot&lt;/a&gt;, paralelo a FJKB, estudia la viabilidad de construir una máquina como la descrita, con los medios disponibles. Particularmente, FJKB es uno de los productos escogidos para verificar las especificaciones. En caso de disponer de DeskBot, u otra máquina con características equivalentes, el listado de herramientas sería:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Necesarias
+
+&lt;ul&gt;
+&lt;li&gt;Soldador&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Recomendada
+
+&lt;ul&gt;
+&lt;li&gt;Grill/Sandwichera con regulador&lt;/li&gt;
+&lt;li&gt;Extrusor para molde&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Opcionales
+
+&lt;ul&gt;
+&lt;li&gt;Impresora láser&lt;/li&gt;
+&lt;li&gt;Taladro/Dremel&lt;/li&gt;
+&lt;li&gt;Sierra para metal&lt;/li&gt;
+&lt;li&gt;Lijas y pulidores para metal&lt;/li&gt;
+&lt;li&gt;Doblador aluminio&lt;/li&gt;
+&lt;li&gt;Acetato e insoladora, o plancha; y utensilios para el atacado&lt;/li&gt;
+&lt;li&gt;Soplete&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Commercial</title>
+      <link>http://freejaus.github.io/notebook/fjkb/commercial/</link>
+      <pubDate>Fri, 20 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://freejaus.github.io/notebook/fjkb/commercial/</guid>
+      <description>
+
+&lt;p&gt;Algunos fabricantes conocidos de componentes de PC con modelos mecánicos son Corsair, Razer, Nox, Ozone, G.Skill, Newskill, SteelSeries, Mad Catz, Thermaltake, Logitech&amp;hellip; En &lt;a href=&#34;https://www.reddit.com/r/MechanicalKeyboards/wiki/buying_guide#wiki_cost&#34;&gt;reddit.com/r/MechanicalKeyboards/wiki/buying_guide#wiki_cost&lt;/a&gt; se puede consultar una lista más completa de modelos.
+También en &lt;a href=&#34;https://www.reddit.com/r/MechanicalKeyboards/wiki/recommendedsellers#wiki_resellers_recommended_by_redditors_that_ship_international_.28alphabetical_order.29&#34;&gt;reddit.com/r/MechanicalKeyboards/wiki/recommendedsellers&lt;/a&gt; se listan las tiendas de todo el mundo que importan y revenden teclados mecánicos. En &lt;a href=&#34;http://gomechanicalkeyboard.com/&#34;&gt;Go Mechanical Keyboard&lt;/a&gt; se analizan y se recomiendan modelos en diferentes rangos de precios. En la tabla siguiente, se resumen las características de algunos modelos comerciales. Se muestra prácticamente todo el catálogo de CoolerMaster, por su variedad.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;th&gt;&amp;ndash;&lt;/th&gt;
+&lt;th&gt;Bare-plate&lt;/th&gt;
+&lt;th&gt;&amp;ndash;&lt;/th&gt;
+&lt;th&gt;Dsitribution&lt;/th&gt;
+&lt;th&gt;&amp;ndash;&lt;/th&gt;
+&lt;th&gt;Keys&lt;/th&gt;
+&lt;th&gt;&amp;ndash;&lt;/th&gt;
+&lt;th&gt;Backlight&lt;/th&gt;
+&lt;th&gt;&amp;ndash;&lt;/th&gt;
+&lt;th&gt;Removable USB&lt;/th&gt;
+&lt;th&gt;&amp;ndash;&lt;/th&gt;
+&lt;th&gt;Hub&lt;/th&gt;
+&lt;th&gt;&amp;ndash;&lt;/th&gt;
+&lt;th&gt;Audio&lt;/th&gt;
+&lt;th&gt;&amp;mdash;&lt;/th&gt;
+&lt;th&gt;PcComponentes&lt;/th&gt;
+&lt;th&gt;&amp;mdash;&lt;/th&gt;
+&lt;th&gt;Amazon&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.aziocorp.com/webe/html/products/index2.aspx?num=32&#34;&gt;Azio MGK1&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Volume wheel&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;White&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.amazon.com/Azio-Backlit-Mechanical-Keyboard-MGK1/dp/B00OBA6QYY&#34;&gt;$79,99&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/quickfireultimate/&#34;&gt;CM Quick Fire Ultimate&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Blue, White or Red&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/quickfirext/&#34;&gt;CM Quick Fire XT&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.amazon.es/Cooler-Master-Storm-QuickFire-Al%C3%A1mbrico/dp/B016YCFVK6/ref=sr_1_7?s=computers&amp;amp;ie=UTF8&amp;amp;qid=1453080464&amp;amp;sr=1-7&#34;&gt;174,08€&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/xt_stealth/&#34;&gt;CM Quick Fire XT-Stealth&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Phantom&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/quickfire-xti/&#34;&gt;CM Quick Fire XTi&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;35 colors&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.amazon.es/Cooler-Master-Storm-Quick-Fire/dp/B0157JQVCO/ref=sr_1_5?s=computers&amp;amp;ie=UTF8&amp;amp;qid=1453080464&amp;amp;sr=1-5&#34;&gt;180,38€&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/quickfiretk/&#34;&gt;CM Quick Fire TK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Compact&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Blue, White, Red or Green&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/tk_stealth/&#34;&gt;CM Quick Fire TK-Stealth&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Compact&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Phantom&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;White&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/quickfirepro/&#34;&gt;CM Quick Fire Pro&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Red (partial)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.pccomponentes.com/cooler_master_cm_storm_quickfire_pro_rojo.html&#34;&gt;! 74€&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.amazon.es/Cooler-Master-Storm-Quickfire-Pro/dp/B00CTBVY0I/ref=sr_1_4?s=computers&amp;amp;ie=UTF8&amp;amp;qid=1453080464&amp;amp;sr=1-4&#34;&gt;177,26€+21,78€&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/quickfirerapid/&#34;&gt;CM Quick Fire Rapid&lt;/a&gt; (&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/quickfirerapidred/&#34;&gt;Red&lt;/a&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;TKL&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/rapid-i/&#34;&gt;CM Quick Fire Rapid-i&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;TKL&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;White&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/rapid-si/&#34;&gt;CM Quick Fire Rapid-Si&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;TKL&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Phantom&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;White&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/stealth/&#34;&gt;CM Quick Fire Stealth&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;TKL&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Phantom&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/novatouchtkl/&#34;&gt;CM Novatouch TKL&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;TKL&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.pccomponentes.com/cooler_master_storm_novatouch_tkl_negro.html&#34;&gt;149€&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.amazon.es/Cooler-Master-Storm-Novatouch-Negro/dp/B00WENZ98O/ref=sr_1_2?s=computers&amp;amp;ie=UTF8&amp;amp;qid=1453080464&amp;amp;sr=1-2&#34;&gt;174,15€+2,99€&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/trigger/&#34;&gt;CM Trigger&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;5 Macro&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Red&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Dual&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://gaming.coolermaster.com/en/products/keyboards/triggerz/&#34;&gt;CM Trigger-Z&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;5 Macro&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Blue, White or Red&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.ozonegaming.com/es/producto/strike-pro/&#34;&gt;Ozone Strike Pro&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;5x6 Macro&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;White and Red (WASD, Arrows)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.pccomponentes.com/ozone_strike_pro_cherry_red.html&#34;&gt;99,95€&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;No se ha encontrado ningún modelo que reúna todas las características deseadas.&lt;/li&gt;
+&lt;li&gt;No es fácil encontrar modelos con el &lt;a href=&#34;http://freejaus.github.io/notebook/fjkb/layout&#34;&gt;layout&lt;/a&gt; ES. Por ejemplo, el &lt;code&gt;Azio MGK1&lt;/code&gt; sería una buena base para modificaciones, pero es un modelo de 104 teclas y no de 105.&lt;/li&gt;
+&lt;li&gt;Los modelos que se encuentran i) tienen un precio elevado (&amp;gt;150€), ii) no tienen iluminación o es sólo roja o específica para gaming, y/o iii) tienen un layout específico para gaming (curvatura de las teclas).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;custom:6bb28760d9618c0b43e7f2efea3ea43c&#34;&gt;Custom&lt;/h2&gt;
+
+&lt;p&gt;Existen varios fabricantes que permiten adquirir teclados custom (personalizados a partir de un conjunto limitado de opciones):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mechanicalkeyboards.com/=&#34;&gt;mechanicalkeyboards&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.wasdkeyboards.com&#34;&gt;WASD Keyboards&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.maxkeyboard.com/&#34;&gt;MAX Keyboard&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.gonskeyboardworks.com/&#34;&gt;GON&amp;rsquo;s keyboard works&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Todas las anteriores ofrecen keysets personalizados (entre los que se encuentran los conjuntos ISO-ES de 88 y 105 teclas). Existe amplia variedad en los materiales de fabricación (ABS, PBT&amp;hellip;), en la orientación de las leyendas (top o font -phantom, en terminología de CM-), y en su idoneidad para retroiluminación. La personalización permite incluso el diseño de teclas a medida. Sin embargo, debe tenerse en cuenta la durabilidad de la impresión (Laser Etched, UV coated, double-shot&amp;hellip;), y el espacio disponible en caso de optar por frontprint.&lt;/p&gt;
+
+&lt;p&gt;En lo que respecta a la base del teclado (barebones), la oferta está más limitada. De las páginas anteriores sólo WASD ofrece modelos ISO. Dispone concretamente de cuatro modelos: 104-key (ANSI), 87-key (ANSI), 105-Key ISO, y 88-Key ISO.&lt;/p&gt;
+
+&lt;p&gt;Revisando las características deseadas la oferta de WASD tiene principalmente las siguientes pegas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;No hay formato Compact, sólo Full o TKL&lt;/li&gt;
+&lt;li&gt;No son bare-plate&lt;/li&gt;
+&lt;li&gt;Modelo V2 ($145-150)
+
+&lt;ul&gt;
+&lt;li&gt;No está retroiluminado&lt;/li&gt;
+&lt;li&gt;Se especifica que las keycaps no son compatibles con retroiluminación&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Modelo CODE -retroiluminado- ($150-170)
+
+&lt;ul&gt;
+&lt;li&gt;Sólo tiene keysets UK, Swedish, German&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La única opción sería adquirir &lt;code&gt;CODE 105-Key German Mechanical Keyboard - Cherry MX Clear&lt;/code&gt; por $155 y adquirir un keyset por separado. Serían $50, sin soporte para retroiluminación. Cada unidad por separado cuesta $2.5-3, dependiendo del diseño.&lt;/p&gt;
+
+&lt;p&gt;En MAX keyboards, se puede adquirir un keyset en policarbonato negro translúcido de 88 / 105 piezas por $39,99. El set en ABS con colores custom cuesta $25.&lt;/p&gt;
+
+&lt;p&gt;La solución más económica serían $175, con teclado retroiluminado, pero keycaps opacas. O $189,99 con keycaps completamente translúcidas. El presupuesto para adquirir un modelo comercial (no custom) y añadir un keyset personalizado es igual o mayor.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

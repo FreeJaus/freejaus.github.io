@@ -2,19 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Todo on FreeJaus - Forge</title>
-    <link>http://forja.freejaus.com/tags/todo/</link>
+    <link>http://freejaus.github.io/tags/todo/</link>
     <description>Recent content in Todo on FreeJaus - Forge</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 20 Nov 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://forja.freejaus.com/tags/todo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://freejaus.github.io/tags/todo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ToDo</title>
-      <link>http://forja.freejaus.com/notebook/todo/</link>
+      <link>http://freejaus.github.io/notebook/todo/</link>
       <pubDate>Fri, 20 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://forja.freejaus.com/notebook/todo/</guid>
-      <description></description>
+      <guid>http://freejaus.github.io/notebook/todo/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://justgetflux.com/&#34;&gt;https://justgetflux.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system /&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.jide.com/en/remixos&#34;&gt;http://www.jide.com/en/remixos&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;PHP Dolibarr&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Plantillas PDF (facturas, pedidos, etc.)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dolistore.com/en/modules/457-Mod--le-de-document-Alpiroc.html&#34;&gt;https://www.dolistore.com/en/modules/457-Mod--le-de-document-Alpiroc.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

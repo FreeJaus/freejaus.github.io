@@ -4,6 +4,9 @@
   
   
   
+    
+    
+  
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,9 +22,9 @@
   <meta name="author" content="This is the author">
   <meta name="generator" content="Hugo 0.16-DEV" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <title>ToDo - FreeJaus - Forge</title>
-  <meta content="ToDo - FreeJaus - Forge" property="og:title">
-  <meta content="todo" name="keywords">
+  <title>4. Identificación - FreeJaus - Forge</title>
+  <meta content="4. Identificación - FreeJaus - Forge" property="og:title">
+  <meta content="" name="keywords">
 
   <!-- Bootstrap and Font Awesome CSS -->
   
@@ -55,14 +58,14 @@
       <i class="fa fa-calendar-check-o"></i>
     </div>
     <div title="last updated">
-      <span>2015/11/20 00:00</span>
+      <span>2016/01/01 00:00</span>
       <i class="fa fa-calendar-plus-o"></i>
     </div>
   </span>
 
   <span style="width: 100%; text-align: center;">
-    <div style="font-size: 16px; font-weight: bold;"><a href="#page-top">Notebook - ToDo</a></div>
-    <div style="font-size: 10px; font-style: italic">todo</div>
+    <div style="font-size: 16px; font-weight: bold;"><a href="#page-top">Notebook - 4. Identificación</a></div>
+    <div style="font-size: 10px; font-style: italic"></div>
   </span>
 
   <!-- /.container-fluid -->
@@ -117,13 +120,13 @@
       
       
       
-        <li class="sub-menu">
+        <li class="sub-menu active">
           <a class="" href="/notebook/redecentralize/overview/">
-            <span class="menu-arrow fa fa-angle-right"></span>
+            <span class="menu-arrow fa fa-angle-down"></span>
             <i class="fa fa-exchange"></i>
             <span>Redecentralize</span>
           </a>
-          <ul class="sub">
+          <ul class="sub open">
             
             
               <li class="">
@@ -142,7 +145,7 @@
                 <a href="/notebook/redecentralize/accesoremoto/"><i class="fa fa-caret-right"></i>3. Acceso remoto</a>
               </li>
             
-              <li class="">
+              <li class="active">
                 <a href="/notebook/redecentralize/identificacion/"><i class="fa fa-caret-right"></i>4. Identificación</a>
               </li>
             
@@ -280,7 +283,7 @@
       
       
       
-        <li class="active">
+        <li class="">
           <a class="" href="/notebook/todo/">
             <i class="fa fa-list-alt"></i>
             <span>ToDo</span>
@@ -320,28 +323,27 @@
       <div id="main-content"> 
           
           
-          <a href="/notebook/deskbot/soft/"><div class="panel-nav" style="margin-bottom: -10px;"><i class="fa fa-angle-double-up"></i></div></a>
+          <a href="/notebook/redecentralize/accesoremoto/"><div class="panel-nav" style="margin-bottom: -10px;"><i class="fa fa-angle-double-up"></i></div></a>
           
 
           <div class="panel-body">  
-            <ul>
-<li><a href="https://justgetflux.com/">https://justgetflux.com/</a></li>
-<li><code>tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system /</code></li>
+            <p>Cuando no se conoce el estado de un host, puede identificarse si la máquina está encendida mediante &lsquo;ping <direccion>&rsquo; y conocer el sistema arrancado con la aplicación <a href="https://nmap.org/">nmap</a> (es posible que se requieran permisos de administración, <code>sudo</code> en el cliente).:</p>
 
-<li><p><a href="http://www.jide.com/en/remixos">http://www.jide.com/en/remixos</a></p></li>
+<pre><code>nmap -O &lt;nombreoipdelhost&gt;'
+</code></pre>
 
-<li><p>PHP Dolibarr</p>
+<p>La GUI oficial <a href="https://nmap.org/zenmap/">Zenmap</a>, permite hacerlo de forma gráfica, tanto desde GNU/Linux como desde Windows.</p>
 
-<ul>
-<li>Plantillas PDF (facturas, pedidos, etc.)</li>
-<li><a href="https://www.dolistore.com/en/modules/457-Mod--le-de-document-Alpiroc.html">https://www.dolistore.com/en/modules/457-Mod--le-de-document-Alpiroc.html</a></li>
-</ul></li>
-</ul>
+<p>En caso de disponer de más de un sistema operativo, si se utiliza <a href="https://www.gnu.org/software/grub/">GRUB</a> como gestor de arranque, se puede utilizar el <code>grub-reboot</code> (en algunas distribuciones <code>grub2-reboot</code>) para reiniciar a uno en concreto. Para ello, GRUB debe estar configurado para arrancar una distribución por defecto que contenga <code>grub-reboot</code>, además de verificar algunas variables tal como se indica en <a href="https://wiki.debian.org/GrubReboot">wiki.debian.org/GrubReboot</a>.</p>
+
+<p><strong>P</strong>: <em>¿Paticiones GPT?</em></p>
+
+<p><strong>P</strong>: <em>¿Windows 10?</em></p>
 
           </div>
 
           
-          <a href="/notebook/minideskbot/minideskbot/"><div class="panel-nav" style="margin-top: -10px;"><i class="fa fa-angle-double-down"></i></div></a>
+          <a href="/notebook/redecentralize/sync/"><div class="panel-nav" style="margin-top: -10px;"><i class="fa fa-angle-double-down"></i></div></a>
           
       </div> 
 

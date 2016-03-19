@@ -4,6 +4,9 @@
   
   
   
+    
+    
+  
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,9 +22,9 @@
   <meta name="author" content="This is the author">
   <meta name="generator" content="Hugo 0.16-DEV" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <title>ToDo - FreeJaus - Forge</title>
-  <meta content="ToDo - FreeJaus - Forge" property="og:title">
-  <meta content="todo" name="keywords">
+  <title>Estructura y Mecanismos - FreeJaus - Forge</title>
+  <meta content="Estructura y Mecanismos - FreeJaus - Forge" property="og:title">
+  <meta content="" name="keywords">
 
   <!-- Bootstrap and Font Awesome CSS -->
   
@@ -61,8 +64,8 @@
   </span>
 
   <span style="width: 100%; text-align: center;">
-    <div style="font-size: 16px; font-weight: bold;"><a href="#page-top">Notebook - ToDo</a></div>
-    <div style="font-size: 10px; font-style: italic">todo</div>
+    <div style="font-size: 16px; font-weight: bold;"><a href="#page-top">Notebook - Estructura y Mecanismos</a></div>
+    <div style="font-size: 10px; font-style: italic"></div>
   </span>
 
   <!-- /.container-fluid -->
@@ -219,13 +222,13 @@
       
       
       
-        <li class="sub-menu">
+        <li class="sub-menu active">
           <a class="" href="/notebook/deskbot/intro/">
-            <span class="menu-arrow fa fa-angle-right"></span>
+            <span class="menu-arrow fa fa-angle-down"></span>
             <i class="fa fa-cube"></i>
             <span>Libre DeskBot</span>
           </a>
-          <ul class="sub">
+          <ul class="sub open">
             
             
               <li class="">
@@ -236,7 +239,7 @@
                 <a href="/notebook/deskbot/elec/"><i class="fa fa-caret-right"></i>Electrónica</a>
               </li>
             
-              <li class="">
+              <li class="active">
                 <a href="/notebook/deskbot/mech/"><i class="fa fa-caret-right"></i>Mecánica</a>
               </li>
             
@@ -280,7 +283,7 @@
       
       
       
-        <li class="active">
+        <li class="">
           <a class="" href="/notebook/todo/">
             <i class="fa fa-list-alt"></i>
             <span>ToDo</span>
@@ -320,28 +323,97 @@
       <div id="main-content"> 
           
           
-          <a href="/notebook/deskbot/soft/"><div class="panel-nav" style="margin-bottom: -10px;"><i class="fa fa-angle-double-up"></i></div></a>
+          <a href="/notebook/deskbot/elec/"><div class="panel-nav" style="margin-bottom: -10px;"><i class="fa fa-angle-double-up"></i></div></a>
           
 
           <div class="panel-body">  
-            <ul>
-<li><a href="https://justgetflux.com/">https://justgetflux.com/</a></li>
-<li><code>tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system /</code></li>
-
-<li><p><a href="http://www.jide.com/en/remixos">http://www.jide.com/en/remixos</a></p></li>
-
-<li><p>PHP Dolibarr</p>
+            
 
 <ul>
-<li>Plantillas PDF (facturas, pedidos, etc.)</li>
-<li><a href="https://www.dolistore.com/en/modules/457-Mod--le-de-document-Alpiroc.html">https://www.dolistore.com/en/modules/457-Mod--le-de-document-Alpiroc.html</a></li>
+<li><a href="http://twilightrobotics.com/cnc/cncnot2">How NOT to make a CNC mill</a></li>
+<li>3D vs Milling
+
+<ul>
+<li>Las impresoras caseras están más centradas en velocidad y superficie, y menos en precisión, para lo que se utiliza SLA.</li>
+<li>Los husillos limitan la velocidad de la impresión 3D en comparación con las correas, pero requieren menor mantenimiento (calibración) para trabajar con precisiones más pequeñas.</li>
+<li><a href="http://www.protoparadigm.com/news-updates/accuracy-vs-precision-and-threaded-rod-vs-leadscrews-in-3d-printers/">Accuracy vs precision and threaded rod vs leadscrews in 3d printers</a></li>
+<li>Las maquinas de mecanizado llevan husillos normalmente ocultos para que no entre la viruta.</li>
 </ul></li>
+<li>¿Qué potencia mínima deben tener los motores (tanto paso a paso como DC/brushless)?
+
+<ul>
+<li><a href="http://www.jgorasia.com/Files/Spring09/mechSolids/destopCNCmechSolids.pdf">Structural Design of a Desktop CNC Mill</a></li>
+<li><a href="http://reprap.org/wiki/Stepper_motor">http://reprap.org/wiki/Stepper_motor</a></li>
+</ul></li>
+<li><a href="http://reprap.org/wiki/Milling_and_Drilling_Head">RepRap - Milling and Drilling Head</a></li>
+<li><a href="http://www.mosaicmanufacturing.com/">http://www.mosaicmanufacturing.com/</a></li>
+<li>Fin de carrera, u otro sensor en el cabeza, para calibrar/identificar los límites de la base</li>
+</ul>
+
+<h1 id="decisiones-de-diseño:8518648d81820d546a8cac8384466c8b">Decisiones de diseño</h1>
+
+<ul>
+<li>Integración de la electrónica (controlador, potencia, LCD, interruptores&hellip;) y alimentación en el chasis, en una o varias cajas/huecos.</li>
+<li>LCD + botones reemplazable/movible, que se pueda quitar de la caja y colocarlo en otra posición (con el soporte adecuado).<br /></li>
+<li>Que la heatbed, y otros elementos que se deban cambiar/ajustar con frecuencia, se fijen con thumbwheels/thumbscrews.</li>
+<li>Mínimizar el número de piezas a cambiar para sustituir un cabezal por otro.</li>
+<li>Posibilidad de utilizar refrigeración líquida para los motores/extrusores/hotends.</li>
+</ul>
+
+<h1 id="materiales:8518648d81820d546a8cac8384466c8b">Materiales</h1>
+
+<h2 id="estructura:8518648d81820d546a8cac8384466c8b">Estructura</h2>
+
+<ul>
+<li>Aluminio</li>
+<li>MDF</li>
+<li>HDF</li>
+<li>Corian</li>
+<li>CompacTop</li>
+</ul>
+
+<p>De entre las soluciones analizadas:</p>
+
+<ul>
+<li>Tablero MD/MDF en <a href="http://makeyourbot.wikidot.com/mantis9-1">Mantis</a> o <a href="http://reprap.org/wiki/ITopie">Itopie</a>; o aluminio en <a href="http://reprap.org/wiki/Prusa_i3">Prusa i3</a>, <a href="http://reprap.org/wiki/Prusa_i3_Rework">Prisa i3 Rework</a> o <a href="http://reprap.org/wiki/I3Berlin">I3Berlin</a>
+
+<ul>
+<li>Facilidad para (des)montar y posibilidad de guardar en una caja.</li>
+<li>Rigidez, sobre todo al cargar herramientas pesadas o que produzca vibraciones (al usarla como CNC). Al mismo tiempo, absorción de las vibraciones.</li>
+</ul></li>
+</ul>
+
+<h2 id="barras-calibradas-rectificadas:8518648d81820d546a8cac8384466c8b">Barras calibradas/rectificadas</h2>
+
+<ul>
+<li>Acero</li>
+</ul>
+
+<h2 id="husillos-y-tuercas:8518648d81820d546a8cac8384466c8b">Husillos y tuercas</h2>
+
+<ul>
+<li>Acero y bronce</li>
+</ul>
+
+<h1 id="base:8518648d81820d546a8cac8384466c8b">Base</h1>
+
+<h1 id="3d-print:8518648d81820d546a8cac8384466c8b">3D print</h1>
+
+<ul>
+<li><a href="http://www.thingiverse.com/thing:839620">2-in-1 fan duct: extruder and filament cooler for E3D V6 and others</a></li>
+<li>Auotlimpiado del extrusor: <a href="https://www.lulzbot.com/">https://www.lulzbot.com/</a></li>
+</ul>
+
+<h1 id="mill-engraver:8518648d81820d546a8cac8384466c8b">Mill/engraver</h1>
+
+<ul>
+<li><a href="http://www.thingiverse.com/thing:264104">PCB Milling Attachment for a Prusa i3 Rework</a>: this model attaches a 225-01 Flex Shaft Attachment made by Dremel to a Prusa i3 for PCB Milling or Simple CNC milling.</li>
 </ul>
 
           </div>
 
           
-          <a href="/notebook/minideskbot/minideskbot/"><div class="panel-nav" style="margin-top: -10px;"><i class="fa fa-angle-double-down"></i></div></a>
+          <a href="/notebook/elin/orangepi/"><div class="panel-nav" style="margin-top: -10px;"><i class="fa fa-angle-double-down"></i></div></a>
           
       </div> 
 

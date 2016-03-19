@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nb Elin on FreeJaus - Forge</title>
+    <link>http://freejaus.github.io/categories/nb-elin/</link>
+    <description>Recent content in Nb Elin on FreeJaus - Forge</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 20 Nov 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://freejaus.github.io/categories/nb-elin/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Base configuration</title>
+      <link>http://freejaus.github.io/notebook/elin/baseconfig/</link>
+      <pubDate>Fri, 20 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://freejaus.github.io/notebook/elin/baseconfig/</guid>
+      <description>&lt;p&gt;ssh pi@192.168.1.3
+    raspberry&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Win32 Disk Imager](http://sourceforge.net/projects/win32diskimager/)
+
+http://elinux.org/Main_Page
+http://elinux.org/RPi_Resize_Flash_Partitions
+http://elinux.org/RPi_raspi-config
+http://weworkweplay.com/play/automatically-connect-a-raspberry-pi-to-a-wifi-network/
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orange Pi</title>
+      <link>http://freejaus.github.io/notebook/elin/orangepi/</link>
+      <pubDate>Fri, 20 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://freejaus.github.io/notebook/elin/orangepi/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://linux-sunxi.org/Xunlong_Orange_Pi_2&#34;&gt;http://linux-sunxi.org/Xunlong_Orange_Pi_2&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://linux-sunxi.org/Xunlong_Orange_Pi_Plus_2&#34;&gt;http://linux-sunxi.org/Xunlong_Orange_Pi_Plus_2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.orangepi.org/downloaded/download.html&#34;&gt;http://www.orangepi.org/downloaded/download.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.orangepi.org/orangepibbsen/forum.php?mod=viewthread&amp;amp;tid=342&amp;amp;extra=page%3D1&#34;&gt;http://www.orangepi.org/orangepibbsen/forum.php?mod=viewthread&amp;amp;tid=342&amp;amp;extra=page%3D1&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.cnx-software.com/2015/09/01/getting-started-with-orange-pi-pc-pi-2-and-pi-plus-development-boards/&#34;&gt;http://www.cnx-software.com/2015/09/01/getting-started-with-orange-pi-pc-pi-2-and-pi-plus-development-boards/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.cnx-software.com/2015/11/09/orange-pi-plus-2-allwinner-h3-board-includes-2gb-memory/&#34;&gt;http://www.cnx-software.com/2015/11/09/orange-pi-plus-2-allwinner-h3-board-includes-2gb-memory/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;!!! &lt;a href=&#34;http://www.cnx-software.com/2015/08/06/how-to-install-and-run-linux-on-zidoo-x1-tv-box/&#34;&gt;http://www.cnx-software.com/2015/08/06/how-to-install-and-run-linux-on-zidoo-x1-tv-box/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.cnx-software.com/2015/11/09/linaro-releases-the-first-alpha-version-of-the-96boards-reference-software-platform/&#34;&gt;http://www.cnx-software.com/2015/11/09/linaro-releases-the-first-alpha-version-of-the-96boards-reference-software-platform/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Todas las Fedora 22 del usuario loboris arrancan, tal como se puede comprobar mediante la salida de la UART (utilizando un adaptador USB-TTL, comprobado con el PL2303). Pero la salida HDMI funciona sólo en las versiones OPI-PLUS, no las OPI-2.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

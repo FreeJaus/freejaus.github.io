@@ -109,46 +109,9 @@ title: Redecentralize
 #### Acceso físico al equipo:
 
 - Arranque dual
-- Tarjetas/tags de acceso:
-  - Mifare
-     - [24C3: Mifare (Little Security, Despite Obscurity)](https://www.youtube.com/watch?v=QJyxUvMGLr0)
-     - [github.com/nfc-tools](https://github.com/nfc-tools/)
-     - [Live RFID Hacking System](http://www.openpcd.org/Live_RFID_Hacking_System)
-     - [How to Crack Mifare Classic Cards](https://firefart.at/post/how-to-crack-mifare-classic-cards/)
-  - Barik
-  - [Salto](http://www.saltosystems.com/en/product-range/explanation/31/salto-wireless/)
-  - [Building a safe NFC ticketing system [30c3] ](https://www.youtube.com/watch?v=Czvn4L1r6f4)
-  - [27c3: Reverse Engineering a real-world RFID payment system](https://www.youtube.com/watch?v=FqO1PvRAy90)
-  - [DEF CON 23 (2015) - RFIDiggity - Pentester Guide to Hacking HF/NFC and UHF RFID - 09Aug2015](https://www.youtube.com/watch?v=7o38hyQWw6g)
-  - [DEFCON 16: The Anatomy of a Subway Hack: Breaking Crypto RFID's and Magstripes of Ticketing Systems](https://www.youtube.com/watch?v=amTB19V_sqg)
-  - []
-
-```
-sudo dnf install autoconf libtool libusb-devel libpcsclite-devel
-sudo dnf install libnfc
-
-git clone https://github.com/nfc-tools/mfoc.git
-cd mfoc/
-autoreconf -vis
-./configure
-make
-make install
-```
-
-```
-nfc-list #o nfc-poll
-mfoc -O output.mfd
-hexdump -vC output.mfd
-```
-
-[fuzxxl/nfc](https://github.com/fuzxxl/nfc)
-
----
-
-- [RFID Treehouse of Horror [30c3]](https://www.youtube.com/watch?v=gTj5Ni7_zes)
-- [Analyzing RFID Security [25C3] ](https://www.youtube.com/watch?v=aO6zFpgtLj8)
+- [Tarjetas/tags de acceso](/notebook/nfcsec/nfcrep)
 - [Preserving arcade games [31c3]](https://www.youtube.com/watch?v=2q_qXGIj-jg)
-- [25c3: Chip Reverse Engineering](https://www.youtube.com/watch?v=Pp4TPQVbxCQ)
 - [Security of the IC Backside [30c3]](https://www.youtube.com/watch?v=wmv7tu7FSW0)
 - [Extracting keys from FPGAs, OTP Tokens and Door Locks [30c3](https://www.youtube.com/watch?v=H-cpm7D8Sqg)
 - [Drones [30c3]](https://www.youtube.com/watch?v=IePG2fzKvF0)
+

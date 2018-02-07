@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FreeJaus - Forge</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36" />
+<title>Estructura y Mecanismos :: FreeJaus - Forge</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "http:\/\/freejaus.github.io";
+</script>
+<meta name="description" content="">
+
+
+    
+  </head>
+  <body data-url="/note/deskbot/mech/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="http://freejaus.github.io">FreeJaus - Forge</a>
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/FreeJaus/freejaus.github.io"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/FreeJaus/freejaus.github.io/archive/master.zip"  rel="noopener">
+                  <i class='fa fa-cloud-download'></i> <label>Download</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/note/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/note/"><i class="fa fa-list-alt"></i>Notes</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/note/refs/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/refs/"><i class="fa fa-book"></i>References</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/refs/hugo/" class="dd-item">
+        <div>
+          <a href="/note/refs/hugo/">
+            Hugo(lang)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/refs/golang/" class="dd-item">
+        <div>
+          <a href="/note/refs/golang/">
+            Go(lang)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/redecentralize/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/redecentralize/"><i class="fa fa-exchange"></i>Redecentralize</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/redecentralize/contexto/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/contexto/">
+            0. Contexto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/permisos/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/permisos/">
+            1. Permisos de usuario
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/accesolocal/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/accesolocal/">
+            2. Acceso local
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/accesoremoto/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/accesoremoto/">
+            3. Acceso remoto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/identificacion/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/identificacion/">
+            4. Identificación
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/sync/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/sync/">
+            5. Sincronización
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/scm/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/scm/">
+            6. Control de versiones
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/hub/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/hub/">
+            7. Distribución
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/textedit/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/textedit/">
+            8. Editores de texto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/mon/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/mon/">
+            9. Monitorización
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/deskbot/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/note/deskbot/"><i class="fa fa-cube"></i>Libre DeskBot</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/deskbot/mods/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/mods/">
+            Cabezales
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/elec/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/elec/">
+            Electrónica
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/mech/" class="dd-item active">
+        <div>
+          <a href="/note/deskbot/mech/">
+            Mecánica
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/bom/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/bom/">
+            Presupuesto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/soft/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/soft/">
+            Software
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/minideskbot/" class="dd-item
+        ">
+      <div>
+      <a href="/note/minideskbot/"></a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/distman/" class="dd-item
+        ">
+      <div>
+      <a href="/note/distman/"><i class="fa fa-industry"></i>Distributed Manufacturing</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/mots/" class="dd-item
+        ">
+      <div>
+      <a href="/note/mots/"><i class="fa fa-cogs"></i>Driving Motors</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/elin/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/elin/"><i class="fa fa-puzzle-piece"></i>Embedded Linux</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/elin/baseconfig/" class="dd-item">
+        <div>
+          <a href="/note/elin/baseconfig/">
+            Base configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/elin/orangepi/" class="dd-item">
+        <div>
+          <a href="/note/elin/orangepi/">
+            Orange Pi
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/nfcsec/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/nfcsec/"><i class="fa fa-shield"></i>NFC/RFID</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/nfcsec/cred/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/cred/">
+            Crédito
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/jauzi/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/jauzi/">
+            Jauzi
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_01/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_01/">
+            PoC 1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_02/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_02/">
+            PoC 2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_03/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_03/">
+            PoC 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_04/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_04/">
+            PoC 4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_05/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_05/">
+            PoC 5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/trans/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/trans/">
+            Transporte
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/univ/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/univ/">
+            Universidad
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/fjkb/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/fjkb/"><i class="fa fa-keyboard-o"></i>[FJKB] Libre DIY Mechanical Keyboard</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/fjkb/overview/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/overview/">
+            0. Full custom
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/layout/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/layout/">
+            1. Layout
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/keys/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/keys/">
+            2. Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/elec/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/elec/">
+            3. Electronics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/mech/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/mech/">
+            4. Mechanics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/tools/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/tools/">
+            5. Tools
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/commercial/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/commercial/">
+            Commercial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/projects/" class="dd-item
+        ">
+      <div>
+      <a href="/projects/">Projects</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/note/" >
+   Notes</option> 
+    <option value="/note/refs/" >
+  - 
+   References</option>
+    <option value="/note/redecentralize/" >
+  - 
+   Redecentralize</option>
+    <option value="/note/deskbot/" >
+  - 
+   [Deskbot] Libre DIY Small Desktop CNC Machine</option> 
+      <option value="/note/deskbot/mods/" >-- Cabezales</option>
+      <option value="/note/deskbot/elec/" >-- Electrónica y Firmware</option>
+      <option value="/note/deskbot/mech/"  selected>-- Estructura y Mecanismos</option>
+      <option value="/note/deskbot/bom/" >-- Presupuesto</option>
+      <option value="/note/deskbot/soft/" >-- Software</option>
+  
+    <option value="/note/minideskbot/" >
+  - 
+   </option>
+    <option value="/note/distman/" >
+  - 
+   Distributed Manufacturing</option>
+    <option value="/note/mots/" >
+  - 
+   Driving Motors</option>
+    <option value="/note/elin/" >
+  - 
+   Embedded Linux</option>
+    <option value="/note/nfcsec/" >
+  - 
+   Seguridad en el control de acceso por tarjeta</option>
+    <option value="/note/fjkb/" >
+  - 
+   [FJKB] Libre DIY Mechanical Keyboard</option>
+  
+    <option value="/projects/" >
+   Projects</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Buscar...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "http:\/\/freejaus.github.io";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>Estructura y Mecanismos</h1>
+    
+    
+    
+    
+
+<ul>
+<li><a href="http://twilightrobotics.com/cnc/cncnot2">How NOT to make a CNC mill</a></li>
+<li>3D vs Milling
+
+<ul>
+<li>Las impresoras caseras están más centradas en velocidad y superficie, y menos en precisión, para lo que se utiliza SLA.</li>
+<li>Los husillos limitan la velocidad de la impresión 3D en comparación con las correas, pero requieren menor mantenimiento (calibración) para trabajar con precisiones más pequeñas.</li>
+<li><a href="http://www.protoparadigm.com/news-updates/accuracy-vs-precision-and-threaded-rod-vs-leadscrews-in-3d-printers/">Accuracy vs precision and threaded rod vs leadscrews in 3d printers</a></li>
+<li>Las maquinas de mecanizado llevan husillos normalmente ocultos para que no entre la viruta.</li>
+</ul></li>
+<li>¿Qué potencia mínima deben tener los motores (tanto paso a paso como DC/brushless)?
+
+<ul>
+<li><a href="http://www.jgorasia.com/Files/Spring09/mechSolids/destopCNCmechSolids.pdf">Structural Design of a Desktop CNC Mill</a></li>
+<li><a href="http://reprap.org/wiki/Stepper_motor">http://reprap.org/wiki/Stepper_motor</a></li>
+</ul></li>
+<li><a href="http://reprap.org/wiki/Milling_and_Drilling_Head">RepRap - Milling and Drilling Head</a></li>
+<li><a href="http://www.mosaicmanufacturing.com/">http://www.mosaicmanufacturing.com/</a></li>
+<li>Fin de carrera, u otro sensor en el cabeza, para calibrar/identificar los límites de la base</li>
+</ul>
+
+<h1 id="decisiones-de-diseño">Decisiones de diseño</h1>
+
+<ul>
+<li>Integración de la electrónica (controlador, potencia, LCD, interruptores&hellip;) y alimentación en el chasis, en una o varias cajas/huecos.</li>
+<li>LCD + botones reemplazable/movible, que se pueda quitar de la caja y colocarlo en otra posición (con el soporte adecuado).<br /></li>
+<li>Que la heatbed, y otros elementos que se deban cambiar/ajustar con frecuencia, se fijen con thumbwheels/thumbscrews.</li>
+<li>Mínimizar el número de piezas a cambiar para sustituir un cabezal por otro.</li>
+<li>Posibilidad de utilizar refrigeración líquida para los motores/extrusores/hotends.</li>
+</ul>
+
+<h1 id="materiales">Materiales</h1>
+
+<h2 id="estructura">Estructura</h2>
+
+<ul>
+<li>Aluminio</li>
+<li>MDF</li>
+<li>HDF</li>
+<li>Corian</li>
+<li>CompacTop</li>
+</ul>
+
+<p>De entre las soluciones analizadas:</p>
+
+<ul>
+<li>Tablero MD/MDF en <a href="http://makeyourbot.wikidot.com/mantis9-1">Mantis</a> o <a href="http://reprap.org/wiki/ITopie">Itopie</a>; o aluminio en <a href="http://reprap.org/wiki/Prusa_i3">Prusa i3</a>, <a href="http://reprap.org/wiki/Prusa_i3_Rework">Prisa i3 Rework</a> o <a href="http://reprap.org/wiki/I3Berlin">I3Berlin</a>
+
+<ul>
+<li>Facilidad para (des)montar y posibilidad de guardar en una caja.</li>
+<li>Rigidez, sobre todo al cargar herramientas pesadas o que produzca vibraciones (al usarla como CNC). Al mismo tiempo, absorción de las vibraciones.</li>
+</ul></li>
+</ul>
+
+<h2 id="barras-calibradas-rectificadas">Barras calibradas/rectificadas</h2>
+
+<ul>
+<li>Acero</li>
+</ul>
+
+<h2 id="husillos-y-tuercas">Husillos y tuercas</h2>
+
+<ul>
+<li>Acero y bronce
+<br /></li>
+</ul>
+
+<h1 id="base">Base</h1>
+
+<h1 id="3d-print">3D print</h1>
+
+<ul>
+<li><a href="http://www.thingiverse.com/thing:839620">2-in-1 fan duct: extruder and filament cooler for E3D V6 and others</a></li>
+<li>Auotlimpiado del extrusor: <a href="https://www.lulzbot.com/">https://www.lulzbot.com/</a></li>
+</ul>
+
+<h1 id="mill-engraver">Mill/engraver</h1>
+
+<ul>
+<li><a href="http://www.thingiverse.com/thing:264104">PCB Milling Attachment for a Prusa i3 Rework</a>: this model attaches a 225-01 Flex Shaft Attachment made by Dremel to a Prusa i3 for PCB Milling or Simple CNC milling.</li>
+</ul>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/note/deskbot/elec/" title="Electrónica y Firmware"> <i class="fa fa-chevron-left"></i><label>Electrónica y Firmware</label></a>
+    <a class="nav nav-next" href="/note/deskbot/bom/" title="Presupuesto" style="margin-right: 0px;"><label>Presupuesto</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i>  20/11/2015
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/FreeJaus/freejaus.github.io/edit/master/_hugo/content/note/deskbot/mech.md" target="blank"><i class="fa fa-code-fork"></i>
+        Edita esta página</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

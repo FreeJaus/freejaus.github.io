@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FreeJaus - Forge</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36" />
+<title>Base configuration :: FreeJaus - Forge</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "http:\/\/freejaus.github.io";
+</script>
+<meta name="description" content="">
+
+
+    
+  </head>
+  <body data-url="/note/elin/baseconfig/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="http://freejaus.github.io">FreeJaus - Forge</a>
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/FreeJaus/freejaus.github.io"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/FreeJaus/freejaus.github.io/archive/master.zip"  rel="noopener">
+                  <i class='fa fa-cloud-download'></i> <label>Download</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/note/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/note/"><i class="fa fa-list-alt"></i>Notes</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/note/refs/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/refs/"><i class="fa fa-book"></i>References</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/refs/hugo/" class="dd-item">
+        <div>
+          <a href="/note/refs/hugo/">
+            Hugo(lang)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/refs/golang/" class="dd-item">
+        <div>
+          <a href="/note/refs/golang/">
+            Go(lang)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/redecentralize/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/redecentralize/"><i class="fa fa-exchange"></i>Redecentralize</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/redecentralize/contexto/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/contexto/">
+            0. Contexto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/permisos/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/permisos/">
+            1. Permisos de usuario
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/accesolocal/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/accesolocal/">
+            2. Acceso local
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/accesoremoto/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/accesoremoto/">
+            3. Acceso remoto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/identificacion/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/identificacion/">
+            4. Identificación
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/sync/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/sync/">
+            5. Sincronización
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/scm/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/scm/">
+            6. Control de versiones
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/hub/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/hub/">
+            7. Distribución
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/textedit/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/textedit/">
+            8. Editores de texto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/mon/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/mon/">
+            9. Monitorización
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/deskbot/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/deskbot/"><i class="fa fa-cube"></i>Libre DeskBot</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/deskbot/mods/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/mods/">
+            Cabezales
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/elec/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/elec/">
+            Electrónica
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/mech/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/mech/">
+            Mecánica
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/bom/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/bom/">
+            Presupuesto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/soft/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/soft/">
+            Software
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/minideskbot/" class="dd-item
+        ">
+      <div>
+      <a href="/note/minideskbot/"></a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/distman/" class="dd-item
+        ">
+      <div>
+      <a href="/note/distman/"><i class="fa fa-industry"></i>Distributed Manufacturing</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/mots/" class="dd-item
+        ">
+      <div>
+      <a href="/note/mots/"><i class="fa fa-cogs"></i>Driving Motors</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/elin/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/note/elin/"><i class="fa fa-puzzle-piece"></i>Embedded Linux</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/elin/baseconfig/" class="dd-item active">
+        <div>
+          <a href="/note/elin/baseconfig/">
+            Base configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/elin/orangepi/" class="dd-item">
+        <div>
+          <a href="/note/elin/orangepi/">
+            Orange Pi
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/nfcsec/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/nfcsec/"><i class="fa fa-shield"></i>NFC/RFID</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/nfcsec/cred/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/cred/">
+            Crédito
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/jauzi/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/jauzi/">
+            Jauzi
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_01/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_01/">
+            PoC 1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_02/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_02/">
+            PoC 2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_03/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_03/">
+            PoC 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_04/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_04/">
+            PoC 4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_05/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_05/">
+            PoC 5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/trans/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/trans/">
+            Transporte
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/univ/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/univ/">
+            Universidad
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/fjkb/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/fjkb/"><i class="fa fa-keyboard-o"></i>[FJKB] Libre DIY Mechanical Keyboard</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/fjkb/overview/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/overview/">
+            0. Full custom
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/layout/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/layout/">
+            1. Layout
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/keys/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/keys/">
+            2. Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/elec/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/elec/">
+            3. Electronics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/mech/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/mech/">
+            4. Mechanics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/tools/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/tools/">
+            5. Tools
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/commercial/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/commercial/">
+            Commercial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/projects/" class="dd-item
+        ">
+      <div>
+      <a href="/projects/">Projects</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/note/" >
+   Notes</option> 
+    <option value="/note/refs/" >
+  - 
+   References</option>
+    <option value="/note/redecentralize/" >
+  - 
+   Redecentralize</option>
+    <option value="/note/deskbot/" >
+  - 
+   [Deskbot] Libre DIY Small Desktop CNC Machine</option>
+    <option value="/note/minideskbot/" >
+  - 
+   </option>
+    <option value="/note/distman/" >
+  - 
+   Distributed Manufacturing</option>
+    <option value="/note/mots/" >
+  - 
+   Driving Motors</option>
+    <option value="/note/elin/" >
+  - 
+   Embedded Linux</option> 
+      <option value="/note/elin/baseconfig/"  selected>-- Base configuration</option>
+      <option value="/note/elin/orangepi/" >-- Orange Pi</option>
+  
+    <option value="/note/nfcsec/" >
+  - 
+   Seguridad en el control de acceso por tarjeta</option>
+    <option value="/note/fjkb/" >
+  - 
+   [FJKB] Libre DIY Mechanical Keyboard</option>
+  
+    <option value="/projects/" >
+   Projects</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Buscar...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "http:\/\/freejaus.github.io";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>Base configuration</h1>
+    
+    
+    
+    
+
+<pre><code>    ssh pi@192.168.1.3
+    raspberry
+</code></pre>
+
+<ul>
+<li><a href="https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash">The single most useful thing in bash</a></li>
+<li><a href="https://coderwall.com/p/xczkaq/ftp-is-so-90-s-let-s-deploy-via-git-instead">FTP is so 90&rsquo;s. Let&rsquo;s deploy via Git instead!</a></li>
+</ul>
+
+<p><a href="http://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a></p>
+
+<ul>
+<li><a href="http://elinux.org/Main_Page">elinux.org</a>
+
+<ul>
+<li><a href="http://elinux.org/RPi_Resize_Flash_Partitions">RPi Resize Flash Partitions</a></li>
+<li><a href="http://elinux.org/RPi_raspi-config">RPi raspi-config</a></li>
+</ul></li>
+<li><a href="http://weworkweplay.com/play/automatically-connect-a-raspberry-pi-to-a-wifi-network/">Automatically connect a Raspberry Pi to a Wifi network</a></li>
+</ul>
+
+<h1 id="drivers">Drivers</h1>
+
+<h2 id="wn725n">WN725N</h2>
+
+<p><a href="https://github.com/lwfinger/rtl8188eu">github.com/lwfinger/rtl8188eu</a></p>
+
+<p>Hay que reconectar el dispositivo y reiniciar el equipo para que lo reconozca.</p>
+
+<h2 id="azio-selene">Azio/Selene</h2>
+
+<p>Algunos teclados, como el <a href="http://www.coolbox.es/products/selene-teclado-gaming-retroiluminado/">Quasar Selene</a> o los <a href="http://www.aziocorp.com/webe/html/products/index.aspx?kind=12">Azio</a>, no funcionan correctamente con el driver por defecto en la mayoría de distribuciones de GNU/Linux. En concreto, la teclas <code>Ctrl Izq</code>, <code>Win</code>, <code>Alt</code> y <code>Alt Gr</code> se comportan como <code>Shift Izq</code>. El driver interpreta la pulsación de cualquiera de ellas con el mismo código, por lo que no hay posibilidad de solucionarlo mediante las opciones de configuración del teclado.</p>
+
+<p>Por suerte, <a href="https://bitbucket.org/Swoogan/">Colin Svingen</a> ha escrito un <a href="https://bitbucket.org/Swoogan/aziokbd">driver</a> que lo soluciona. Utiliza <a href="https://www.mercurial-scm.org/">mercurial</a> como sistema de control de versiones, por lo que deberemos instalarlo para clonar el repositorio. Alternativamente, podemos <a href="https://bitbucket.org/Swoogan/aziokbd/downloads">descargarlo</a> en formato zip.</p>
+
+<p>Para instalarlo, basta con instalar las librerías para trabajar con el kernel (por ejemplo, <code>build-essential</code> y <code>linux-headers-generiz</code> en Debian, o <code>kernel-devel</code> y <code>kernel-headers</code> en Fedora), y ejecutar el script <code>install.sh</code> con permisos de administrador (<code>sudo</code>). Revisaremos la salida en pantalla para comprobar que no haya ningún error. En el caso de las últimas versiones de Fedora, por ejemplo, el último paso requiere añadir un argumento al arranque de Grub, para evitar que se cargue el driver por defecto. El script trata de crear un fichero en <code>/etc/default/grub.d/</code>, pero la configuración por defecto sólo utiliza <code>/etc/default/grub</code>. Por lo tanto, tal como se indica en el <code>README.md</code>, hay que añadir la siguiente línea, editando el fichero con permisos de administrador: <code>GRUB_CMDLINE_LINUX_DEFAULT='usbhid.quirks=0x0c45:0x7603:0x4'</code>.</p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/note/elin/" title="Embedded Linux"> <i class="fa fa-chevron-left"></i><label>Embedded Linux</label></a>
+    <a class="nav nav-next" href="/note/elin/orangepi/" title="Orange Pi" style="margin-right: 0px;"><label>Orange Pi</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="https://github.com/FreeJaus/freejaus.github.io/edit/master/_hugo/content/note/elin/baseconfig.md" target="blank"><i class="fa fa-code-fork"></i>
+        Edita esta página</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

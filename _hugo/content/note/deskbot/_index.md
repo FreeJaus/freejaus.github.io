@@ -110,3 +110,7 @@ https://www.youtube.com/watch?v=S8SJnGtUW68)
   - [Liteplacer](http://www.liteplacer.com)
   - [DIY Pick and place V2]( http://www.briandorey.com/post/diy-pick-and-place-v2-project-complete)
   - [OpenFeeder](https://github.com/xboxhacker/OpenFeeder)
+
+---
+
+La referencia comercial más competitiva es posiblemente [Trinus 3D Printer](https://eu.kodama3d.com/collections/trinus/products/trinus-3d-printer?variant=33203947460) 349.00€; y las más completa en cuanto a variedad de cabezales [diyouware](http://www.diyouware.com/).

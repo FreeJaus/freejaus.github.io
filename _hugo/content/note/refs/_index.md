@@ -1,5 +1,0 @@
----
-pre: "book"
-title: References
----
-

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://freejaus.github.io/note/refs/hugo/</loc>
+    <lastmod>2016-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/redecentralize/contexto/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/redecentralize/permisos/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/redecentralize/accesolocal/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/redecentralize/accesoremoto/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/redecentralize/identificacion/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/redecentralize/sync/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/redecentralize/scm/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/redecentralize/hub/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/redecentralize/textedit/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/redecentralize/mon/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/refs/golang/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/deskbot/mods/</loc>
+    <lastmod>2015-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/deskbot/elec/</loc>
+    <lastmod>2015-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/deskbot/mech/</loc>
+    <lastmod>2015-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/deskbot/bom/</loc>
+    <lastmod>2015-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/deskbot/soft/</loc>
+    <lastmod>2015-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/minideskbot/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/fjkb/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/fjkb/layout/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/fjkb/keys/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/fjkb/elec/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/fjkb/mech/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/fjkb/tools/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/elin/baseconfig/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/fjkb/commercial/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/nfcsec/cred/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/distman/didprot/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/distman/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/mots/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/elin/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/ecam/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/</loc>
+    <lastmod>2016-04-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/nfcsec/jauzi/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/deskbot/</loc>
+    <lastmod>2015-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/distman/manbots/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/nfcsec/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/categories/nb-deskbot/</loc>
+    <lastmod>2015-11-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/categories/nb-redecentralize/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/categories/nb-refs/</loc>
+    <lastmod>2016-04-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/elin/orangepi/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/nfcsec/poc_01/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/nfcsec/poc_02/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/nfcsec/poc_03/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/nfcsec/poc_04/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/nfcsec/poc_05/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/projects/rf/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/elin/rpi3/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/redecentralize/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/refs/</loc>
+    <lastmod>2016-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/nfcsec/trans/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/nfcsec/univ/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/fjkb/</loc>
+  </url>
+  
+</urlset>

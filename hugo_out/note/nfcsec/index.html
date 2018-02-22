@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FreeJaus - Forge</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>Seguridad en el control de acceso por tarjeta :: FreeJaus - Forge</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "http:\/\/freejaus.github.io";
+</script>
+<meta name="description" content="">
+
+
+    
+  </head>
+  <body data-url="/note/nfcsec/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="http://freejaus.github.io">FreeJaus - Forge</a>
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/FreeJaus/freejaus.github.io"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/FreeJaus/freejaus.github.io/archive/master.zip"  rel="noopener">
+                  <i class='fa fa-cloud-download'></i> <label>Download</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/note/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/note/"><i class="fa fa-list-alt"></i>Notes</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/note/refs/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/refs/"><i class="fa fa-book"></i>References</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/refs/hugo/" class="dd-item">
+        <div>
+          <a href="/note/refs/hugo/">
+            Hugo(lang)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/refs/golang/" class="dd-item">
+        <div>
+          <a href="/note/refs/golang/">
+            Go(lang)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/redecentralize/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/redecentralize/"><i class="fa fa-exchange"></i>Redecentralize</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/redecentralize/contexto/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/contexto/">
+            0. Contexto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/permisos/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/permisos/">
+            1. Permisos de usuario
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/accesolocal/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/accesolocal/">
+            2. Acceso local
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/accesoremoto/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/accesoremoto/">
+            3. Acceso remoto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/identificacion/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/identificacion/">
+            4. Identificación
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/sync/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/sync/">
+            5. Sincronización
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/scm/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/scm/">
+            6. Control de versiones
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/hub/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/hub/">
+            7. Distribución
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/textedit/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/textedit/">
+            8. Editores de texto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/mon/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/mon/">
+            9. Monitorización
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/deskbot/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/deskbot/"><i class="fa fa-cube"></i>Libre DeskBot</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/deskbot/mods/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/mods/">
+            Cabezales
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/elec/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/elec/">
+            Electrónica
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/mech/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/mech/">
+            Mecánica
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/bom/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/bom/">
+            Presupuesto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/soft/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/soft/">
+            Software
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/minideskbot/" class="dd-item
+        ">
+      <div>
+      <a href="/note/minideskbot/"></a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/distman/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/distman/"><i class="fa fa-industry"></i>Distributed Manufacturing</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/note/distman/didprot/" class="dd-item
+        ">
+      <div>
+      <a href="/note/distman/didprot/"><i class="fa fa-object-group"></i>Didactic prototypes</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/distman/manbots/" class="dd-item
+        ">
+      <div>
+      <a href="/note/distman/manbots/"><i class="fa fa-gears"></i>Manufacturing bots/machines</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/mots/" class="dd-item
+        ">
+      <div>
+      <a href="/note/mots/"><i class="fa fa-gear"></i>Driving Motors</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/elin/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/elin/"><i class="fa fa-puzzle-piece"></i>Embedded Linux</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/elin/baseconfig/" class="dd-item">
+        <div>
+          <a href="/note/elin/baseconfig/">
+            Base configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/elin/orangepi/" class="dd-item">
+        <div>
+          <a href="/note/elin/orangepi/">
+            Orange Pi
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/elin/rpi3/" class="dd-item">
+        <div>
+          <a href="/note/elin/rpi3/">
+            Raspberry Pi 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/ecam/" class="dd-item
+        ">
+      <div>
+      <a href="/note/ecam/"><i class="fa fa-video-camera"></i>Embedded apps with camera(s)</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/nfcsec/" class="dd-item parent active haschildren
+        ">
+      <div>
+      <a href="/note/nfcsec/"><i class="fa fa-shield"></i>NFC/RFID</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/nfcsec/cred/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/cred/">
+            Crédito
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/jauzi/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/jauzi/">
+            Jauzi
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_01/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_01/">
+            PoC 1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_02/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_02/">
+            PoC 2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_03/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_03/">
+            PoC 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_04/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_04/">
+            PoC 4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_05/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_05/">
+            PoC 5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/trans/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/trans/">
+            Transporte
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/univ/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/univ/">
+            Universidad
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/fjkb/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/fjkb/"><i class="fa fa-keyboard-o"></i>[FJKB] Libre DIY Mechanical Keyboard</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/fjkb/overview/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/overview/">
+            0. Full custom
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/layout/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/layout/">
+            1. Layout
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/keys/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/keys/">
+            2. Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/elec/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/elec/">
+            3. Electronics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/mech/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/mech/">
+            4. Mechanics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/tools/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/tools/">
+            5. Tools
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/commercial/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/commercial/">
+            Commercial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/projects/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/projects/">Projects</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/projects/rf/" class="dd-item
+        ">
+      <div>
+      <a href="/projects/rf/"><i class="fa fa-cube"></i>Proyect instru</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/note/" >
+   Notes</option> 
+    <option value="/note/refs/" >
+  - 
+   References</option>
+    <option value="/note/redecentralize/" >
+  - 
+   Redecentralize</option>
+    <option value="/note/deskbot/" >
+  - 
+   [Deskbot] Libre DIY Small Desktop CNC Machine</option>
+    <option value="/note/minideskbot/" >
+  - 
+   </option>
+    <option value="/note/distman/" >
+  - 
+   Distributed Manufacturing</option>
+    <option value="/note/mots/" >
+  - 
+   Driving Motors</option>
+    <option value="/note/elin/" >
+  - 
+   Embedded Linux</option>
+    <option value="/note/ecam/" >
+  - 
+   Embedded apps with camera(s)</option>
+    <option value="/note/nfcsec/"  selected>
+  - 
+   Seguridad en el control de acceso por tarjeta</option> 
+      <option value="/note/nfcsec/cred/" >-- Tarjeta de crédito</option>
+      <option value="/note/nfcsec/jauzi/" >-- Jauzi</option>
+      <option value="/note/nfcsec/poc_01/" >-- Prueba de concepto 1</option>
+      <option value="/note/nfcsec/poc_02/" >-- Prueba de concepto 2</option>
+      <option value="/note/nfcsec/poc_03/" >-- Prueba de concepto 3</option>
+      <option value="/note/nfcsec/poc_04/" >-- Prueba de concepto 4</option>
+      <option value="/note/nfcsec/poc_05/" >-- Prueba de concepto 5</option>
+      <option value="/note/nfcsec/trans/" >-- Transporte colectivo</option>
+      <option value="/note/nfcsec/univ/" >-- Tarjeta universitaria</option>
+  
+    <option value="/note/fjkb/" >
+  - 
+   [FJKB] Libre DIY Mechanical Keyboard</option>
+  
+    <option value="/projects/" >
+   Projects</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Buscar...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "http:\/\/freejaus.github.io";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>Seguridad en el control de acceso por tarjeta</h1>
+    
+    
+    
+
+
+
+<h1 id="introducción">Introducción</h1>
+
+<p>En los edificios públicos construidos o adaptados en el último lustro, se utilizan tarjetas (provistas con tecnología NFC/RFID) para el control de acceso. También es habitual en hoteles y transportes colectivos. Recientemente se están incluyendo también en tarjetas de crédito y teléfonos móviles. Tal es la expansión, que se pueden encontrar incluso máquinas <em>vending</em> y/o taquillas que utilizan esta tecnología (si no aquí, en países de nuestro entorno). Como resultado, actualmente existe en el mercado una amplia variedad de tarjetas y tags con diferentes características en cuanto a forma, capacidad, seguridad y compatibilidad de los protocolos que implementan,&hellip; y coste.</p>
+
+<p>Uno de los primeros modelos en aparecer, &ldquo;Classic&rdquo; de la familia Mifare, comercializada por <a href="http://www.nxp.com/">NXP</a>, basa el cifrado del contenido de las tarjetas en un algoritmo propio. Utilizan, por tanto, medidas de seguridad basadas en oscurdidad u ocultación. Concretamente, la empresa fabricante, NXP, no ha hecho públicos los detalles criptográficos del algoritmo. Sobre este tipo de práctica, la <a href="https://es.wikipedia.org/wiki/Seguridad_por_oscuridad">Wikipedia</a> dice:</p>
+
+<blockquote>
+<p>Un sistema que se apoya en la seguridad por ocultación puede tener vulnerabilidades teóricas o prácticas, pero sus propietarios o diseñadores creen que sus puntos débiles, debido al secreto que se mantiene sobre los entresijos del sistema, son muy difíciles de encontrar, y por tanto los atacantes tienen muy pocas probabilidades de descubrirlos.</p>
+</blockquote>
+
+<p>En otras palabras, el elemento principal que garantiza la seguridad de las &ldquo;Mifare Classic&rdquo; es el hecho de que el algoritmo se encuentra en un chip, por lo que se necesitan herramientas específicas y de alto coste para analizarlo. Además se requieren conocimientos muy avanzados de electrónica, física de semiconductores, arquitectura de computadores para entender el funcionamiento. Sin embargo, aunque es muy difícil realizar un ataque exitoso, el sistema es inseguro para aplicaciones críticas.</p>
+
+<p>De hecho, en 2008 unos investigadores holandeses analizaron físicamente el chip, capa por capa, y en unos meses se hizo público el contenido oculto. Probaron así, una vez más, que la seguridad por ocultación sólo puede considerarse como tal temporalmente. Por pocas que sean las posibilidades de descubrir vulnerabilidades, si las hay, el sistema no es seguro. Se trata de un caso que tuvo un eco mediático relevante, porque el transporte público utilizaba ese tipo de tarjetas. Hubo sesiones específicas en ambas cámaras, se encargaron informes al respecto, e incluso la empresa denunció a los investigadores para evitar la publicación de la información. Pueden consultarse los detalles al respecto, tanto técnicos como geopolíticos, en los siguientes enlaces:</p>
+
+<ul>
+<li>Artículos
+
+<ul>
+<li><a href="http://www.cs.ru.nl/~flaviog/publications/Attack.MIFARE.pdf">A Practical Attack on the MIFARE Classic</a></li>
+<li><a href="http://www.cs.ru.nl/~flaviog/publications/Dismantling.Mifare.pdf">Dismantling MIFARE Classic</a></li>
+<li><a href="http://www.cs.ru.nl/~flaviog/publications/Pickpocketing.Mifare.pdf">Wirelessly Pickpocketing a Mifare Classic Card</a></li>
+</ul></li>
+<li>Ponencias
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=amTB19V_sqg">DEFCON 16: The Anatomy of a Subway Hack: Breaking Crypto RFID&rsquo;s and Magstripes of Ticketing Systems</a></li>
+<li><a href="https://www.youtube.com/watch?v=w0vC8gfBkRg">23C3: RFID hacking</a></li>
+<li><a href="https://www.youtube.com/watch?v=kwsCixJOe2I">23C3: A Hacker&rsquo;s Toolkit for RFID Emulation and Jamming</a></li>
+<li><a href="https://www.youtube.com/watch?v=QJyxUvMGLr0">24C3: Mifare (Little Security, Despite Obscurity)</a></li>
+</ul></li>
+</ul>
+
+<p>Seis años después, el algoritmo utilizado es público, se conocen los detalles de su implementación, y también los errores en su uso que permiten evitar la seguridad. Existen librerías software que permiten leer el contenido de cualquier &ldquo;Mifare Classic&rdquo; en apenas un minuto. En caso de conocer alguna de las claves de antemano, el tiempo se reduce considerablemente. Si, además, se utilizan dispositivos con mayor capacidad de cómputo, como FPGAs, se reduce a segundos (se conozca o no alguna clave). <a href="http://www.proxmark.org/">Proxmark</a> es, por ejemplo, un modelo diseñado por un estudiante de máster. Para ilustrar el riesgo asociado, el siguiente vídeo muestra cómo se pueden &ldquo;robar&rdquo; credenciales &ldquo;sin contacto&rdquo;:</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/NW3RGbQTLhE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="YouTube Video"></iframe>
+ </div>
+
+
+<hr />
+
+<p>Hoy en día, el propio fabricante <a href="https://www.mifare.net/en/products/chip-card-ics/mifare-classic/">no recomienda</a> el uso de los modelos Mifare Classic para aplicaciones de seguridad:</p>
+
+<blockquote>
+<p>MIFARE Classic is the pioneer in contactless smart ticket ICs operating in the 13.56 MHZ frequency range with read/write capability and ISO 14443 compliance.
+It started the contactless revolution by paving the way for numerous applications in public transport, access management, employee cards and on campuses.
+Following the broad acceptance of contactless ticketing technology and extraordinary success of the MIFARE Classic product family, application requirements and security needs constantly increased. Therefore we do not recommend to use MIFARE Classic in security relevant applications anymore.
+This led to the development of two high security product families MIFARE Plus and MIFARE DESFire and to the development of the limited use/high volume IC family MIFARE Ultralight.</p>
+</blockquote>
+
+<p>A pesar de lo anterior, debe tenerse en cuenta que las tarjetas o tags son sólo uno de los elementos que conforman el sistema de control de acceso. El hecho de que la tarjeta sea insegura puede compensarse aprovechando inteligentemente capas adicionales de seguridad, como se expone en <a href="https://www.youtube.com/watch?v=Czvn4L1r6f4">Building a safe NFC ticketing system [30c3]</a>. Aunque, es cierto que leer íntegramente el contenido de las misma facilita la recopilación de datos, y puede comprometer la integridad de la información en el sistema.</p>
+
+<p>Adicionalmente, como se hizo patente en el caso holandés (y se documenta gráficamente en <a href="https://www.youtube.com/watch?v=amTB19V_sqg">DEFCON 16: The Anatomy of a Subway Hack: Breaking Crypto RFID&rsquo;s and Magstripes of Ticketing Systems</a>), cuando la prensa y la opinión pública ponen en la agenda cuestiones tecnológicas que implican la seguridad y privacidad, la respuesta de las administraciones no responde a criterios exclusivamente técnicos. Es imprescindible introducir en la ecuación el hecho de que son sistemas con miles o millones de usuarios sin conocimientos tecnológicos suficientes. Deben gestionarse tanto la alarma social, desde el prisma de la comunicación, como el coste de implantación/actualización de sistemas seguros.</p>
+
+<hr />
+
+<p>Hecha la exposición anterior, el objetivo de este proyecto es estudiar la seguridad de los sistemas NFC que utilizamos habitualmente. Nos hemos acostumbrado a llevar en la cartera/mochila/bolso hasta media docena de tarjetas que pueden ser leídas de forma inalámbrica. ¿Y si cualquiera pudiera leerlas mientras nos cruzamos en el ascensor, en la cafetería, en el metro, en un bar&hellip;? ¿Qué implicaciones tendría? ¿Nos afecta a los usuarios o a la empresa que provee el servicio? Si es una empresa pública, ¿&rdquo;Hacienda somos todos&rdquo;?</p>
+
+<p>Los servicios que se analizan son:</p>
+
+<ul>
+<li><a href="/notebook/nfcsec/univ">Tarjeta universitaria</a></li>
+<li><a href="/notebook/nfcsec/trans">Transporte colectivo</a></li>
+<li><a href="/notebook/nfcsec/cred">Tarjeta de crédito</a></li>
+</ul>
+
+<h1 id="otras-referencias">Otras Referencias</h1>
+
+<ul>
+<li><a href="https://firefart.at/post/how-to-crack-mifare-classic-cards/">How to Crack Mifare Classic Cards</a></li>
+<li><a href="http://www.openpcd.org/Live_RFID_Hacking_System">Live RFID Hacking System</a></li>
+<li><a href="http://www.backtrack-linux.org/wiki/index.php/RFID_Cooking_with_Mifare_Classic">RFID Cooking with Mifare Classic</a>
+
+<ul>
+<li><em>&ldquo;MFOC is utility to compute (crack) all keys (A and B) to all sectors, providing at least one of the keys is already known&rdquo;.</em></li>
+</ul></li>
+<li><a href="https://www.youtube.com/watch?v=Pp4TPQVbxCQ&amp;t=1945s">25c3: Chip Reverse Engineering</a></li>
+<li><a href="https://www.youtube.com/watch?v=aO6zFpgtLj8">25C3: Analyzing RFID Security</a></li>
+<li><a href="https://www.youtube.com/watch?v=FqO1PvRAy90">27c3: Reverse Engineering a real-world RFID payment system</a></li>
+<li><a href="https://www.youtube.com/watch?v=gTj5Ni7_zes">RFID Treehouse of Horror [30c3]</a></li>
+<li><a href="https://www.youtube.com/watch?v=Y_r3-G1WyCg">DEFCON 17: RFID MythBusting </a></li>
+<li><a href="https://www.youtube.com/watch?v=x2rF3dD1Ns0">DEFCON 20: NFC Hacking The Easy Way</a></li>
+<li><a href="https://www.youtube.com/watch?v=7o38hyQWw6g">DEFCON 23: RFIDiggity - Pentester Guide to Hacking HF/NFC and UHF RFID</a></li>
+</ul>
+
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/note/ecam/" title="Embedded apps with camera(s)"> <i class="fa fa-chevron-left"></i><label>Embedded apps with camera(s)</label></a>
+    <a class="nav nav-next" href="/note/nfcsec/cred/" title="Tarjeta de crédito" style="margin-right: 0px;"><label>Tarjeta de crédito</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="https://github.com/FreeJaus/freejaus.github.io/edit/master/_hugo/content/note/nfcsec/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+        Edita esta página</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

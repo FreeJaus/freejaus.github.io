@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FreeJaus - Forge</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>Presupuesto :: FreeJaus - Forge</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "http:\/\/freejaus.github.io";
+</script>
+<meta name="description" content="">
+
+
+    
+  </head>
+  <body data-url="/note/deskbot/bom/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="http://freejaus.github.io">FreeJaus - Forge</a>
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/FreeJaus/freejaus.github.io"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/FreeJaus/freejaus.github.io/archive/master.zip"  rel="noopener">
+                  <i class='fa fa-cloud-download'></i> <label>Download</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/note/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/note/"><i class="fa fa-list-alt"></i>Notes</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/note/refs/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/refs/"><i class="fa fa-book"></i>References</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/refs/hugo/" class="dd-item">
+        <div>
+          <a href="/note/refs/hugo/">
+            Hugo(lang)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/refs/golang/" class="dd-item">
+        <div>
+          <a href="/note/refs/golang/">
+            Go(lang)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/redecentralize/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/redecentralize/"><i class="fa fa-exchange"></i>Redecentralize</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/redecentralize/contexto/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/contexto/">
+            0. Contexto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/permisos/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/permisos/">
+            1. Permisos de usuario
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/accesolocal/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/accesolocal/">
+            2. Acceso local
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/accesoremoto/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/accesoremoto/">
+            3. Acceso remoto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/identificacion/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/identificacion/">
+            4. Identificación
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/sync/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/sync/">
+            5. Sincronización
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/scm/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/scm/">
+            6. Control de versiones
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/hub/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/hub/">
+            7. Distribución
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/textedit/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/textedit/">
+            8. Editores de texto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/mon/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/mon/">
+            9. Monitorización
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/deskbot/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/note/deskbot/"><i class="fa fa-cube"></i>Libre DeskBot</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/deskbot/mods/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/mods/">
+            Cabezales
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/elec/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/elec/">
+            Electrónica
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/mech/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/mech/">
+            Mecánica
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/bom/" class="dd-item active">
+        <div>
+          <a href="/note/deskbot/bom/">
+            Presupuesto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/soft/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/soft/">
+            Software
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/minideskbot/" class="dd-item
+        ">
+      <div>
+      <a href="/note/minideskbot/"></a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/distman/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/distman/"><i class="fa fa-industry"></i>Distributed Manufacturing</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/note/distman/didprot/" class="dd-item
+        ">
+      <div>
+      <a href="/note/distman/didprot/"><i class="fa fa-object-group"></i>Didactic prototypes</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/distman/manbots/" class="dd-item
+        ">
+      <div>
+      <a href="/note/distman/manbots/"><i class="fa fa-gears"></i>Manufacturing bots/machines</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/mots/" class="dd-item
+        ">
+      <div>
+      <a href="/note/mots/"><i class="fa fa-gear"></i>Driving Motors</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/elin/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/elin/"><i class="fa fa-puzzle-piece"></i>Embedded Linux</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/elin/baseconfig/" class="dd-item">
+        <div>
+          <a href="/note/elin/baseconfig/">
+            Base configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/elin/orangepi/" class="dd-item">
+        <div>
+          <a href="/note/elin/orangepi/">
+            Orange Pi
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/elin/rpi3/" class="dd-item">
+        <div>
+          <a href="/note/elin/rpi3/">
+            Raspberry Pi 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/ecam/" class="dd-item
+        ">
+      <div>
+      <a href="/note/ecam/"><i class="fa fa-video-camera"></i>Embedded apps with camera(s)</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/nfcsec/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/nfcsec/"><i class="fa fa-shield"></i>NFC/RFID</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/nfcsec/cred/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/cred/">
+            Crédito
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/jauzi/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/jauzi/">
+            Jauzi
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_01/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_01/">
+            PoC 1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_02/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_02/">
+            PoC 2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_03/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_03/">
+            PoC 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_04/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_04/">
+            PoC 4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_05/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_05/">
+            PoC 5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/trans/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/trans/">
+            Transporte
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/univ/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/univ/">
+            Universidad
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/fjkb/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/fjkb/"><i class="fa fa-keyboard-o"></i>[FJKB] Libre DIY Mechanical Keyboard</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/fjkb/overview/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/overview/">
+            0. Full custom
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/layout/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/layout/">
+            1. Layout
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/keys/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/keys/">
+            2. Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/elec/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/elec/">
+            3. Electronics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/mech/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/mech/">
+            4. Mechanics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/tools/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/tools/">
+            5. Tools
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/commercial/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/commercial/">
+            Commercial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/projects/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/projects/">Projects</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/projects/rf/" class="dd-item
+        ">
+      <div>
+      <a href="/projects/rf/"><i class="fa fa-cube"></i>Proyect instru</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/note/" >
+   Notes</option> 
+    <option value="/note/refs/" >
+  - 
+   References</option>
+    <option value="/note/redecentralize/" >
+  - 
+   Redecentralize</option>
+    <option value="/note/deskbot/" >
+  - 
+   [Deskbot] Libre DIY Small Desktop CNC Machine</option> 
+      <option value="/note/deskbot/mods/" >-- Cabezales</option>
+      <option value="/note/deskbot/elec/" >-- Electrónica y Firmware</option>
+      <option value="/note/deskbot/mech/" >-- Estructura y Mecanismos</option>
+      <option value="/note/deskbot/bom/"  selected>-- Presupuesto</option>
+      <option value="/note/deskbot/soft/" >-- Software</option>
+  
+    <option value="/note/minideskbot/" >
+  - 
+   </option>
+    <option value="/note/distman/" >
+  - 
+   Distributed Manufacturing</option>
+    <option value="/note/mots/" >
+  - 
+   Driving Motors</option>
+    <option value="/note/elin/" >
+  - 
+   Embedded Linux</option>
+    <option value="/note/ecam/" >
+  - 
+   Embedded apps with camera(s)</option>
+    <option value="/note/nfcsec/" >
+  - 
+   Seguridad en el control de acceso por tarjeta</option>
+    <option value="/note/fjkb/" >
+  - 
+   [FJKB] Libre DIY Mechanical Keyboard</option>
+  
+    <option value="/projects/" >
+   Projects</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Buscar...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "http:\/\/freejaus.github.io";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>Presupuesto</h1>
+    
+    
+    
+    
+
+<h1 id="referencias">Referencias</h1>
+
+<h2 id="electronics">Electronics</h2>
+
+<ul>
+<li><strong>1x Power supply &gt;240W</strong> [20-30€]
+
+<ul>
+<li>12V/28A 500W B-MOVE ATX vent. 12cm SATA [<a href="https://www.modpc.com/articulo/C0CZ/fuente-500w-b-move-bm500wb-12cm-bulk">16,90€</a>]</li>
+<li>12V/20A 400W B-MOVE mATX [[17,00€ modpc]<a href="https://www.modpc.com/articulo/C0D0/fuente-400w-b-move-matx-2xsata-oem)">https://www.modpc.com/articulo/C0D0/fuente-400w-b-move-matx-2xsata-oem)</a>]</li>
+<li>12V/20A 240W [<a href="https://www.modpc.com/articulo/J844/fuente-alimentacion-20a">21,05€ modpc</a> | <a href="http://bcndynamics.com/es/product/fuente-alimentaci%C3%B3n-12v20a">22,99€ bcndynamics</a>]</li>
+<li>12V/30A 360W [<a href="http://bcndynamics.com/es/product/fuente-alimentaci%C3%B3n-24v15a">27,95€ bcndynamics</a>]</li>
+<li>12V/30A 500W Tacens Mars MP500 ATX APFC [<a href="https://www.modpc.com/articulo/C1GH/fuente-500w-tacens-mars-gaming-mp500-14db-pfc-activo">32,30€</a>]</li>
+</ul></li>
+<li><strong>1x Power conversion</strong> [15-20€]
+
+<ul>
+<li>RAMPS 1.4 [<a href="http://bcndynamics.com/es/product/ramps-v14">15€ bcndynamics</a>]</li>
+</ul></li>
+<li><strong>1x Controller</strong> [5-45€]
+
+<ul>
+<li>Arduino Mega 2560 R3 [<a href="https://www.cooking-hacks.com/arduino-mega-2560">41€ cooking-hacks</a>]</li>
+<li>Mega 2560 r3 [<a href="http://es.aliexpress.com/item/MEGA-2560-R3-ATmega2560-R3-AVR-USB-board-for-Arduino-2560-MEGA2560-R3-NO-USB/32222306768.html">5,37€ aliexpress</a>]</li>
+</ul></li>
+<li><strong>3(+1:2)x Stepper drivers</strong> [30-60€]
+
+<ul>
+<li>Hasta 2-2,5A -X,Y,Z-
+
+<ul>
+<li>DRV8825 [<a href="http://bcndynamics.com/es/product/driver-motor-pap-drv8825-rrw">10,49€ bcndynamics</a> (versión de 4 capas, no incluye disipador, aunque se recomienda)]</li>
+<li>DRV8825  [<a href="http://bcndynamics.com/es/product/drv8825%EF%BB%BF-driver-de-motor-paso-paso-stepstick">4,99€ bcndynamics</a> (incluye disipador)]</li>
+</ul></li>
+<li>Hasta 1A -extrusores-
+
+<ul>
+<li>A4988 [<a href="http://bcndynamics.com/es/product/driver-de-motor-pap-a4988">3,99€ bcndynamics</a> (incluye disipador)]</li>
+</ul></li>
+</ul></li>
+<li><strong>1x DC/Brushless bridge</strong></li>
+<li><strong>3(+1)x Microswitches</strong> [2,5-4,5€]
+
+<ul>
+<li>[<a href="http://bcndynamics.com/es/product/microswitch-en-placa-con-cable">1,40€ bcndynamics</a> (en placa y con cable)]</li>
+</ul></li>
+<li><strong>2x Thermistor</strong> [10-20€]
+
+<ul>
+<li>100K NTC  [<a href="http://bcndynamics.com/es/product/termistor-100k-ntc-cable-1m-y-conector">5,99€ bcndynamics</a> (con cable de 1m y conector)]</li>
+</ul></li>
+</ul>
+
+<p>Es común encontrar kits que incluyan una placa de conversión de potencia, varios drivers para motores paso a paso, un controlador, microswitches&hellip;:</p>
+
+<ul>
+<li>Kits bcndynamics
+
+<ul>
+<li>RAMPS + 4x A4988 + 4x disipador [<a href="http://bcndynamics.com/es/product/kit-ramps-drivers-0">29,95€</a> (1€ de ahorro)]</li>
+<li>Kit anterior + 1x A4988 + 1 disipador + Arduino Mega 2560 [72,50€, el arduino sale a 38,56€]</li>
+<li>Kit anterior + Fuente 12V/20A + 3x microswitch + 1x Termistor + 1x ventilador 40x40mm + cables USB, electrico, extensión, alimención&hellip; [110€, todos los cables salen gratis]</li>
+</ul></li>
+<li>Kits aliexpress
+
+<ul>
+<li>RAMPS 1.4 + 5x DRV8825 + 5x disipador [<a href="http://es.aliexpress.com/item/3D-Printer-Kit-RAMPS-1-4-Controller-Control-Panel-for-Arduino-Mega-Devlepment-Board-5x-DRV8825/32359381891.html">12,95€</a>]
+<br /></li>
+</ul></li>
+</ul>
+
+<h2 id="mechanics">Mechanics</h2>
+
+<ul>
+<li><strong>1x Fan</strong> [3-10€]
+
+<ul>
+<li>40x40mm 0x09A [<a href="http://bcndynamics.com/es/product/ventilador-40x40mm-12v">3,50€ bcndynamics</a>]</li>
+</ul></li>
+<li><strong>6x Precision/Calibrated/Rectified stainless steel shaft (round bar)</strong>
+
+<ul>
+<li>8mm</li>
+<li>10mm
+
+<ul>
+<li>300mm [<a href="http://es.aliexpress.com/store/product/Brand-New-Hard-OD-10mm-x-300mm-Cylinder-Liner-Rail-Linear-Axis-Chrome-Shaft-Resistance-Excellent/1803726_32513021150.html?spm=2114.04010208.3.37.DzZWBh&amp;ws_ab_test=searchweb201556_1,searchweb201644_5_505_506_503_504_301_502_10001_10002_10017_10010_10005_10011_10006_10003_10004_10013_10009_10008,searchweb201560_1,searchweb1451318400_-1,searchweb1451318411_6449&amp;btsid=7399ec88-6796-46f8-9755-7a8d8aa59d25">4,76€ aliexpress</a>]</li>
+<li>400mm [<a href="http://es.aliexpress.com/store/product/Brand-New-Hard-OD-10mm-x-400mm-Cylinder-Liner-Rail-Linear-Axis-Chrome-Shaft-Resistance-Excellent/1803726_32513029037.html?spm=2114.04010208.3.112.DzZWBh&amp;ws_ab_test=searchweb201556_1,searchweb201644_5_505_506_503_504_301_502_10001_10002_10017_10010_10005_10011_10006_10003_10004_10013_10009_10008,searchweb201560_1,searchweb1451318400_-1,searchweb1451318411_6449&amp;btsid=7399ec88-6796-46f8-9755-7a8d8aa59d25">6,22€ aliexpress</a>]</li>
+</ul></li>
+<li>12mm</li>
+</ul></li>
+<li><strong>12x Linear bearing</strong>
+
+<ul>
+<li>8-15mm
+
+<ul>
+<li>LM8UU (24mm)</li>
+<li>LM8LUU (45mm)</li>
+</ul></li>
+<li>10-19mm
+
+<ul>
+<li>LM10UU (29mm)</li>
+<li>LM10LUU (55mm)</li>
+</ul></li>
+<li>12-21mm
+
+<ul>
+<li>LM12UU (30mm)</li>
+<li>LM12LUU (57mm)</li>
+</ul></li>
+</ul></li>
+<li><strong>2(+1:2)x Radial bearing</strong>
+
+<ul>
+<li>8-22x7mm
+
+<ul>
+<li>608-ZZ</li>
+<li>608-2RS</li>
+</ul></li>
+<li>10-19x5mm
+
+<ul>
+<li>6800-ZZ</li>
+<li>6800-2RS</li>
+</ul></li>
+<li>12-21x5mm
+
+<ul>
+<li>6801-ZZ</li>
+<li>6801-2RS</li>
+</ul></li>
+</ul></li>
+<li><strong>3(+1:2)x Flexible coupling</strong>
+
+<ul>
+<li>5-8mm</li>
+<li>5-10mm</li>
+<li>5-12mm</li>
+</ul></li>
+<li><strong>3(+1:2)x Stainless steel trapezoidal threaded rod</strong>
+
+<ul>
+<li>Tr.8x2, single right</li>
+<li>Tr.10x2, single right</li>
+<li>Tr.12x3, single right</li>
+</ul></li>
+<li><strong>3(+1:2)x Bronze trapezoidal nuts</strong>
+
+<ul>
+<li>Hexagonal
+
+<ul>
+<li>Tr.8x2, single right</li>
+<li>Tr.10x2, single right</li>
+<li>Tr.12x3, single right</li>
+</ul></li>
+</ul></li>
+<li><strong>1x DC/Brushless</strong></li>
+<li><strong>3(+1:2)x Stepper</strong> [NEMA <sup>14</sup>&frasl;<sub>17</sub> | 0,9-1,8º | 2.8-12V | <1.75A | 3-8mH | >=44Ncm] [60-]
+
+<ul>
+<li>NEMA 14
+
+<ul>
+<li><a href="http://bcndynamics.com/sites/default/files/LDO-35STH48-1684A.pdf">LDO-35STH48-1684A</a> [ 1,8º | 2.8V | 1,68A |2.8mH | &gt;44Ncm | 250g | 48mm]
+
+<ul>
+<li>[<a href="http://bcndynamics.com/es/product/motor-paso-paso-nema14-30cm-cable">12,95€ bcndynamics</a>]</li>
+</ul></li>
+</ul></li>
+<li>NEMA 17
+
+<ul>
+<li><a href="http://bcndynamics.com/sites/default/files/LDO-42STH47-1684A%20RevA.pdf">LDO-42STH47-1684A</a> [ 1,8º | 2,8V | 1,68A | 2,8mH | &gt;50Ncm | 350g | 48mm]
+
+<ul>
+<li><a href="http://www.alibaba.com/product-detail/Nema-17-cheap-stepper-motor-70_669547573.html?spm=a2700.7724838.30.11.MIQWyN">$5.6-10 aliexpress LDO</a></li>
+<li>30cm cable wo/ connector [<a href="http://bcndynamics.com/en/product/stepper-motor-nema-17-30cm-cables">9,68€ bcndynamics</a>]</li>
+<li>wo/ cable [<a href="http://bcndynamics.com/en/product/stepper-motor-nema-17-connector">14,00€ bcndynamics</a>]</li>
+<li>w/ 50cm cable [<a href="http://bcndynamics.com/en/product/stepper-motor-nema17-50cm-cables">14,48€ bcndynamics</a>]</li>
+<li>w/ 100cm cable [<a href="http://bcndynamics.com/en/product/stepper-motor-nema17-100cm-cable">14,97€ bcndynamics</a>]</li>
+</ul></li>
+<li>17HS4401 [1,8º | 1,7A | 1,5Ohm | 2,8mH | 40Ncm | 280g | 40mm]
+
+<ul>
+<li>5x 48,24€ [<a href="http://es.aliexpress.com/store/product/5pcs-4-lead-Nema17-Stepper-Motor-42-motor-Nema-17-motor-42BYGH-1-7A-17HS4401-motor/1021965_1500927219.html?spm=2114.04010208.3.1.YjrY23&amp;ws_ab_test=searchweb201556_1,searchweb201644_5_505_506_503_504_301_502_10001_10002_10017_10010_10005_10011_10006_10003_10004_10013_10009_10008,searchweb201560_1,searchweb1451318400_-1,searchweb1451318411_6449&amp;btsid=445a56af-d8f4-4e1b-97fa-1f86237d22f4">9,65€ aliexpress</a>]</li>
+<li>5x 47,66€ [<a href="http://es.aliexpress.com/store/product/5pcs-4-lead-Nema17-Stepper-Motor-42-motor-Nema-17-motor-42BYGH-1-7A-17HS4401-motor/330447_1849871491.html?spm=2114.04010208.3.20.pI9qjz&amp;ws_ab_test=searchweb201556_1,searchweb201644_5_505_506_503_504_301_502_10001_10002_10017_10010_10005_10011_10006_10003_10004_10013_10009_10008,searchweb201560_1,searchweb1451318400_-1,searchweb1451318411_6449&amp;btsid=42e04e7c-023d-43a6-8d77-66d05f340139">9,53€ aliexpress</a>]</li>
+<li>3x 28,58€ [<a href="http://es.aliexpress.com/store/product/3pcs-4-lead-Nema17-Stepper-Motor-42-motor-Nema-17-motor-42BYGH-1-7A-17HS4401-motor/817985_32534144790.html?spm=2114.04010208.3.30.pI9qjz&amp;ws_ab_test=searchweb201556_1,searchweb201644_5_505_506_503_504_301_502_10001_10002_10017_10010_10005_10011_10006_10003_10004_10013_10009_10008,searchweb201560_1,searchweb1451318400_-1,searchweb1451318411_6449&amp;btsid=42e04e7c-023d-43a6-8d77-66d05f340139">9,53€ aliexpress</a>]</li>
+</ul></li>
+<li>17HS8401 [1,8º | 1.8A | 1,5Ohm | 3,2mH | 52Ncm | 400g | 48mm]
+
+<ul>
+<li>5x 54,08€ [<a href="http://es.aliexpress.com/store/product/Free-shipping-5-PCS-lot-4-lead-Nema-17-Stepper-Motor-42-motor-17HS8401-1-8A/1201455_32476806811.html?spm=2114.04010208.3.29.NJRrGU&amp;ws_ab_test=searchweb201556_1,searchweb201644_5_505_506_503_504_301_502_10001_10002_10017_10010_10005_10011_10006_10003_10004_10013_10009_10008,searchweb201560_1,searchweb1451318400_-1,searchweb1451318411_6449&amp;btsid=64bc4396-a16a-4da0-97bf-0d3581247967">10,82€ aliexpress</a>]</li>
+<li>[<a href="http://es.aliexpress.com/store/product/1-PCS-lot-4-lead-Nema-17-Stepper-Motor-42-motor-17HS8401-1-8A-CE-ROSH/822038_1050631173.html?spm=2114.04010208.3.12.NJRrGU&amp;ws_ab_test=searchweb201556_1,searchweb201644_5_505_506_503_504_301_502_10001_10002_10017_10010_10005_10011_10006_10003_10004_10013_10009_10008,searchweb201560_1,searchweb1451318400_-1,searchweb1451318411_6449&amp;btsid=64bc4396-a16a-4da0-97bf-0d3581247967">12,77€ aliexpress</a>]</li>
+</ul></li>
+<li>42SHB0602-24 [0,9º | 2.77V | 1.68A | 4.1mH | 44Ncm | 300g | 48mm]
+
+<ul>
+<li>5x 55,35 [<a href="http://es.aliexpress.com/store/product/5pcs-lot-CNC-Nema17-0-9-degree-stepper-motor-for-1-68A-4400g-cm-48mm-length/530976_32305940737.html?spm=2114.12010408.0.82.kbBSn8">11,07€ aliexpress</a>] + envío</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<ul>
+<li><a href="https://www.bcn3dtechnologies.com/es/catalog/mechanics">https://www.bcn3dtechnologies.com/es/catalog/mechanics</a>
+<br /></li>
+</ul>
+
+<hr />
+
+<ul>
+<li><a href="http://www.baiz.net">http://www.baiz.net</a></li>
+<li><a href="http://www.rosmil.com">http://www.rosmil.com</a></li>
+<li><a href="http://tubosmecanicos.es/media/TM_BarraCromada.pdf">http://tubosmecanicos.es/media/TM_BarraCromada.pdf</a></li>
+<li><a href="http://www.protubsa.com/wp-content/uploads/P_Protubsa_Cromados_2015.pdf">http://www.protubsa.com/wp-content/uploads/P_Protubsa_Cromados_2015.pdf</a></li>
+<li><a href="http://euroacerossa.com/productos/">http://euroacerossa.com/productos/</a></li>
+<li><a href="http://www.acerosims.com/files/CatalogoInoxidable8Paginas2015.pdf">http://www.acerosims.com/files/CatalogoInoxidable8Paginas2015.pdf</a>
+<br /></li>
+</ul>
+
+<h1 id="bom">BOM</h1>
+
+<h2 id="base">Base</h2>
+
+<table>
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Componente</th>
+<th>Unidades</th>
+<th>Coste/u</th>
+<th>Subtotal</th>
+<th>Observaciones</th>
+<th>URL</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Estructura y carros</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Ejes</td>
+<td>Barra<sup><a href="#footnote1">1</a></sup> Ø10mm L370mm</td>
+<td>2</td>
+<td>0,00 €</td>
+<td></td>
+<td>X</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Barra<sup><a href="#footnote1">1</a></sup> Ø10mm L350mm</td>
+<td>2</td>
+<td>0,00 €</td>
+<td></td>
+<td>Y</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Barra<sup><a href="#footnote1">1</a></sup> Ø10mm L320mm</td>
+<td>2</td>
+<td>0,00 €</td>
+<td></td>
+<td>Z</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Rodamiento lineal LM10UU</td>
+<td>12</td>
+<td>0,80 €</td>
+<td>9,63 €</td>
+<td>4 por eje</td>
+<td><a href="http://es.aliexpress.com/af/LM10UU.html?spm=2114.30011108.0.307.aCsbHu&amp;site=esp&amp;SearchText=LM10UU&amp;g=y&amp;CatId=204005035&amp;initiative_id=SB_20160219171834&amp;isAffiliate=y&amp;shipCountry=es">Aliexpress</a></td>
+</tr>
+
+<tr>
+<td>Transmisión</td>
+<td>Husillo<sup><a href="#myfootnote2">2</a></sup> Tr. 10x2mm L350mm</td>
+<td>1</td>
+<td>0,00 €</td>
+<td></td>
+<td>X</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Husillo<sup><a href="#myfootnote2">2</a></sup> Tr. 10x2mm L330mm</td>
+<td>1</td>
+<td>0,00 €</td>
+<td></td>
+<td>Y</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Husillo<sup><a href="#myfootnote2">2</a></sup> Tr. 10x2mm L300mm</td>
+<td>2</td>
+<td>0,00 €</td>
+<td></td>
+<td>Z</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Tuerca<sup><a href="#myfootnote3">3</a></sup> hexagonal Tr. 10x2mm</td>
+<td>4</td>
+<td>0,00 €</td>
+<td></td>
+<td>1 por husillo</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Acoplamiento 5mm x 10mm</td>
+<td>4</td>
+<td>1,43 €</td>
+<td>5,70 €</td>
+<td>1 por motor de eje</td>
+<td><a href="http://es.aliexpress.com/wholesale?shipCountry=ES&amp;shipFromCountry=&amp;shipCompanies=&amp;SearchText=acoplamientos+eje+5+10+mm&amp;exception=&amp;minPrice=&amp;maxPrice=&amp;isFreeShip=y&amp;isFavorite=n&amp;isRtl=n&amp;isOnSale=n&amp;isBigSale=n&amp;similar_style=n&amp;similar_style_id=&amp;isLocalReturn=n&amp;CatId=0&amp;g=y&amp;SortType=price_asc&amp;initiative_id=SB_20160217161948&amp;needQuery=n&amp;groupsort=1">Aliexpress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Cojinete 6800ZZ</td>
+<td>4</td>
+<td>0,60 €</td>
+<td>2,40 €</td>
+<td>1 por husillo, 10 * 19 * 5 mm</td>
+<td><a href="http://es.aliexpress.com/af/6800ZZ.html?ltype=wholesale&amp;d=y&amp;origin=n&amp;isViewCP=y&amp;catId=0&amp;initiative_id=SB_20160219180320&amp;SearchText=6800ZZ">Aliexpress</a></td>
+</tr>
+
+<tr>
+<td>Actuación</td>
+<td>NEMA 17</td>
+<td>4</td>
+<td>0,00 €</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Electrónica</td>
+<td>Controlador</td>
+<td>1</td>
+<td>5,37 €</td>
+<td>5,37 €</td>
+<td>Mega 2560 R3</td>
+<td><a href="http://es.aliexpress.com/item/MEGA-2560-R3-ATmega2560-R3-AVR-USB-board-for-Arduino-2560-MEGA2560-R3-NO-USB/32222306768.html">Aliexpress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Fin de carrera</td>
+<td>3</td>
+<td>0,00 €</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>LCD TFT 3.5 Touch + SD</td>
+<td>1</td>
+<td>7,98 €</td>
+<td>7,98 €</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Ethernet/Wifi/SBC</td>
+<td>0,00 €</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Potencia</td>
+<td>FA 12V 20-30A</td>
+<td>1</td>
+<td>0,00 €</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Adaptación y distribución</td>
+<td>1</td>
+<td>12,95 €</td>
+<td>12,95 €</td>
+<td>RAMPS 1.4 en kit</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Driver PAP</td>
+<td>4</td>
+<td>0,00 €</td>
+<td>0,00 €</td>
+<td>5x DRV8825 en kit RAMPS</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Disipador driver</td>
+<td>4</td>
+<td>0,00 €</td>
+<td>0,00 €</td>
+<td>5x en kit RAMPS</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Cableado</td>
+<td>Alimentación</td>
+<td>1</td>
+<td>0,00 €</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>FA-adaptación</td>
+<td>1</td>
+<td>0,00 €</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>LCD-controlador</td>
+<td>1</td>
+<td>0,00 €</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Controlador-potencia</td>
+<td>1</td>
+<td>0,00 €</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><a name="footnote1">1</a>: Barra calibrada o rectificada h8-h11 de acero semiduro (F114, AISI 304).</li>
+<li><a name="footnote2">2</a>: Una entrada a derecha de acero semiduro (F114, AISI 304) con calidad exterior h7-h8.</li>
+<li><a name="footnote3">3</a>: Una entrada a derecha de bronce <sup>88</sup>&frasl;<sub>12</sub>.</li>
+</ul>
+
+<h2 id="3d-print">3D print</h2>
+
+<table>
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Componente</th>
+<th>Unidades</th>
+<th>Coste/u</th>
+<th>Subtotal</th>
+<th>Observaciones</th>
+<th>URL</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Extrusor</td>
+<td>Driver PAP (baja)</td>
+<td>1</td>
+<td>0,00 €</td>
+<td>0,00 €</td>
+<td>1 en kit RAMPS. Por cada extrusor? O se puede usar uno para dos?</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Disipador driver (baja)</td>
+<td>1</td>
+<td>0,00 €</td>
+<td>0,00 €</td>
+<td>1 en kit RAMPS</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>NEMA 14</td>
+<td>1</td>
+<td>0,00 €</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Cama</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="plotter">Plotter</h2>
+
+<table>
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Componente</th>
+<th>Unidades</th>
+<th>Coste/u</th>
+<th>Subtotal</th>
+<th>Observaciones</th>
+<th>URL</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Cabezal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Base</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="pluma">Pluma</h2>
+
+<h2 id="mill-engraver">Mill/engraver</h2>
+
+<table>
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Componente</th>
+<th>Unidades</th>
+<th>Coste/u</th>
+<th>Subtotal</th>
+<th>Observaciones</th>
+<th>URL</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Cabezal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Base</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="láser">Láser</h2>
+
+<table>
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Componente</th>
+<th>Unidades</th>
+<th>Coste/u</th>
+<th>Subtotal</th>
+<th>Observaciones</th>
+<th>URL</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Cabezal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Base</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="pick-and-place">Pick-and-Place</h2>
+
+<table>
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Componente</th>
+<th>Unidades</th>
+<th>Coste/u</th>
+<th>Subtotal</th>
+<th>Observaciones</th>
+<th>URL</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Cabezal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Base</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/note/deskbot/mech/" title="Estructura y Mecanismos"> <i class="fa fa-chevron-left"></i><label>Estructura y Mecanismos</label></a>
+    <a class="nav nav-next" href="/note/deskbot/soft/" title="Software" style="margin-right: 0px;"><label>Software</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i>  20/11/2015
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/FreeJaus/freejaus.github.io/edit/master/_hugo/content/note/deskbot/bom.md" target="blank"><i class="fa fa-code-fork"></i>
+        Edita esta página</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

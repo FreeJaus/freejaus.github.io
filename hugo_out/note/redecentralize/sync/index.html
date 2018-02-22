@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FreeJaus - Forge</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>5. Sincronización :: FreeJaus - Forge</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "http:\/\/freejaus.github.io";
+</script>
+<meta name="description" content="">
+
+
+    
+  </head>
+  <body data-url="/note/redecentralize/sync/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="http://freejaus.github.io">FreeJaus - Forge</a>
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/FreeJaus/freejaus.github.io"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/FreeJaus/freejaus.github.io/archive/master.zip"  rel="noopener">
+                  <i class='fa fa-cloud-download'></i> <label>Download</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/note/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/note/"><i class="fa fa-list-alt"></i>Notes</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/note/refs/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/refs/"><i class="fa fa-book"></i>References</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/refs/hugo/" class="dd-item">
+        <div>
+          <a href="/note/refs/hugo/">
+            Hugo(lang)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/refs/golang/" class="dd-item">
+        <div>
+          <a href="/note/refs/golang/">
+            Go(lang)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/redecentralize/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/note/redecentralize/"><i class="fa fa-exchange"></i>Redecentralize</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/redecentralize/contexto/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/contexto/">
+            0. Contexto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/permisos/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/permisos/">
+            1. Permisos de usuario
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/accesolocal/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/accesolocal/">
+            2. Acceso local
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/accesoremoto/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/accesoremoto/">
+            3. Acceso remoto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/identificacion/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/identificacion/">
+            4. Identificación
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/sync/" class="dd-item active">
+        <div>
+          <a href="/note/redecentralize/sync/">
+            5. Sincronización
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/scm/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/scm/">
+            6. Control de versiones
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/hub/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/hub/">
+            7. Distribución
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/textedit/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/textedit/">
+            8. Editores de texto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/redecentralize/mon/" class="dd-item">
+        <div>
+          <a href="/note/redecentralize/mon/">
+            9. Monitorización
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/deskbot/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/deskbot/"><i class="fa fa-cube"></i>Libre DeskBot</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/deskbot/mods/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/mods/">
+            Cabezales
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/elec/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/elec/">
+            Electrónica
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/mech/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/mech/">
+            Mecánica
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/bom/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/bom/">
+            Presupuesto
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/deskbot/soft/" class="dd-item">
+        <div>
+          <a href="/note/deskbot/soft/">
+            Software
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/minideskbot/" class="dd-item
+        ">
+      <div>
+      <a href="/note/minideskbot/"></a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/distman/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/distman/"><i class="fa fa-industry"></i>Distributed Manufacturing</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/note/distman/didprot/" class="dd-item
+        ">
+      <div>
+      <a href="/note/distman/didprot/"><i class="fa fa-object-group"></i>Didactic prototypes</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/distman/manbots/" class="dd-item
+        ">
+      <div>
+      <a href="/note/distman/manbots/"><i class="fa fa-gears"></i>Manufacturing bots/machines</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/mots/" class="dd-item
+        ">
+      <div>
+      <a href="/note/mots/"><i class="fa fa-gear"></i>Driving Motors</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/elin/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/elin/"><i class="fa fa-puzzle-piece"></i>Embedded Linux</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/elin/baseconfig/" class="dd-item">
+        <div>
+          <a href="/note/elin/baseconfig/">
+            Base configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/elin/orangepi/" class="dd-item">
+        <div>
+          <a href="/note/elin/orangepi/">
+            Orange Pi
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/elin/rpi3/" class="dd-item">
+        <div>
+          <a href="/note/elin/rpi3/">
+            Raspberry Pi 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/ecam/" class="dd-item
+        ">
+      <div>
+      <a href="/note/ecam/"><i class="fa fa-video-camera"></i>Embedded apps with camera(s)</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/note/nfcsec/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/nfcsec/"><i class="fa fa-shield"></i>NFC/RFID</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/nfcsec/cred/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/cred/">
+            Crédito
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/jauzi/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/jauzi/">
+            Jauzi
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_01/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_01/">
+            PoC 1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_02/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_02/">
+            PoC 2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_03/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_03/">
+            PoC 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_04/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_04/">
+            PoC 4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/poc_05/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/poc_05/">
+            PoC 5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/trans/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/trans/">
+            Transporte
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/nfcsec/univ/" class="dd-item">
+        <div>
+          <a href="/note/nfcsec/univ/">
+            Universidad
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/note/fjkb/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/note/fjkb/"><i class="fa fa-keyboard-o"></i>[FJKB] Libre DIY Mechanical Keyboard</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/note/fjkb/overview/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/overview/">
+            0. Full custom
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/layout/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/layout/">
+            1. Layout
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/keys/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/keys/">
+            2. Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/elec/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/elec/">
+            3. Electronics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/mech/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/mech/">
+            4. Mechanics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/tools/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/tools/">
+            5. Tools
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/commercial/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/commercial/">
+            Commercial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/projects/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/projects/">Projects</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/projects/rf/" class="dd-item
+        ">
+      <div>
+      <a href="/projects/rf/"><i class="fa fa-cube"></i>Proyect instru</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/note/" >
+   Notes</option> 
+    <option value="/note/refs/" >
+  - 
+   References</option>
+    <option value="/note/redecentralize/" >
+  - 
+   Redecentralize</option> 
+      <option value="/note/redecentralize/contexto/" >-- 0. Contexto</option>
+      <option value="/note/redecentralize/permisos/" >-- 1. Permisos de usuario</option>
+      <option value="/note/redecentralize/accesolocal/" >-- 2. Acceso local</option>
+      <option value="/note/redecentralize/accesoremoto/" >-- 3. Acceso remoto</option>
+      <option value="/note/redecentralize/identificacion/" >-- 4. Identificación</option>
+      <option value="/note/redecentralize/sync/"  selected>-- 5. Sincronización</option>
+      <option value="/note/redecentralize/scm/" >-- 6. Control de versiones</option>
+      <option value="/note/redecentralize/hub/" >-- 7. Distribución</option>
+      <option value="/note/redecentralize/textedit/" >-- 8. Editores de texto</option>
+      <option value="/note/redecentralize/mon/" >-- 9. Monitorización</option>
+  
+    <option value="/note/deskbot/" >
+  - 
+   [Deskbot] Libre DIY Small Desktop CNC Machine</option>
+    <option value="/note/minideskbot/" >
+  - 
+   </option>
+    <option value="/note/distman/" >
+  - 
+   Distributed Manufacturing</option>
+    <option value="/note/mots/" >
+  - 
+   Driving Motors</option>
+    <option value="/note/elin/" >
+  - 
+   Embedded Linux</option>
+    <option value="/note/ecam/" >
+  - 
+   Embedded apps with camera(s)</option>
+    <option value="/note/nfcsec/" >
+  - 
+   Seguridad en el control de acceso por tarjeta</option>
+    <option value="/note/fjkb/" >
+  - 
+   [FJKB] Libre DIY Mechanical Keyboard</option>
+  
+    <option value="/projects/" >
+   Projects</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Buscar...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "http:\/\/freejaus.github.io";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>5. Sincronización</h1>
+    
+    
+    
+    
+
+<h1 id="sincronización-de-ficheros-y-copias-de-seguridad">Sincronización de ficheros y copias de seguridad</h1>
+
+<p><a href="http://www.increa.com/computers/totalcommander-linux-alternatives/">http://www.increa.com/computers/totalcommander-linux-alternatives/</a></p>
+
+<h2 id="comparación-de-herramientas-de-comparación-de-directorios-y-ficheros-https-en-wikipedia-org-wiki-comparison-of-file-comparison-tools"><a href="https://en.wikipedia.org/wiki/Comparison_of_file_comparison_tools">Comparación de herramientas de comparación de directorios y ficheros</a></h2>
+
+<pre><code>diff
+diff3
+winmerge
+meld
+</code></pre>
+
+<h2 id="comparación-de-herramientas-de-sincronización-de-directorios-https-en-wikipedia-org-wiki-comparison-of-file-synchronization-software"><a href="https://en.wikipedia.org/wiki/Comparison_of_file_synchronization_software">Comparación de herramientas de sincronización de directorios</a></h2>
+
+<pre><code>csync
+csyn2
+</code></pre>
+
+<h2 id="owncloud">owncloud</h2>
+
+<p>owncloud - ehubox</p>
+
+<h2 id="syncthing-https-syncthing-net"><a href="https://syncthing.net/">Syncthing</a></h2>
+
+<ul>
+<li><a href="https://syncthing.net/security.html">syncthing.net/security</a></li>
+<li><a href="http://docs.syncthing.net/users/">docs.syncthing.net/users/</a>
+
+<ul>
+<li><a href="http://docs.syncthing.net/users/security.html">security</a></li>
+<li><a href="http://docs.syncthing.net/users/autostart.html">autostart</a>
+
+<ul>
+<li><a href="https://github.com/syncthing/syncthing-gtk">syncthing-gtk</a></li>
+<li><a href="https://github.com/canton7/SyncTrayzor">SyncTrayzor</a> (<a href="https://github.com/canton7/SyncTrayzor/tree/master/security">security</a>)</li>
+</ul></li>
+<li><a href="http://docs.syncthing.net/users/ignoring.html">ignoring</a>: <a href="https://forum.syncthing.net/t/useful-stignore-patterns/1175">Usefil .stignore patterns</a> (the first pattern that matches will decide the fate of a given file).</li>
+<li><a href="http://docs.syncthing.net/users/faq.html#faq">faq</a>
+
+<ul>
+<li>How can I exclude files with brackets ([]) in the name?</li>
+<li>How do I access the web GUI from another computer?</li>
+</ul></li>
+<li><a href="http://docs.syncthing.net/users/discosrv.html">discosrv</a></li>
+<li><a href="http://docs.syncthing.net/users/foldermaster.html">foldermaster</a> (clicking this button will enforce the master’s current state on the rest of the cluster: any changes made to files will be overwritten by the version on the master, any files that don’t exist on the master will be deleted, and so on)</li>
+</ul></li>
+<li><a href="https://forum.syncthing.net/t/getting-syncthing-running-with-a-central-file-server-running-centos-7-minimal-setup-and-windows-clients/1429">Getting Syncthing running with a central file server running CentOS 7 minimal setup and windows clients</a></li>
+<li>Para compartir configuración entre Windows y GNU/Linux:
+
+<ul>
+<li>Montar partición</li>
+<li>Crear link simbólico de <path> a la carpeta de configuración en la partición montada</li>
+<li><code>syncthing -home &lt;path&gt;</code></li>
+</ul></li>
+<li>No soporta múltiples carpetas locales para un mismo directorio.
+<br /></li>
+</ul>
+
+<h3 id="example-output-log-of-first-execution-en-windows">Example output log of first execution en Windows</h3>
+
+<pre><code>[start] 07:39:47 INFO: Generating RSA key and certificate for syncthing...
+[BV3U5] 07:39:50 INFO: syncthing v0.11.26 &quot;Aluminium Ant&quot; (go1.4.2 windows-amd64 default) unknown-user@syncthing-builder 2015-10-02 06:08:07 UTC
+[BV3U5] 07:39:50 INFO: My ID: XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX
+[BV3U5] 07:39:50 INFO: No config file; starting with empty defaults
+[BV3U5] 07:39:50 INFO: Edit C:\Users\&lt;usuario&gt;\AppData\Local\Syncthing\config.xml to taste or use the GUI
+[BV3U5] 07:39:50 INFO: Database block cache capacity 32478 KiB
+[BV3U5] 07:39:50 OK: Ready to synchronize default (read-write)
+[BV3U5] 07:39:50 INFO: Starting web GUI on http://127.0.0.1:8384/
+[BV3U5] 07:39:50 INFO: Loading HTTPS certificate: open C:\Users\&lt;usuario&gt;\AppData\Local\Syncthing\https-cert.pem: El sistema no puede encontrar el archivo especificado.
+[BV3U5] 07:39:50 INFO: Creating new HTTPS certificate
+[BV3U5] 07:39:50 INFO: Generating RSA key and certificate for &lt;nombredelequipo&gt;...
+[BV3U5] 07:39:50 INFO: Completed initial scan (rw) of folder default
+[BV3U5] 07:39:51 INFO: Starting local discovery announcements
+[BV3U5] 07:39:51 INFO: Starting global discovery announcements
+[BV3U5] 07:39:51 INFO: Device XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX is &quot;&lt;nombredelequipo&gt;&quot; at [dynamic]
+[BV3U5] 07:39:51 INFO: API listening on 127.0.0.1:8384
+[BV3U5] 07:40:01 INFO: No UPnP device detected
+</code></pre>
+
+<h3 id="tunneling-via-ssh">Tunneling via SSH</h3>
+
+<p>If you have SSH access to the machine running Syncthing but would rather not open the web GUI port to the outside world, you can access it through a SSH tunnel instead. You can start a tunnel with a command like the following:</p>
+
+<pre><code>ssh -L 9999:localhost:8384 machine
+</code></pre>
+
+<p>This will bind to your local port 9999 and forward all connections from there to port 8384 on the target machine. This still works even if Syncthing is bound to listen on localhost only.</p>
+
+<h2 id="rsync-https-rsync-samba-org-rsnapshop-http-rsnapshot-org"><a href="https://rsync.samba.org/">rsync</a> &amp; <a href="http://rsnapshot.org/">rsnapshop</a></h2>
+
+<blockquote>
+<p>Similar to rcp and scp, <a href="https://en.wikipedia.org/wiki/Rsync">rsync</a> requires the specification of a source and of a destination; either of them may be remote, but not both. By default, rsync uses the remote-shell program SSH for its communication. It can be configured to use a different remote-shell program, or to contact an rsync daemon directly via TCP, which per default then is via TCP port 873.</p>
+</blockquote>
+
+<p><a href="http://linux.die.net/man/1/rsync">rsync - Linux man page</a></p>
+
+<pre><code>rsync -vr /run/media/1138-4EB/CLIFF/* /run/media/1138-4EB/Data/CLIFF_bck/
+rsync -vrzP --bwlimit=1000
+</code></pre>
+
+<blockquote>
+<p>rsnapshot is a filesystem snapshot utility based on rsync, that makes it easy to make periodic snapshots of local machines, and remote machines over ssh.</p>
+</blockquote>
+
+<p>incremental transfer</p>
+
+<blockquote>
+<p>To protect your data, it is highly suggested to first try a run using the <code>--dry-run</code> option (<code>-n</code>) to see what files are going to be deleted.</p>
+</blockquote>
+
+<pre><code>rsync -az --progress --delete --force --dry-run SOURCE DEST
+rsync -az --progress --delete --force SOURCE DEST
+
+# To use --delete this form should be used:
+rsync -avz /src/foo /dest
+# instead of:
+rsync -avz /src/foo/ /dest/foo
+
+-e, --rsh=COMMAND           specify the remote shell to use
+    --rsync-path=PROGRAM    specify the rsync to run on remote machine
+    --existing              skip creating new files on receiver
+    --ignore-existing       skip updating files that exist on receiver
+    --remove-source-files   sender removes synchronized files (non-dir)
+    --del                   an alias for --delete-during
+    --delete                delete extraneous files from dest dirs
+    --delete-before         receiver deletes before xfer, not during
+    --delete-during         receiver deletes during the transfer
+    --delete-delay          find deletions during, delete after
+    --delete-after          receiver deletes after transfer, not during
+    --delete-excluded       also delete excluded files from dest dirs
+    --ignore-missing-args   ignore missing source args without error
+    --delete-missing-args   delete missing source args from destination
+    --ignore-errors         delete even if there are I/O errors
+    --force                 force deletion of dirs even if not empty
+    --max-delete=NUM        don't delete more than NUM files
+    --max-size=SIZE         don't transfer any file larger than SIZE
+    --min-size=SIZE         don't transfer any file smaller than SIZE
+    --partial               keep partially transferred files
+    --partial-dir=DIR       put a partially transferred file into DIR
+    --delay-updates         put all updated files into place at end
+</code></pre>
+
+<h2 id="unison-https-www-cis-upenn-edu-bcpierce-unison"><a href="https://www.cis.upenn.edu/~bcpierce/unison/">Unison</a></h2>
+
+<p><a href="http://www.seas.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html#tutorial">Unison File Synchronizer - User Manual and Reference Guide: Tutorial, Version 2.48.3</a></p>
+
+<ul>
+<li><a href="http://alan.petitepomme.net/unison/index.html">Native compiled versions</a>, on Windows GTK+&gt;=2.12 is required.</li>
+<li>Cygwin (MinGW)</li>
+</ul>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/note/redecentralize/identificacion/" title="4. Identificación"> <i class="fa fa-chevron-left"></i><label>4. Identificación</label></a>
+    <a class="nav nav-next" href="/note/redecentralize/scm/" title="6. Control de versiones" style="margin-right: 0px;"><label>6. Control de versiones</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i>  01/01/2016
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/FreeJaus/freejaus.github.io/edit/master/_hugo/content/note/redecentralize/sync.md" target="blank"><i class="fa fa-code-fork"></i>
+        Edita esta página</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

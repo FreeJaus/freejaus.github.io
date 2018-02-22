@@ -12,7 +12,7 @@ keywords: mechanical keyboard
 - **Título de la actividad**: [FJKB] Libre DIY Mechanical Keyboard
 - **Tipo**: TAZ
 - **GEAs**: [ArduPi](https://github.com/FreeJaus/ardupi)
-- **Participante(s)**: u.mc, m.mc, z.gb
+- **Participante(s)**: u.mc
 
 ---
 

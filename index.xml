@@ -239,13 +239,7 @@ G-code generator  http://replicat.org/generators dxf2gcode  Simulation  CAMotics
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://freejaus.github.io/note/fjkb/elec/</guid>
-      <description> PCB  Layers  Backlight  Addressable LEDs  Connector  USB PS/2 Inalámbrico  Module connection Controller
- Backlight Brightness Effects Media/Fn keys/functions Win key block with fn combination, not switch  http://kalerator.clueboard.co/
- https://geekhack.org/index.php?topic=74139.0
- https://github.com/skullydazed/kalerator
- Single-switch PCB
- https://geekhack.org/index.php?topic=55744.msg1254946#msg1254946 https://deskthority.net/workshop-f7/another-single-switch-circuit-board-t11420.html  https://geekhack.org/index.php?topic=41989.0
-  </description>
+      <description>PCB  Layers  Backlight  Addressable LEDs  Connector  USB PS/2 Inalámbrico  Module connection Controller  Backlight Brightness Effects Media/Fn keys/functions Win key block with fn combination, not switch    Kalerator, helping you turn keyboard-layout-editor.com layouts into PCB&amp;rsquo;s by generating EAGLE scripts.  https://github.com/skullydazed/kalerator https://geekhack.org/index.php?topic=74139.0  Guide on how to design keyboard PCBs with KiCad Keyboard Firmware Builder, upload keyboard firmware builder configuration or import from keyboard-layout-editor.</description>
     </item>
     
     <item>
@@ -314,14 +308,8 @@ sudo dnf install autoconf libtool libusb-devel libpcsclite-devel sudo dnf instal
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://freejaus.github.io/note/elin/orangepi/</guid>
-      <description>http://linux-sunxi.org/Xunlong_Orange_Pi_2 http://linux-sunxi.org/Xunlong_Orange_Pi_Plus_2
- http://www.orangepi.org/downloaded/download.html
- http://www.orangepi.org/orangepibbsen/forum.php?mod=viewthread&amp;amp;tid=342&amp;amp;extra=page%3D1
- http://www.cnx-software.com/2015/09/01/getting-started-with-orange-pi-pc-pi-2-and-pi-plus-development-boards/
- http://www.cnx-software.com/2015/11/09/orange-pi-plus-2-allwinner-h3-board-includes-2gb-memory/
- !!! http://www.cnx-software.com/2015/08/06/how-to-install-and-run-linux-on-zidoo-x1-tv-box/
- http://www.cnx-software.com/2015/11/09/linaro-releases-the-first-alpha-version-of-the-96boards-reference-software-platform/
-  Todas las Fedora 22 del usuario loboris arrancan, tal como se puede comprobar mediante la salida de la UART (utilizando un adaptador USB-TTL, comprobado con el PL2303). Pero la salida HDMI funciona sólo en las versiones OPI-PLUS, no las OPI-2.</description>
+      <description>sunxi represents the family of ARM SoCs from Allwinner Technology, a Chinese fabless semiconductor company
+  linux-sunxi.org  Xunlong_Orange_Pi_Plus_2 github.com/linux-sunxi    orangepi.org  Orange Pi Plus Quick Start Guide orangepi.org/downloadresources | Orange Pi Plus2 and Plus: linux source, Ubuntu 15.04, Lubuntu 15.04, Debian 8, Fedora 22, Kali, Arch, OpenSuse, Android, Raspbian&amp;hellip; [last updated 2017-05] github.com/orangepi-xunlong Linux Distributions for Orange PI H3 boards (@loboris) All of the tested images work, as shown in orangepi_uart.</description>
     </item>
     
     <item>
@@ -370,6 +358,17 @@ Metodología  Leer el contenido de la copia realizada en la PoC 4, después de a
       <guid>http://freejaus.github.io/note/nfcsec/poc_05/</guid>
       <description>Objetivos  Observar las diferencias en el contenido de diferentes tarjetas de la UPV/EHU, con perfiles variados. Observar las diferencias en el contenido de diferentes tarjetas, caducadas y sin caducar, con permisos iguales y diferentes.  Herramientas Las mismas que en la PoC 2, pero utilizando varias tarjetas de la UPV/EHU.
 Metodología  Para cada tarjeta, realizar una lectura con mfoc, tal como se ha procedido en la PoC 2.</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi 3</title>
+      <link>http://freejaus.github.io/note/elin/rpi3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://freejaus.github.io/note/elin/rpi3/</guid>
+      <description> bamarni/pi64
+ Octoprint
+ https://octoprint.org/download/ https://plugins.octoprint.org/   </description>
     </item>
     
     <item>

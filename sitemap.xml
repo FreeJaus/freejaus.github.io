@@ -133,6 +133,10 @@
   </url>
   
   <url>
+    <loc>http://freejaus.github.io/note/distman/didprot/</loc>
+  </url>
+  
+  <url>
     <loc>http://freejaus.github.io/note/distman/</loc>
   </url>
   
@@ -142,6 +146,10 @@
   
   <url>
     <loc>http://freejaus.github.io/note/elin/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/ecam/</loc>
   </url>
   
   <url>
@@ -157,6 +165,10 @@
   <url>
     <loc>http://freejaus.github.io/note/deskbot/</loc>
     <lastmod>2015-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/distman/manbots/</loc>
   </url>
   
   <url>
@@ -211,6 +223,14 @@
   
   <url>
     <loc>http://freejaus.github.io/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/projects/rf/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/elin/rpi3/</loc>
   </url>
   
   <url>

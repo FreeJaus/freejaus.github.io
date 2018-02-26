@@ -31,3 +31,30 @@ title: 3. Electronics
 - Single-switch PCB
   - https://geekhack.org/index.php?topic=55744.msg1254946#msg1254946
   - https://deskthority.net/workshop-f7/another-single-switch-circuit-board-t11420.html
+
+---
+
+- https://kbdfans.myshopify.com/collections/pcb/products/gk64-rgb-60-64keys-hot-swap-pcb
+  - One WS8212B, WS2812B-MINI, WS2812D, WS2813B-MINI... per key.
+
+---
+
+¿Cómo indicar en keyboard-layout-editor que una tecla tiene led integrado (caps lock, num lock, etc.)?
+
+---
+
+SPI TFT/LCD + SD
+
+```
+5V     VCC         VCC
+MISO   NC/SD_MISO  GND
+SCK    CLK/SD_SCK  GND
+MOSI   SDA/SD_MOSI NC
+LCD_CS CS          NC   SD_CS
+SD_CS  NC/SD_CS    NC   SD_MISO
+D_C    RS          CLK  SD_SCK
+RESET  RST         SDA  SD_MOSI
+BL     -           RS
+GND    GND         RST
+                   CS
+```

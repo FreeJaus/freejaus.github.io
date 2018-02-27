@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://freejaus.github.io/note/fjkb/overview/</loc>
+    <loc>http://freejaus.github.io/note/fjkb/custom/</loc>
   </url>
   
   <url>
@@ -254,6 +254,10 @@
   
   <url>
     <loc>http://freejaus.github.io/note/fjkb/</loc>
+  </url>
+  
+  <url>
+    <loc>http://freejaus.github.io/note/fjkb/builds/umc/</loc>
   </url>
   
 </urlset>

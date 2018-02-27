@@ -22,7 +22,7 @@
 
     
   </head>
-  <body data-url="/note/fjkb/overview/">
+  <body data-url="/note/fjkb/custom/">
     
       <header>
   <div class="logo">
@@ -344,9 +344,9 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/note/fjkb/overview/" class="dd-item active">
+      <li data-nav-id="/note/fjkb/custom/" class="dd-item active">
         <div>
-          <a href="/note/fjkb/overview/">
+          <a href="/note/fjkb/custom/">
             0. Full custom
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -390,6 +390,13 @@
         <div>
           <a href="/note/fjkb/commercial/">
             Commercial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/builds/umc/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/builds/umc/">
+            umc
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -454,13 +461,14 @@
     <option value="/note/fjkb/" >
   - 
    [FJKB] Libre DIY Mechanical Keyboard</option> 
-      <option value="/note/fjkb/overview/"  selected>-- 0. Full custom</option>
+      <option value="/note/fjkb/custom/"  selected>-- 0. Full custom</option>
       <option value="/note/fjkb/layout/" >-- 1. Layout</option>
       <option value="/note/fjkb/keys/" >-- 2. Keys</option>
       <option value="/note/fjkb/elec/" >-- 3. Electronics</option>
       <option value="/note/fjkb/mech/" >-- 4. Mechanics</option>
       <option value="/note/fjkb/tools/" >-- 5. Tools</option>
       <option value="/note/fjkb/commercial/" >-- Commercial</option>
+      <option value="/note/fjkb/builds/umc/" >-- umc</option>
   
   
     <option value="/projects/" >
@@ -516,7 +524,9 @@
      - https://github.com/doxkb/tmk_keyboard
 -->
 
-<p>En 2012, bajo el nombre <a href="http://deskthority.net/wiki/Phantom">Phantom</a>, diseñaron en DESKthority el PCB y soporte de un teclado basado en la tarjeta <a href="https://www.pjrc.com/teensy/">Teensy</a> (compatible con Arduino). Pensado para encajar en un <a href="http://deskthority.net/wiki/Filco_Majestouch">Filco Majestouch</a>, están disponibles los esquemas y el firmware, además de los registros de múltiples pedidos conjuntos de piezas y keysets. Es especialmente reseñable que se diseñó un solo PCB para soportar diferentes layouts (ANSI, ANSI/WIN, ISO, ISO/WIN y 7BIT), incluso formato Compact (aunque el original fuera TKL). Es, por lo tanto, una base muy sólida sobre la que empezar. Dentro del abanico de layouts compatibles, la única modificación que requiere el PCB, a priori, es el soporte para los LEDs de retroiluminación.</p>
+<p>En 2012, bajo el nombre <a href="http://deskthority.net/wiki/Phantom">Phantom</a>, diseñaron en DESKthority el PCB y soporte de un teclado basado en la tarjeta <a href="https://www.pjrc.com/teensy/">Teensy</a> (compatible con Arduino). Pensado para encajar en un <a href="http://deskthority.net/wiki/Filco_Majestouch">Filco Majestouch</a>, están disponibles los esquemas y el firmware, además de los registros de múltiples pedidos conjuntos de piezas y keysets. Sin embargo, no está disponible el diseño del PCB. Es especialmente reseñable que se diseñó uno solo para soportar diferentes layouts (ANSI, ANSI/WIN, ISO, ISO/WIN y 7BIT), incluso formato Compact (aunque el original fuera TKL). Sería, por lo tanto, una base muy sólida sobre la que empezar. Dentro del abanico de layouts compatibles, la única modificación que requiere el PCB, a priori, es el soporte para los LEDs de retroiluminación. Lástima no tener acceso a las fuentes.</p>
+
+<p>Otro diseño, más reciente, del que sí se dispone de todas las fuentes, es <a href="https://github.com/mohitg11/TS65AVR">mohitg11/TS65AVR</a> (<a href="https://geekhack.org/index.php?topic=79161.0">geekhack</a>, <a href="https://www.reddit.com/r/MechanicalKeyboards/comments/6agkuu/ts65_split_65_keyboard/">reddit</a>). La característica más significativa del diseño es que está pensado para poder separar el teclado por la mitad. Además, incluye LEDs de retroiluminación en cada tecla, y 18 LEDs RGB para generar efectos estéticos. <a href="http://sonorankeyboards.com/#lynx">Esta</a> realización práctica muestra los posibles layouts soportados.</p>
 
 <p>Es digno de subrayar la cantidad de contenido que hay en la red, especialmente generado durante los últimos cinco años, con el éxito de Arduino, las impresoras 3D y el crowdfunding como impulsores. Sin embargo, la mayoría de la información está incompleta o muy dispersa. No se ha encontrado ningún proyecto documentado de principio a fin. En general, las referencias se centran en algún aspecto específico (la base, el layout, los switches, los keycaps, el firmware&hellip;). Las comunidades anteriores reúnen prácticamente toda la información necesaria, pero se encuentra mezclada con referencias a múltiples fabricantes y modelos.</p>
 
@@ -554,7 +564,7 @@
   
 
     <div class="github-link">
-      <a href="https://github.com/FreeJaus/freejaus.github.io/edit/master/_hugo/content/note/fjkb/overview.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/FreeJaus/freejaus.github.io/edit/master/_hugo/content/note/fjkb/custom.md" target="blank"><i class="fa fa-code-fork"></i>
         Edita esta página</a>
     </div>
   </div>

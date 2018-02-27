@@ -344,9 +344,9 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/note/fjkb/overview/" class="dd-item">
+      <li data-nav-id="/note/fjkb/custom/" class="dd-item">
         <div>
-          <a href="/note/fjkb/overview/">
+          <a href="/note/fjkb/custom/">
             0. Full custom
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -390,6 +390,13 @@
         <div>
           <a href="/note/fjkb/commercial/">
             Commercial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/note/fjkb/builds/umc/" class="dd-item">
+        <div>
+          <a href="/note/fjkb/builds/umc/">
+            umc
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -454,13 +461,14 @@
     <option value="/note/fjkb/" >
   - 
    [FJKB] Libre DIY Mechanical Keyboard</option> 
-      <option value="/note/fjkb/overview/" >-- 0. Full custom</option>
+      <option value="/note/fjkb/custom/" >-- 0. Full custom</option>
       <option value="/note/fjkb/layout/" >-- 1. Layout</option>
       <option value="/note/fjkb/keys/"  selected>-- 2. Keys</option>
       <option value="/note/fjkb/elec/" >-- 3. Electronics</option>
       <option value="/note/fjkb/mech/" >-- 4. Mechanics</option>
       <option value="/note/fjkb/tools/" >-- 5. Tools</option>
       <option value="/note/fjkb/commercial/" >-- Commercial</option>
+      <option value="/note/fjkb/builds/umc/" >-- umc</option>
   
   
     <option value="/projects/" >
@@ -549,9 +557,30 @@
 
 <h2 id="backlight">Backlight</h2>
 
-<p>Si bien un teclado puede disponer de retroiluminación independientemente del switch utilizado, algunos modelos son más adecuados para ello. Particularmente, los modelos MX incluyen, en el diseño de la carcasa de cada switch, un hueco para colocarlos, tal como se ve en la animación mostrada anteriormente. En el caso de los <a href="https://deskthority.net/wiki/Matias_switch">switches Matias</a>, sin embargo, la carcasa no incluye ningún soporte. Puesto que es transparente/traslúcido, están pensados para que el LED pueda colocarse en cualquier posición debajo del propio switch. En el layout combinado mostrado más adelante, puede apreciarse que el LED está situado en la parte inferior, para ambos diseños.</p>
+<p>Si bien un teclado puede disponer de retroiluminación independientemente del switch utilizado, algunos modelos son más adecuados para ello. Particularmente, los modelos MX incluyen, en el diseño de la carcasa de cada switch, un hueco para colocarlos, tal como se ve en la animación mostrada anteriormente. Esto es debido a que el plástico utilizado para el cuerpo es opaco. Como resultado, no es fácil obtener una iluminación uniforme. En la actualidad, se comercializan también modelos con la mitad superior transparente, para mitigar este efecto. También existen otros con la mitad superior transparente y la inferior translúcida (más o menos), de forma que puedan utilizarse LEDs SMD soldados en el PCB. Debe tenerse en cuenta que parece ser más fácil adquirir modelos transparentes/translúcidos en clones, en vez de los fabricados por Cherry.</p>
 
-<p>No obstante, tal como se analiza en la sección correspondiente a las keycaps, el efecto de la retroiluminación es simbólico si no se dispone de leyendas traslúcidas. En caso de querer una iluminación de fondo por motivos puramente estéticos, puede reducirse significativamente el número de LEDs utilizado (reduciendo así el consumo también). Asimismo, si se utilizan leyendas frontprint y switches no traslúcidos, debe tenerse en cuenta la posición en la que montar el switch. Los switches pueden colocarse en varias posiciones, sin que afecte a su uso, pero el layout del PCB tiene que ser coherente.</p>
+<p>En el caso de los <a href="https://deskthority.net/wiki/Matias_switch">switches Matias</a>, sin embargo, la carcasa no incluye ningún soporte. Puesto que todo el cuerpo es transparente/traslúcido, están pensados para que el LED pueda colocarse en cualquier posición debajo del propio switch. En el layout combinado mostrado más adelante, puede apreciarse que el LED está situado en la parte inferior, para ambos diseños.</p>
+
+<p>No obstante, tal como se analiza en la sección correspondiente a las keycaps, el efecto de la retroiluminación es simbólico si no se dispone de leyendas traslúcidas. Asimismo, si se utilizan leyendas frontprint y switches no traslúcidos, debe tenerse en cuenta la posición en la que montar el switch. Los switches pueden colocarse en varias posiciones, sin que afecte a su uso, pero el layout del PCB tiene que ser coherente. Una técnica vista recientemente es adquirir teclas translúcidas que han sido pintadas, y lijar/pulir la parte superior: <a href="https://www.youtube.com/watch?v=RzoZ7rG0x0c&amp;t=114s">DIY Blank Top Keycaps on the Ajazz AK33 RGB Mechanical Keyboard</a>.</p>
+
+<hr />
+
+<p>Al margen del tipo de switch utilizado, en lo que respecta a la retroiluminación debe decidirse el número y tipo de LEDs a utilizar. Lo habitual hasta hace relativamente poco era distribuir varios LEDs por el PCB para obtener una iluminación uniforme. Se podía modificar el brillo/intensidad de todos al mismo tiempo, incluso con efectos (fade in/out). Sin embargo, con la introducción de los LEDs RGB, y especialmente los direccionables individualmente, el abanico de posibilidades se ha extendido:</p>
+
+<ul>
+<li>En cada switch o como distribución uniforme:
+
+<ul>
+<li>LED de un solo color.</li>
+<li>LED RGB no direccionable.</li>
+<li>LED RGB no direccionable + CI.</li>
+<li>LED RGB direccionable (CI integrado).</li>
+</ul></li>
+</ul>
+
+<p>Por ejemplo, el diseño <a href="https://github.com/mohitg11/TS65AVR">mohitg11/TS65AVR</a> incluye LEDs de un solo color en cada tecla y 18 LEDs RGB direccionables distribuidos uniformemente.</p>
+
+<p>Debe tenerse en cuenta que el número de LEDs afecta al consumo. Aunque los puertos USB ofrecen cada vez más potencia, el estándar 2.0 establece 100-500mA, por lo que a 20-60mA por LED, se pueden iluminar simultáneamente hasta 25 LEDs. Así, en caso de querer una iluminación de fondo por motivos puramente estéticos, es recomendable reducir el número de LEDs utilizados.</p>
 
 <h2 id="elección-de-la-familia-de-switches">Elección de la familia de switches</h2>
 

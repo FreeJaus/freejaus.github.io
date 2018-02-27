@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.36.1" />
-<title>Prueba de concepto 2 :: FreeJaus - Forge</title>
+<title>umc :: FreeJaus - Forge</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 
     
   </head>
-  <body data-url="/note/nfcsec/poc_02/">
+  <body data-url="/note/fjkb/builds/umc/">
     
       <header>
   <div class="logo">
@@ -266,11 +266,10 @@
       <a href="/note/ecam/"><i class="fa fa-video-camera"></i>Embedded apps with camera(s)</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
-    <li data-nav-id="/note/nfcsec/" class="dd-item parent haschildren
+    <li data-nav-id="/note/nfcsec/" class="dd-item haschildren
         ">
       <div>
-      <a href="/note/nfcsec/"><i class="fa fa-shield"></i>NFC/RFID</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/note/nfcsec/"><i class="fa fa-shield"></i>NFC/RFID</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/note/nfcsec/cred/" class="dd-item">
@@ -294,7 +293,7 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/note/nfcsec/poc_02/" class="dd-item active">
+      <li data-nav-id="/note/nfcsec/poc_02/" class="dd-item">
         <div>
           <a href="/note/nfcsec/poc_02/">
             PoC 2
@@ -338,10 +337,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/note/fjkb/" class="dd-item haschildren
+    <li data-nav-id="/note/fjkb/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/note/fjkb/"><i class="fa fa-keyboard-o"></i>[FJKB] Libre DIY Mechanical Keyboard</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/note/fjkb/"><i class="fa fa-keyboard-o"></i>[FJKB] Libre DIY Mechanical Keyboard</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/note/fjkb/custom/" class="dd-item">
@@ -393,7 +393,7 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/note/fjkb/builds/umc/" class="dd-item">
+      <li data-nav-id="/note/fjkb/builds/umc/" class="dd-item active">
         <div>
           <a href="/note/fjkb/builds/umc/">
             umc
@@ -457,20 +457,19 @@
    Embedded apps with camera(s)</option>
     <option value="/note/nfcsec/" >
   - 
-   Seguridad en el control de acceso por tarjeta</option> 
-      <option value="/note/nfcsec/cred/" >-- Tarjeta de crédito</option>
-      <option value="/note/nfcsec/jauzi/" >-- Jauzi</option>
-      <option value="/note/nfcsec/poc_01/" >-- Prueba de concepto 1</option>
-      <option value="/note/nfcsec/poc_02/"  selected>-- Prueba de concepto 2</option>
-      <option value="/note/nfcsec/poc_03/" >-- Prueba de concepto 3</option>
-      <option value="/note/nfcsec/poc_04/" >-- Prueba de concepto 4</option>
-      <option value="/note/nfcsec/poc_05/" >-- Prueba de concepto 5</option>
-      <option value="/note/nfcsec/trans/" >-- Transporte colectivo</option>
-      <option value="/note/nfcsec/univ/" >-- Tarjeta universitaria</option>
-  
+   Seguridad en el control de acceso por tarjeta</option>
     <option value="/note/fjkb/" >
   - 
-   [FJKB] Libre DIY Mechanical Keyboard</option>
+   [FJKB] Libre DIY Mechanical Keyboard</option> 
+      <option value="/note/fjkb/custom/" >-- 0. Full custom</option>
+      <option value="/note/fjkb/layout/" >-- 1. Layout</option>
+      <option value="/note/fjkb/keys/" >-- 2. Keys</option>
+      <option value="/note/fjkb/elec/" >-- 3. Electronics</option>
+      <option value="/note/fjkb/mech/" >-- 4. Mechanics</option>
+      <option value="/note/fjkb/tools/" >-- 5. Tools</option>
+      <option value="/note/fjkb/commercial/" >-- Commercial</option>
+      <option value="/note/fjkb/builds/umc/"  selected>-- umc</option>
+  
   
     <option value="/projects/" >
    Projects</option>
@@ -496,63 +495,87 @@
       </div>
     
 
-    <h1>Prueba de concepto 2</h1>
+    <h1>umc</h1>
     
     
     
-    
-
-<h1 id="objetivos">Objetivos</h1>
+    <p>Puestos a realizar un desembolso de 80-150€ en un teclado, las características que debería reunir reunir son:</p>
 
 <ul>
-<li>Verificar que se puede leer el contenido íntegro de una tarjeta de la UPV/EHU.</li>
-<li>Verificar que se puede volcar el contenido leído en otra tarjeta, obteniendo una copia idéntica, a excepción del UID de la tarjeta.</li>
-</ul>
-
-<h1 id="herramientas">Herramientas</h1>
+<li>Fabricación
 
 <ul>
-<li>Hardware
-
-<ul>
-<li>Lector/grabador NFC/RFID basado en PN532</li>
-<li>Conversor USB-TTL basado en <a href="http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&amp;pcid=41">PL2303</a> [a partir 0,5€ en aliexpress -envío gratis-]</li>
-<li>Portátil o Single-Board-Computer</li>
-<li>Tarjeta de la UPV/EHU (con permisos activos o caducados)</li>
-<li>Tarjeta vacía [a partir 0,3€ en aliexpress -envío gratis-]</li>
+<li>Plate-mounted: switches montados sobre placa de aluminio/acero (no pcb-mounted)</li>
+<li>Bare plate: sin embellecedor sobre la placa de aluminio (para que no se acumule suciedad)</li>
+<li>Grip pads and stand-offs with rubber feet</li>
+<li>Huecos en la parte inferior para redirigir los cables</li>
+<li>Cable USB extraible (no microUSB)</li>
+<li>[Opt] Reposamuñecas</li>
+<li>Retroiluminación RGB direccionable por tecla</li>
 </ul></li>
-<li>Software
+<li>Switches
 
 <ul>
-<li><a href="http://nfc-tools.org">nfc-tools</a>
-
-<ul>
-<li><a href="https://github.com/nfc-tools/libnfc">libnfc</a></li>
-<li><a href="https://github.com/nfc-tools/mfoc">mfoc</a></li>
+<li>Cherry MX (por compatibilidad de las keycaps)</li>
+<li>[Opt] O-Ring</li>
 </ul></li>
-<li><a href="https://www.freebsd.org/cgi/man.cgi?query=hexdump&amp;sektion=1">hexdump</a></li>
-<li><a href="http://meldmerge.org/">meld</a></li>
+<li>Distribución
+
+<ul>
+<li>ISO 65 + Numpad 15</li>
+<li>[Opt] Macro Keys 15-20</li>
 </ul></li>
-</ul>
-
-<h1 id="metodología">Metodología</h1>
+<li>Teclas
 
 <ul>
-<li>Conectar el conversor USB-TTL al lector/grabador por UART.</li>
-<li>Conectar el conversor USB-TTL al ordenador por USB.</li>
-<li>Ejecutar <code>nfc-list</code> para comprobar que se detecta correctamente el lector/grabador.</li>
-<li>Acercar una tarjeta de la UPV/EHU y volver a ejecutar <code>nfc-list</code> para comprobar que se detecta la tarjeta.</li>
-<li>Ejecutar <code>mfoc -O base.mfd</code> para atacar la tarjeta y extraer el contenido íntegro (16 secciones, con 4 bloques de 128 bits o 16 bytes cada uno).</li>
-<li>Alejar la tarjeta de la UPV/EHU, acercar una tarjeta vacía y ejecutar <code>nfc-mfclassic w a base.mfd</code> para escribir el contenido leído.</li>
-<li>Ejecutar <code>mfoc -O copia.mfd</code> para comprobar que el contenido se ha escrito adecuadamente. Opcionalmente, se pueden indicar las claves conocidas para acelerar el proceso.</li>
-<li>Convertir el contenido a formato texto con <code>hexdump -vC base.mfd &gt; base.dump</code> y <code>hexdump -vC copia.mfd &gt; copia.dump</code>, y compararlos con <code>meld base.dump copia.dump</code>.</li>
-</ul>
-
-<h1 id="conclusiones">Conclusiones</h1>
+<li>Doble juego: topprint y frontprint (compatibles con backlight)</li>
+</ul></li>
+<li>Programación
 
 <ul>
-<li>Como algunas de las claves son las que vienen por defecto, se puede leer el contenido íntegro de una tarjeta de la UPV/EHU.</li>
-<li>Se puede escribir el contenido leído de la tarjea de la UPV/EHU en otra tarjeta, obteniendo una copia idéntica, a excepción del UID de la tarjeta.</li>
+<li>Driverless (bare-metal, mediante firmware)</li>
+<li>Función/multimedia/layers</li>
+<li>Bloqueo de la tecla &lsquo;Windows&rsquo; mediante tecla de función, no con un interruptor específico</li>
+<li>Retroiluminación
+
+<ul>
+<li>Brillo configurable</li>
+<li>Modos:</li>
+<li>Iluminar caps lk, num lk y scroll lk.</li>
+<li>Gaming.</li>
+<li>Dual arcade.</li>
+<li>Flechas de dirección en la parte 65.</li>
+</ul></li>
+</ul></li>
+
+<li><p>Extras</p>
+
+<ul>
+<li>[Opt] USB Hub (e.g. for smart-card reader)</li>
+<li>[Opt] Audio</li>
+<li><a href="touch">Opt</a> LCD/TFT SPI + SD Card</li>
+<li>[Opt] Joystick</li>
+<li>[Opt] Rotary Encoder</li>
+<li>[Opt] NRF24L01 breakout</li>
+<li>[Opt] External SPI/UART to manage desk lights/devices (i.e., to communicate with another uC).</li>
+</ul></li>
+
+<li><p>Layout mecánico:</p>
+
+<ul>
+<li>Criterio:</li>
+<li>Hago un uso intensivo del <code>numpad</code>, por lo que el teclado de trabajo principal debe incluir una cuadricula cartesiana de al menos 9x9. El diseño compact es una buena base.</li>
+<li>La separación de las teclas de función no es necesaria, por lo que es interesante &lsquo;pegar&rsquo; la fila de función a la fila 1, como en 75%.</li>
+<li>Disponer de teclas de función permite mapear en las mismas hasta 12*(4+n) funciones, pero también son 12 switches requeridos. ¿Merece la pena mantenerlas? A priori resulta difícil encajar <em>Esc</em>, <em>PrtSc</em> y <em>Pause</em>, pero puede ser interesante tratar de ajustar un 60% con un <code>numpad</code> (y llamarlo 70%¿?).</li>
+<li>Entre el TKL y el 75%, el primero lo único que aporta es más separación. Estaría bien probar si cuesta situar las teclas de enter y edición. Si pueden encontrarse fácilmente a ciegas -posiblemente con <em>homing</em>-, puede ser una buena base tanto para gaming como para un uso portable/multimedia.</li>
+<li>Proceso de &lsquo;compresión&rsquo;:</li>
+
+<li><p><a href="http://www.keyboard-layout-editor.com/##@@_c=#ff0000&amp;a:7;&amp;=&amp;_c=#000000&amp;t=#ffffff;&amp;=%0A%0A%0A%0AF1&amp;=%0A%0A%0A%0AF2&amp;=%0A%0A%0A%0AF3&amp;=%0A%0A%0A%0AF4&amp;_c=#222222&amp;n:true;&amp;=%0A%0A%0A%0AF5&amp;_c=#000000;&amp;=%0A%0A%0A%0AF6&amp;=%0A%0A%0A%0AF7&amp;=%0A%0A%0A%0AF8&amp;=%0A%0A%0A%0AF9&amp;_c=#222222&amp;n:true;&amp;=%0A%0A%0A%0AF10&amp;_c=#000000;&amp;=%0A%0A%0A%0AF11&amp;=%0A%0A%0A%0AF12&amp;_c=#222222;&amp;=%0A%0A%0A%0APause&amp;_c=#ff0000&amp;a:3;&amp;=%0A%0A%0A%0ADel%0AIns&amp;_x:0.15&amp;c=#222222&amp;a:7;&amp;=%0A%0A%0A%0AHome&amp;=%0A%0A%0A%0AEnd&amp;=%0A%0A%0A%0APgUp&amp;=%0A%0A%0A%0APgDn;&amp;@_a:3;&amp;=%0A%0A%0A%0A%C2%BA%0A%5C%0A%0A%0A%0A%0A%0A%C2%AA&amp;_c=#74096f;&amp;=%0A%0A%0A%0A!%0A%7C&amp;=%0A%0A%0A%0A%22%0A/@&amp;=%0A%0A%0A%0A%C2%B7%0A#&amp;=%0A%0A%0A%0A$%0A~&amp;=%0A%0A%0A%0A%25%0A%E2%82%AC&amp;=%0A%0A%0A%0A/&amp;%0A%C2%AC&amp;=%0A%0A%0A%0A//&amp;=%0A%0A%0A%0A(&amp;=%0A%0A%0A%0A)&amp;=%0A%0A%0A%0A/=&amp;_c=#222222;&amp;=%0A%0A%0A%0A'%0A?&amp;=%0A%0A%0A%0A%C2%A1%0A%C2%BF&amp;_c=#ff0000&amp;a:7&amp;w:2;&amp;=&amp;_x:0.15&amp;c=#000000;&amp;=LED&amp;=%0A%0A%0A%0A//&amp;=%0A%0A%0A%0A*&amp;_a:3;&amp;=%0A%0A%0A%0APrt%0ASys;&amp;@_c=#e2591f&amp;a:7&amp;w:1.5;&amp;=&amp;_c=#000000;&amp;=%0A%0A%0A%0AQ&amp;=%0A%0A%0A%0AW&amp;=%0A%0A%0A%0AE&amp;=%0A%0A%0A%0AR&amp;=%0A%0A%0A%0AT&amp;=%0A%0A%0A%0AY&amp;=%0A%0A%0A%0AU&amp;=%0A%0A%0A%0AI&amp;=%0A%0A%0A%0AO&amp;=%0A%0A%0A%0AP&amp;_c=#222222&amp;a:3;&amp;=%0A%0A%0A%0A%60%0A%5B%0A%0A%0A%0A%0A%0A%5E&amp;=%0A%0A%0A%0A*%0A%5D%0A%0A%0A%0A%0A%0A+&amp;_x:0.25&amp;c=#74096f&amp;a:7&amp;w:1.25&amp;h:2&amp;w2:1.5&amp;h2:1&amp;x2:-0.25;&amp;=&amp;_x:0.15&amp;c=#000000&amp;a:5;&amp;=Ins%0A%0A%0A%0A7&amp;=Home%0A%0A%0A%0A8&amp;=PgUp%0A%0A%0A%0A9&amp;_a:7;&amp;=%0A%0A%0A%0A-;&amp;@_c=#e2591f&amp;w:1.75;&amp;=LED&amp;_c=#000000;&amp;=%0A%0A%0A%0AA&amp;=%0A%0A%0A%0AS&amp;=%0A%0A%0A%0AD&amp;_c=#222222&amp;n:true;&amp;=%0A%0A%0A%0AF&amp;_c=#000000;&amp;=%0A%0A%0A%0AG&amp;=%0A%0A%0A%0AH&amp;_c=#222222&amp;n:true;&amp;=%0A%0A%0A%0AJ&amp;_c=#000000;&amp;=%0A%0A%0A%0AK&amp;=%0A%0A%0A%0AL&amp;=%0A%0A%0A%0A%C3%91&amp;_c=#222222&amp;a:3;&amp;=%0A%0A%0A%0A%C2%B4%0A%7B%0A%0A%0A%0A%0A%0A%C2%A8&amp;=%0A%0A%0A%0A%0A%7D%0A%0A%0A%0A%0A%0A%C3%87&amp;_x:1.4&amp;c=#000000&amp;a:5;&amp;=Del%0A%0A%0A%0A4&amp;=End%0A%0A%0A%0A5&amp;=PgDn%0A%0A%0A%0A6&amp;_a:7;&amp;=%0A%0A%0A%0A+;&amp;@_c=#e2591f&amp;w:1.25;&amp;=&amp;_c=#222222&amp;a:3;&amp;=%0A%0A%0A%0A%3E%0A%3C&amp;_c=#000000&amp;a:7;&amp;=%0A%0A%0A%0AZ&amp;=%0A%0A%0A%0AX&amp;=%0A%0A%0A%0AC&amp;=%0A%0A%0A%0AV&amp;=%0A%0A%0A%0AB&amp;=%0A%0A%0A%0AN&amp;=%0A%0A%0A%0AM&amp;_c=#222222&amp;a:3;&amp;=%0A%0A%0A%0A,%0A/;&amp;=%0A%0A%0A%0A.%0A/:&amp;=%0A%0A%0A%0A-%0A/_&amp;_c=#4a9d0b&amp;t=#000000&amp;a:7;&amp;=&amp;_c=#e2591f&amp;t=#ffffff&amp;w:1.75;&amp;=&amp;_x:0.15&amp;c=#000000;&amp;=%0A%0A%0A%0A1&amp;_c=#222222;&amp;=%E2%86%91%0A%0A%0A%0A2&amp;_c=#000000&amp;a:5;&amp;=Menu%0A%0A%0A%0A3&amp;_c=#74096f&amp;a:7&amp;h:2;&amp;=;&amp;@_c=#e2591f&amp;t=#000000&amp;w:1.25;&amp;=&amp;_c=#4a9d0b&amp;t=#ffffff&amp;w:1.25;&amp;=&amp;_c=#e2591f&amp;t=#000000&amp;w:1.25;&amp;=&amp;_c=#74096f&amp;t=#ffffff&amp;w:6.25;&amp;=&amp;_c=#e2591f&amp;t=#000000&amp;w:1.25;&amp;=&amp;_c=#4a9d0b&amp;t=#ffffff&amp;w:1.25;&amp;=&amp;_c=#222222&amp;w:1.25;&amp;=LED%0A%0A%0A%0AMenu&amp;_c=#e2591f&amp;t=#000000&amp;w:1.25;&amp;=&amp;_x:0.15&amp;c=#222222&amp;t=#ffffff;&amp;=%E2%86%90%0A%0A%0A%0A0&amp;=%E2%86%93%0A%0A%0A%0A00&amp;=%E2%86%92%0A%0A%0A%0A.">fjkb-101</a></p></li>
+
+<li><p><a href="http://www.keyboard-layout-editor.com/##@@_c=#ff0000&amp;a:7;&amp;=&amp;_c=#74096f&amp;t=#ffffff&amp;a:3;&amp;=%0A%0A%0A%0A!%0A%7C%0A%0A%0A%0A%0A%0A1&amp;=%0A%0A%0A%0A%22%0A/@%0A%0A%0A%0A%0A%0A2&amp;=%0A%0A%0A%0A%C2%B7%0A#%0A%0A%0A%0A%0A%0A3&amp;=%0A%0A%0A%0A$%0A~%0A%0A%0A%0A%0A%0A4&amp;=%0A%0A%0A%0A%25%0A%E2%82%AC%0A%0A%0A%0A%0A%0A5&amp;=%0A%0A%0A%0A/&amp;%0A%C2%AC%0A%0A%0A%0A%0A%0A6&amp;=%0A%0A%0A%0A//%0A%0A%0A%0A%0A%0A%0A7&amp;=%0A%0A%0A%0A(%0A%0A%0A%0A%0A%0A%0A8&amp;=%0A%0A%0A%0A)%0A%0A%0A%0A%0A%0A%0A9&amp;=%0A%0A%0A%0A/=%0A%0A%0A%0A%0A%0A%0A0&amp;_c=#222222;&amp;=%0A%0A%0A%0A'%0A?&amp;=%0A%0A%0A%0A%C2%A1%0A%C2%BF&amp;_c=#ff0000&amp;a:7&amp;w:2;&amp;=&amp;_x:0.15&amp;c=#000000;&amp;=LED&amp;=%0A%0A%0A%0A//&amp;=%0A%0A%0A%0A*&amp;_a:3;&amp;=%0A%0A%0A%0APrt%0ASys;&amp;@_c=#e2591f&amp;a:7&amp;w:1.5;&amp;=&amp;_c=#000000;&amp;=%0A%0A%0A%0AQ&amp;=%0A%0A%0A%0AW&amp;=%0A%0A%0A%0AE&amp;=%0A%0A%0A%0AR&amp;=%0A%0A%0A%0AT&amp;=%0A%0A%0A%0AY&amp;=%0A%0A%0A%0AU&amp;=%0A%0A%0A%0AI&amp;=%0A%0A%0A%0AO&amp;=%0A%0A%0A%0AP&amp;_c=#222222&amp;a:3;&amp;=%0A%0A%0A%0A%60%0A%5B%0A%0A%0A%0A%0A%0A%5E&amp;=%0A%0A%0A%0A*%0A%5D%0A%0A%0A%0A%0A%0A+&amp;_x:0.25&amp;c=#74096f&amp;a:7&amp;w:1.25&amp;h:2&amp;w2:1.5&amp;h2:1&amp;x2:-0.25;&amp;=&amp;_x:0.15&amp;c=#000000&amp;a:5;&amp;=Ins%0A%0A%0A%0A7&amp;=Home%0A%0A%0A%0A8&amp;=PgUp%0A%0A%0A%0A9&amp;_a:7;&amp;=%0A%0A%0A%0A-;&amp;@_c=#e2591f&amp;w:1.75;&amp;=LED&amp;_c=#000000;&amp;=%0A%0A%0A%0AA&amp;=%0A%0A%0A%0AS&amp;=%0A%0A%0A%0AD&amp;_c=#222222&amp;n:true;&amp;=%0A%0A%0A%0AF&amp;_c=#000000;&amp;=%0A%0A%0A%0AG&amp;=%0A%0A%0A%0AH&amp;_c=#222222&amp;n:true;&amp;=%0A%0A%0A%0AJ&amp;_c=#000000;&amp;=%0A%0A%0A%0AK&amp;=%0A%0A%0A%0AL&amp;=%0A%0A%0A%0A%C3%91&amp;_c=#222222&amp;a:3;&amp;=%0A%0A%0A%0A%C2%B4%0A%7B%0A%0A%0A%0A%0A%0A%C2%A8&amp;=%0A%0A%0A%0A%0A%7D%0A%0A%0A%0A%0A%0A%C3%87&amp;_x:1.4&amp;c=#000000&amp;a:5;&amp;=Del%0A%0A%0A%0A4&amp;=End%0A%0A%0A%0A5&amp;=PgDn%0A%0A%0A%0A6&amp;_a:7;&amp;=%0A%0A%0A%0A+;&amp;@_c=#e2591f&amp;w:1.25;&amp;=&amp;_c=#222222&amp;a:3;&amp;=%0A%0A%0A%0A%3E%0A%3C&amp;_c=#000000&amp;a:7;&amp;=%0A%0A%0A%0AZ&amp;=%0A%0A%0A%0AX&amp;=%0A%0A%0A%0AC&amp;=%0A%0A%0A%0AV&amp;=%0A%0A%0A%0AB&amp;=%0A%0A%0A%0AN&amp;=%0A%0A%0A%0AM&amp;_c=#222222&amp;a:3;&amp;=%0A%0A%0A%0A,%0A/;&amp;=%0A%0A%0A%0A.%0A/:&amp;=%0A%0A%0A%0A-%0A/_&amp;=%0A%0A%0A%0A%C2%BA%0A%5C%0A%0A%0A%0A%0A%0A%C2%AA&amp;_c=#e2591f&amp;a:7&amp;w:1.75;&amp;=&amp;_x:0.15&amp;c=#000000;&amp;=%0A%0A%0A%0A1&amp;_c=#222222;&amp;=%E2%86%91%0A%0A%0A%0A2&amp;_c=#000000&amp;a:5;&amp;=Menu%0A%0A%0A%0A3&amp;_c=#74096f&amp;a:7&amp;h:2;&amp;=;&amp;@_c=#e2591f&amp;t=#000000&amp;w:1.5;&amp;=&amp;_c=#4a9d0b&amp;t=#ffffff&amp;w:1.25;&amp;=&amp;_c=#e2591f&amp;t=#000000&amp;w:1.25;&amp;=&amp;_c=#1b2cc2&amp;w:1.25;&amp;=&amp;_c=#74096f&amp;t=#ffffff&amp;w:3;&amp;=&amp;_c=#1b2cc2&amp;t=#000000&amp;w:1.25;&amp;=&amp;_c=#e2591f&amp;w:1.25;&amp;=&amp;_c=#4a9d0b&amp;t=#ffffff;&amp;=&amp;_c=#0b2b9d&amp;t=#000000;&amp;=%0A%0A%0A%0APause&amp;_c=#222222&amp;t=#ffffff;&amp;=LED%0A%0A%0A%0AMenu&amp;_c=#e2591f&amp;t=#000000&amp;w:1.25;&amp;=&amp;_x:0.15&amp;c=#222222&amp;t=#ffffff;&amp;=%E2%86%90%0A%0A%0A%0A0&amp;=%E2%86%93%0A%0A%0A%0A00&amp;=%E2%86%92%0A%0A%0A%0A.">fjkb-85</a></p></li>
+
+<li><p><a href="http://www.keyboard-layout-editor.com/##@@_c=#d31929&amp;a:7&amp;w:1.25&amp;n:true;&amp;=%0A%0A%0A%0Aesc&amp;_c=#2d3238&amp;t=#ffffff&amp;a:0;&amp;=%0A%0A%0A%7C%0A1%0A!&amp;=%0A%0A%0A/@%0A2%0A%22&amp;=%0A%0A%0A#%0A3%0A%C2%B7&amp;=%0A%0A%0A~%0A4%0A$&amp;_c=#525554&amp;n:true;&amp;=%0A%0A%0A%E2%82%AC%0A5%0A%25&amp;_c=#2d3238;&amp;=%0A%0A%0A%C2%AC%0A6%0A/&amp;&amp;_a:3;&amp;=%0A%0A%0A%0A7%0A//&amp;=%0A%0A%0A%0A8%0A(&amp;=%0A%0A%0A%0A9%0A)&amp;_c=#525554&amp;n:true;&amp;=%0A%0A%0A%0A0%0A/=&amp;_c=#2d3238;&amp;=%0A%0A%0A%0A'%0A?&amp;=%0A%0A%0A%0A%C2%A1%0A%C2%BF&amp;_c=#0078a3&amp;a:7&amp;w:1.25;&amp;=%0A%0A%0A%0AbackSpace&amp;_x:0.25&amp;c=#2d3238&amp;a:5;&amp;=%0AprtSc%0A%0A%0A//&amp;=%0AscrLk%0A%0A%0A*&amp;=%0Apause%0A%0A%0A-;&amp;@_c=#0078a3&amp;t=#000000&amp;a:7&amp;w:1.25;&amp;=%0A%0A%0A%0Atab&amp;_c=#d9dae0;&amp;=%0A%0A%0A%0AQ&amp;=%0A%0A%0A%0AW&amp;=%0A%0A%0A%0AE&amp;=%0A%0A%0A%0AR&amp;=%0A%0A%0A%0AT&amp;=%0A%0A%0A%0AY&amp;=%0A%0A%0A%0AU&amp;=%0A%0A%0A%0AI&amp;=%0A%0A%0A%0AO&amp;=%0A%0A%0A%0AP&amp;_c=#2d3238&amp;t=#ffffff&amp;a:0;&amp;=%0A%0A%0A%5B%0A%60%0A%5E&amp;=%0A%0A%0A%5D%0A+%0A*&amp;_c=#95bfe8&amp;a:7&amp;w:1.25&amp;h:2;&amp;=%0A%0A%0A%0Aenter&amp;_x:0.25&amp;c=#d9dae0&amp;t=#000000&amp;a:5;&amp;=%0Ains%0A%0A%0A7&amp;=%0Ahome%0A%0A%0A8&amp;=%0ApgUp%0A%0A%0A9;&amp;@_c=#00a477&amp;t=#ffffff&amp;a:7&amp;w:1.25;&amp;=%0A%0A%0A%0AcapsLk&amp;_c=#d9dae0&amp;t=#000000;&amp;=%0A%0A%0A%0AA&amp;=%0A%0A%0A%0AS&amp;=%0A%0A%0A%0AD&amp;_n:true;&amp;=%0A%0A%0A%0AF&amp;=%0A%0A%0A%0AG&amp;=%0A%0A%0A%0AH&amp;_n:true;&amp;=%0A%0A%0A%0AJ&amp;=%0A%0A%0A%0AK&amp;=%0A%0A%0A%0AL&amp;=%0A%0A%0A%0A%C3%91&amp;_c=#2d3238&amp;t=#ffffff&amp;a:0;&amp;=%0A%0A%0A%7B%0A%C2%B4%0A%C2%A8&amp;=%0A%0A%0A%7D%0A%C3%A7%0A%C3%87&amp;_x:1.5&amp;c=#d9dae0&amp;t=#000000&amp;a:5;&amp;=%0Adel%0A%0A%0A4&amp;=%0Aend%0A%0A%0A5&amp;=%0APgDn%0A%0A%0A6;&amp;@_c=#0078a3&amp;a:7&amp;w:1.25;&amp;=%0A%0A%0A%0Ashift&amp;_c=#2d3238&amp;t=#ffffff&amp;a:3;&amp;=%0A%0A%0A%0A%3C%0A%3E&amp;_c=#d9dae0&amp;t=#000000&amp;a:7;&amp;=%0A%0A%0A%0AZ&amp;=%0A%0A%0A%0AX&amp;=%0A%0A%0A%0AC&amp;=%0A%0A%0A%0AV&amp;=%0A%0A%0A%0AB&amp;=%0A%0A%0A%0AN&amp;=%0A%0A%0A%0AM&amp;_c=#2d3238&amp;t=#ffffff&amp;a:3;&amp;=%0A%0A%0A%0A,%0A/;&amp;=%0A%0A%0A%0A.%0A/:&amp;=%0A%0A%0A%0A-%0A/_&amp;_c=#525554&amp;a:0;&amp;=%0A%0A%0A%5C%0A%C2%BA%0A%C2%AA&amp;_c=#0078a3&amp;t=#000000&amp;a:7&amp;w:1.25;&amp;=%0A%0A%0A%0Ashift&amp;_x:0.25&amp;c=#d9dae0;&amp;=%0A%0A%0A%0A1&amp;_c=#95bfe8&amp;t=#ffffff&amp;a:5;&amp;=%0A%E2%86%91%0A%0A%0A2&amp;_c=#d9dae0&amp;t=#000000&amp;a:7;&amp;=%0A%0A%0A%0A3;&amp;@_c=#0078a3&amp;w:1.25;&amp;=%0A%0A%0A%0Actrl&amp;_c=#00a477&amp;t=#ffffff;&amp;=%0A%0A%0A%0Asuper&amp;_c=#2d3238;&amp;=&amp;_c=#0078a3&amp;t=#000000&amp;w:1.25;&amp;=%0A%0A%0A%0Aalt&amp;_c=#95bfe8&amp;w:4.5;&amp;=&amp;_c=#0078a3&amp;w:1.25;&amp;=%0A%0A%0A%0AaltGr&amp;_c=#00a477&amp;n:true;&amp;=%0A%0A%0A%0Afn&amp;_c=#2d3238&amp;t=#ffffff;&amp;=%0A%0A%0A%0Amenu&amp;_c=#00a477;&amp;=%0A%0A%0A%0AnumLk&amp;_c=#0078a3&amp;t=#000000&amp;w:1.25;&amp;=%0A%0A%0A%0Actrl&amp;_x:0.25&amp;c=#95bfe8&amp;t=#ffffff&amp;a:5;&amp;=%0A%E2%86%90%0A%0A%0A0&amp;=%0A%E2%86%93%0A%0A%0A00&amp;_a:4;&amp;=.%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%E2%86%92">fjkb-80</a></p></li>
+</ul></li>
 </ul>
 
 
@@ -560,8 +583,8 @@
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/note/nfcsec/poc_01/" title="Prueba de concepto 1"> <i class="fa fa-chevron-left"></i><label>Prueba de concepto 1</label></a>
-    <a class="nav nav-next" href="/note/nfcsec/poc_03/" title="Prueba de concepto 3" style="margin-right: 0px;"><label>Prueba de concepto 3</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/note/fjkb/commercial/" title="Commercial"> <i class="fa fa-chevron-left"></i><label>Commercial</label></a>
+    <a class="nav nav-next" href="/projects/" title="Projects" style="margin-right: 0px;"><label>Projects</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -577,7 +600,7 @@
   
 
     <div class="github-link">
-      <a href="https://github.com/FreeJaus/freejaus.github.io/edit/master/_hugo/content/note/nfcsec/poc_02.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/FreeJaus/freejaus.github.io/edit/master/_hugo/content/note/fjkb/builds/umc.md" target="blank"><i class="fa fa-code-fork"></i>
         Edita esta página</a>
     </div>
   </div>

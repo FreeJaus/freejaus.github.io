@@ -207,10 +207,10 @@ G-code generator  http://replicat.org/generators dxf2gcode  Simulation  CAMotics
     
     <item>
       <title>0. Full custom</title>
-      <link>http://freejaus.github.io/note/fjkb/overview/</link>
+      <link>http://freejaus.github.io/note/fjkb/custom/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://freejaus.github.io/note/fjkb/overview/</guid>
+      <guid>http://freejaus.github.io/note/fjkb/custom/</guid>
       <description>Tras analizar el mercado, y observar la limitada oferta disponible en europa para layouts ISO compactos en formato ES, se plantea la posibilidad de fabricar un teclado modular libre -no sólo open source- completamente a medida, lo que implica tanto el diseño mecánico como el electrónico e informático. Se analizarán los costes detalladamente. Por un lado, para disponer un presupuesto completo que permita valorar si merece la pena fabricar un número muy reducido de unidades (1-3), o si es más razonable adquirir un modelo comercial/custom y modificarlo.</description>
     </item>
     
@@ -389,6 +389,16 @@ Metodología  Para cada tarjeta, realizar una lectura con mfoc, tal como se ha p
       <description>Contexto La tarjeta universitaria se utiliza para:
  Gestionar el acceso a todo tipo de puerta: aulas, laboratorios, despachos, salas de servicio, ascensores, garaje, biblioteca&amp;hellip; Fichaje horario (PAS). Préstamo de recursos bibliográficos. Firma de actas (PDI)  El fabricante de las cerraduras, el software de la red y base de datos es Salto-systems, como puede deducirse de las siguientes referencias:
  Formalización contrato 08/01/2014: Servicios de mantenimiento preventivo y correctivo de cerraduras electrónicas en puertas interiores y exteriores que cuenten con el sistema de control de accesos fabricado e instalado por la empresa SALTO-SYSTEMS en los edificios de la UPV/EHU Cita del Jefe de Seguridad de la universidad: &amp;ldquo;La universidad (&amp;hellip;) incorpora así la biblioteca (&amp;hellip;) a la red de edificios [&amp;hellip;] equipados con el sistema SALTO, los accesos de la biblioteca se unen a los cientos de puertas&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>umc</title>
+      <link>http://freejaus.github.io/note/fjkb/builds/umc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://freejaus.github.io/note/fjkb/builds/umc/</guid>
+      <description>Puestos a realizar un desembolso de 80-150€ en un teclado, las características que debería reunir reunir son:
+ Fabricación  Plate-mounted: switches montados sobre placa de aluminio/acero (no pcb-mounted) Bare plate: sin embellecedor sobre la placa de aluminio (para que no se acumule suciedad) Grip pads and stand-offs with rubber feet Huecos en la parte inferior para redirigir los cables Cable USB extraible (no microUSB) [Opt] Reposamuñecas Retroiluminación RGB direccionable por tecla  Switches  Cherry MX (por compatibilidad de las keycaps) [Opt] O-Ring  Distribución  ISO 65 + Numpad 15 [Opt] Macro Keys 15-20  Teclas  Doble juego: topprint y frontprint (compatibles con backlight)  Programación  Driverless (bare-metal, mediante firmware) Función/multimedia/layers Bloqueo de la tecla &amp;lsquo;Windows&amp;rsquo; mediante tecla de función, no con un interruptor específico Retroiluminación  Brillo configurable Modos: Iluminar caps lk, num lk y scroll lk.</description>
     </item>
     
   </channel>

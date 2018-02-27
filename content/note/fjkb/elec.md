@@ -39,10 +39,6 @@ title: 3. Electronics
 
 ---
 
-¿Cómo indicar en keyboard-layout-editor que una tecla tiene led integrado (caps lock, num lock, etc.)?
-
----
-
 SPI TFT/LCD + SD
 
 ```
@@ -58,3 +54,13 @@ BL     -           RS
 GND    GND         RST
                    CS
 ```
+
+---
+
+- En cada switch o como distribución uniforme:
+  - LED de un solo color.
+  - LED RGB no direccionable.
+  - LED RGB no direccionable + CI.
+  - LED RGB direccionable (CI integrado).
+
+Considerar la potencia necesaria. Si se enciende un led RGB en cada tecla al máximo brillo, ¡el consumo puede ser de hasta 3.8A!

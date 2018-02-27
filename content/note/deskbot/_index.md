@@ -114,3 +114,9 @@ https://www.youtube.com/watch?v=S8SJnGtUW68)
 ---
 
 La referencia comercial más competitiva es posiblemente [Trinus 3D Printer](https://eu.kodama3d.com/collections/trinus/products/trinus-3d-printer?variant=33203947460) 349.00€; y las más completa en cuanto a variedad de cabezales [diyouware](http://www.diyouware.com/).
+
+Extendiendo el presupuesto a 1-3K€, merece especial mención [BCN3D](https://github.com/BCN3D), que es completamente open-source (mecánica, electrónica, procesos de fabricación, calidad...). Es interesante, además, porque se trata de un proyecto nacido en el seno de una universidad.
+
+---
+
+Geetech ofrece impresoras 'para reciclar' (con algún defecto) por precios llamativos (50-75% de descuento): http://www.geeetech.com/forum/viewtopic.php?f=36&t=60827 (i3 Pro B 50-70€, Aluminium i3 60-80€...)

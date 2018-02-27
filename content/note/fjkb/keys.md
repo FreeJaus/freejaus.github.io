@@ -56,9 +56,25 @@ Por otro lado, la japonesa [Topre Corporation](https://deskthority.net/wiki/Topr
 
 ## Backlight
 
-Si bien un teclado puede disponer de retroiluminación independientemente del switch utilizado, algunos modelos son más adecuados para ello. Particularmente, los modelos MX incluyen, en el diseño de la carcasa de cada switch, un hueco para colocarlos, tal como se ve en la animación mostrada anteriormente. En el caso de los [switches Matias](https://deskthority.net/wiki/Matias_switch), sin embargo, la carcasa no incluye ningún soporte. Puesto que es transparente/traslúcido, están pensados para que el LED pueda colocarse en cualquier posición debajo del propio switch. En el layout combinado mostrado más adelante, puede apreciarse que el LED está situado en la parte inferior, para ambos diseños.
+Si bien un teclado puede disponer de retroiluminación independientemente del switch utilizado, algunos modelos son más adecuados para ello. Particularmente, los modelos MX incluyen, en el diseño de la carcasa de cada switch, un hueco para colocarlos, tal como se ve en la animación mostrada anteriormente. Esto es debido a que el plástico utilizado para el cuerpo es opaco. Como resultado, no es fácil obtener una iluminación uniforme. En la actualidad, se comercializan también modelos con la mitad superior transparente, para mitigar este efecto. También existen otros con la mitad superior transparente y la inferior translúcida (más o menos), de forma que puedan utilizarse LEDs SMD soldados en el PCB. Debe tenerse en cuenta que parece ser más fácil adquirir modelos transparentes/translúcidos en clones, en vez de los fabricados por Cherry.
 
-No obstante, tal como se analiza en la sección correspondiente a las keycaps, el efecto de la retroiluminación es simbólico si no se dispone de leyendas traslúcidas. En caso de querer una iluminación de fondo por motivos puramente estéticos, puede reducirse significativamente el número de LEDs utilizado (reduciendo así el consumo también). Asimismo, si se utilizan leyendas frontprint y switches no traslúcidos, debe tenerse en cuenta la posición en la que montar el switch. Los switches pueden colocarse en varias posiciones, sin que afecte a su uso, pero el layout del PCB tiene que ser coherente.
+En el caso de los [switches Matias](https://deskthority.net/wiki/Matias_switch), sin embargo, la carcasa no incluye ningún soporte. Puesto que todo el cuerpo es transparente/traslúcido, están pensados para que el LED pueda colocarse en cualquier posición debajo del propio switch. En el layout combinado mostrado más adelante, puede apreciarse que el LED está situado en la parte inferior, para ambos diseños.
+
+No obstante, tal como se analiza en la sección correspondiente a las keycaps, el efecto de la retroiluminación es simbólico si no se dispone de leyendas traslúcidas. Asimismo, si se utilizan leyendas frontprint y switches no traslúcidos, debe tenerse en cuenta la posición en la que montar el switch. Los switches pueden colocarse en varias posiciones, sin que afecte a su uso, pero el layout del PCB tiene que ser coherente. Una técnica vista recientemente es adquirir teclas translúcidas que han sido pintadas, y lijar/pulir la parte superior: [DIY Blank Top Keycaps on the Ajazz AK33 RGB Mechanical Keyboard](https://www.youtube.com/watch?v=RzoZ7rG0x0c&t=114s).
+
+---
+
+Al margen del tipo de switch utilizado, en lo que respecta a la retroiluminación debe decidirse el número y tipo de LEDs a utilizar. Lo habitual hasta hace relativamente poco era distribuir varios LEDs por el PCB para obtener una iluminación uniforme. Se podía modificar el brillo/intensidad de todos al mismo tiempo, incluso con efectos (fade in/out). Sin embargo, con la introducción de los LEDs RGB, y especialmente los direccionables individualmente, el abanico de posibilidades se ha extendido:
+
+- En cada switch o como distribución uniforme:
+  - LED de un solo color.
+  - LED RGB no direccionable.
+  - LED RGB no direccionable + CI.
+  - LED RGB direccionable (CI integrado).
+
+Por ejemplo, el diseño [mohitg11/TS65AVR](https://github.com/mohitg11/TS65AVR) incluye LEDs de un solo color en cada tecla y 18 LEDs RGB direccionables distribuidos uniformemente.
+
+Debe tenerse en cuenta que el número de LEDs afecta al consumo. Aunque los puertos USB ofrecen cada vez más potencia, el estándar 2.0 establece 100-500mA, por lo que a 20-60mA por LED, se pueden iluminar simultáneamente hasta 25 LEDs. Así, en caso de querer una iluminación de fondo por motivos puramente estéticos, es recomendable reducir el número de LEDs utilizados.
 
 ## Elección de la familia de switches
 
